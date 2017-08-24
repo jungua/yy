@@ -1,0 +1,3457 @@
+<html lang="ko"><head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="http://image.yeoboya.com/imgs/new_wedding/mobile/img/favicon_16.ico" type="image/x-icon">
+<link rel="icon" href="http://image.yeoboya.com/imgs/new_wedding/mobile/img/favicon_16.ico" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="ALL">
+<meta name="robots" content="index,follow">
+<meta name="revisit-after" content="1 days">
+<meta name="Subject" content="여보야">
+<meta name="description" content="결혼, 재혼, 평생 배우자를 찾는 스마트한 방법, 문의전화1522-3379">
+<meta name="keywords" content="여보야, yeoboya, 결혼, 재혼">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="HandheldFriendly" content="true">
+<meta name="mobile-web-app-capable" content="yes">
+
+<title>여보야</title>
+<link href="css/webfont.min2.css" rel="stylesheet" type="text/css">
+<link href="css/default.css" rel="stylesheet" type="text/css">
+<script async src="https://www.google-analytics.com/analytics.js"></script><script>
+document.domain = "yeoboya.com";
+var _underwork = false;
+</script>
+<script src="http://m.yeoboya.com/_global/js/jquery.min.js"></script>
+<script src="http://m.yeoboya.com/_global/js/jquery-cookie.min.js"></script>
+<script src="http://m.yeoboya.com/_global/js/jsBridge.js?ver=1503301741"></script>
+<script src="http://m.yeoboya.com/_global/js/app.js?ver=1503301741"></script>
+<script src="http://m.yeoboya.com/_global/js/NodeMarrySession.js?ver=1503301741"></script>
+<script src="http://m.yeoboya.com/js/default.js?ver=1503301741"></script>
+<script src="http://m.yeoboya.com/js/testDomains.js?ver=1503301741"></script>
+<script src="http://m.yeoboya.com/_global/js/jquery-ui.min-1.12.1.js"></script>
+<style>
+#imgSpinBg {position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.7);top:0;}
+#imgSpin {position:fixed;top:50%;left:50%;margin-top:-36px;margin-left:-36px;width:72px;height:72px;}
+@-webkit-keyframes flip /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes flip {
+  from {
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+.flip {    
+  -webkit-animation: flip 1.2s ease infinite;
+  -moz-animation: flip 1.2s ease infinite;
+  -ms-animation: flip 1.2s ease infinite;
+  -o-animation: flip 1.2s ease infinite;
+  animation: flip 1.2s ease infinite;
+}
+
+.btn_home{display:inline-block;}
+.btn_home{position:absolute; padding:7px 20px 2px 50px; top:0; right:0;}
+</style>
+<script src="http://m.yeoboya.com/js/iscroll.js"></script>
+<script src="http://m.yeoboya.com/js/photoUpload.js?v=1503301741"></script>
+</head>
+<body style=";-webkit-overflow-scrolling: touch">
+<script>
+// path controls
+var _chnl = 'cont';
+var _ctrl = 'profile';
+var _dest = 'profileEdit';
+
+$(window).on("touchend",function(){});
+</script><style>
+	#profileAttr {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#eee;z-index:522}
+	#profileAttr .slct {position:fixed;top:45px;left:0;bottom:45px;width:100%;}
+	#profileAttr .ft {position:fixed;bottom:0;left:0;z-index:524}
+#profileAttr .hd {position:relative;top:0;width:100%;height:45px;background:#483334;z-index:524}
+#profileAttr .hd p {}
+#profileAttr .slct ul {position:absolute;top:0;margin:0;padding:0;width:100%}
+#profileAttr .slct ul li a {display:inline-block;width:100%;padding:0 20px;height:45px;line-height:45px;border-top:1px solid #fff;border-bottom:1px solid #d0d0d0;font-size:0.9em}
+#profileAttr .slct ul li a.slcted {background:#fec107;color:#333;border-top:1px solid #a09999;border-bottom:1px solid #d0d0d0}
+#profileAttr .slct ul li .tmove {background:#635958;color:#fff;border-top:1px solid #a09999;border-bottom:1px solid #87817e} /* 20161101 kossy2k 프로필정보 추가수정 */
+/*#profileAttr .slct ul li a:hover {background:#635958;color:#fff;border-top:1px solid #a09999;border-bottom:1px solid #87817e}*/
+#profileAttr .slct ul.multi {position:absolute;top:0;margin:0;padding:0;width:100%}
+#profileAttr .slct ul.multi li.helpMulti {width:100%;padding:10px 0;text-align:center;border-bottom:1px solid #d0d0d0;background:#fff}
+#profileAttr .slct ul.multi li.list {position:relative}
+#profileAttr .slct ul.multi li.list a {display:inline-block;width:100%;padding:0 20px;height:45px;line-height:45px;border-top:1px solid #fff;border-bottom:1px solid #d0d0d0;font-size:0.9em}
+#profileAttr .slct ul.multi li.list a.slcted {background:#fec107;color:#333;border-top:1px solid #a09999;border-bottom:1px solid #d0d0d0}
+/*#profileAttr .slct ul.multi li.list a:hover {background:#635958;color:#fff;border-top:1px solid #a09999;border-bottom:1px solid #87817e}*/
+#profileAttr .slct ul.multi li.list a input[type="checkbox"] {display:none}
+#profileAttr .slct ul.multi li.list a input[type="checkbox"] + label {display:inline-block;cursor:pointer;margin:-3px 8px 0 0;padding:0;width:28px;height:28px;background:url('http://image.yeoboya.com/imgs/new_wedding/mobile/img/join_check.png') no-repeat;;background-position:0 0}
+#profileAttr .slct ul.multi li.list a input[type="checkbox"]:checked + label{background-position:0 -28px}
+#myPhotoZone {position:relative}
+#myPhotoZone .plofile_photo {display:none}
+#myPhotoZone .btn_photo_del {display:none;position:absolute;top:30px;left:50px}
+
+.select_box_03 {position:relative}
+.strOver {display:inline-block;width:75%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.slctColor {color:#b80a0e}
+.select_radio_hope {float:right; width:72.9375%; height:38px; margin-right:8px; }
+.radio_btn_hope { float:left; font-size:18px; margin-top:5px; margin-left:15%; color:#263238; }
+input[type=radio].msg_radio { border:0; clip:rect(0 0 0 0); height:1px; left:-1000px; margin:-1px; overflow:hidden; padding:0; position:absolute; vertical-align:middle; width:1px; z-index:-1000; }
+input[type=radio].msg_radio { background-position:0 0; background-repeat:no-repeat; display:inline-block; height:25px; vertical-align:middle; }
+.select_radio_hope.radio_match01 { background-position:0 0; background-repeat:no-repeat; display:inline-block; height:25px; }
+input[type=radio].msg_radio:checked + .radio_match01 { background-position:0 -25px; }
+input[type=radio].radio_match01 { background-position:0 -25px; }
+label.radio_match01 {cursor:pointer; background-image: url("http://image.yeoboya.com/imgs/new_wedding/mobile/img/hope_radio.png"); background-size: 25px; }
+.select_dropbox_name_box {display:inline-block; position:relative; float:left; width:19.4375%; height:38px; margin-right:8px;}
+@media (min-width:360px) {
+.select_dropbox_name_box {width:25.4375%;}
+}
+@media (min-width:480px) {
+.select_dropbox_name_box {width:28.4375%;}
+}
+@media (min-width:768px) {
+.select_dropbox_name_box {width:25.4375%;}
+}
+@media (min-width:1920px) {
+.select_dropbox_name_box {width:40%;}
+}
+.select_dropbox_name {float:right; width:72.9375%; height:38px; margin-right:10px;}
+.select_dropbox_name_01 {float:left; width:100%; height:38px; border:1px solid #d3d3d3; border-radius:3px; font-size:15px;}
+.select_drop_padding {position:relative; padding-left:5px;}
+.select_color_03 {color:#000;}
+.name_x {position:absolute; top:12px; right:-5px;}
+.name_col_txt {display:inline-block; float:left; padding-left:14px; line-height:38px;}
+.select_dropbox_name_02 {float:left; width:25.75%; height:38px; margin-left:3px; padding-left:5px; border:1px solid #d3d3d3; border-radius:3px; font-size:15px;}
+@media (min-width:360px) {
+.select_dropbox_name_02 {width:26.4375%;}
+}
+@media (min-width:480px) {
+.select_dropbox_name_02 {width:33.4375%;}
+}
+@media (min-width:768px) {
+.select_dropbox_name_02 {width:45.4375%;}
+}
+@media (min-width:1920px) {
+.select_dropbox_name_02 {width:35%;}
+}
+.check_box_name {position:relative;float:right;margin-right:5px}
+.arrow_box_name {position:relative; float:right; width:22px; height:38px; border-left:1px solid #eaeaea; background-color:#ededed;}
+.arrow_box_name img {display:block; position:absolute; top:16px; left:6px;}
+input[type=checkbox].name_check {position:absolute; z-index:-1000; left:-1000px; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; border:0; clip:rect(0 0 0 0);}
+input[type=checkbox].name_check {display:block; height:28px; background-repeat:no-repeat; background-position:0 0; vertical-align:middle;}
+label {display:inline-block; height:25px; padding-left:30px; background-repeat:no-repeat; background-position:0 0; vertical-align:middle; line-height:25px;}
+input[type=checkbox].name_check:checked + label {background-position:0 -28px;}
+input[type=checkbox].label {background-position:0 -28px;}
+.css-label_01 {display:inline-block; height:28px; margin-top:6px; margin-left:8px; background-repeat:no-repeat; background-position:0 0; font-size:13px; vertical-align:middle;}
+.name_check_txt {display:inline-block; padding-top:4px; padding-left:3px; background-repeat:no-repeat; font-size:13px; vertical-align:middle;}
+@media (min-width:768px) {
+	.name_check_txt {padding-left:25px;}
+}
+@media (min-width:1920px) {
+	.name_check_txt {padding-left:3px;}
+}
+label.css-label_01 {background-image:url('http://image.yeoboya.com/imgs/new_wedding/mobile/img/join_check.png');}
+.check_box_name {position:relative; float:right; margin-right:5px;}
+.btn_send_bottom_mobile {
+	position: fixed;
+	width: 100%;
+}
+.btn_send_bottom_pc {
+	position: fixed;
+	width: 716px;
+}
+.btn_send_bottom_pc2 {
+	position: relative;
+	width: 716px;
+}
+.btn_send_bottom {
+	display: inline-block;
+	z-index: 20;
+	height: 45px;
+	bottom: 0;
+	border: 1px solid #e8b610;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f1d41a), color-stop(1, #e7b510));
+	background: -moz-linear-gradient(top, #f1d41a 5%, #e7b510 100%);
+	background: -webkit-linear-gradient(top, #f1d41a 5%, #e7b510 100%);
+	background: -o-linear-gradient(top, #f1d41a 5%, #e7b510 100%);
+	background: -ms-linear-gradient(top, #f1d41a 5%, #e7b510 100%);
+	background: linear-gradient(to bottom, #f1d41a 5%, #e7b510 100%);
+	background-color: #f1d41a;
+	box-shadow: inset 0px 1px 0px 0px #f8ea8d;
+	color: #ffffff;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 45px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1d41a', endColorstr='#e7b510',GradientType=0);
+	-webkit-box-shadow: inset 0px 1px 0px 0px #f8ea8d;
+	-moz-box-shadow: inset 0px 1px 0px 0px #f8ea8d;
+}
+.pr_photo_box {position:relative;width:86px;margin:8px;padding:0}
+.pr_photo_box .p_x {position:absolute;top:-8px;right:-10px}
+.myphoto_box {width:95%;margin:10px auto;height:60px}
+.myphoto_box .photo_save_btn {display:table-cell; float:left; width:70px; height:50px; margin-top:5px; border:1px solid #d3d3d3; border-radius:5px; text-align:center;}
+.myphoto_box .main_photo_btn {display:inline-block; line-height:30px; padding:0 7px; height:30px; margin-top:10px; border:1px solid #3a3030; border-radius:3px; background:-moz-linear-gradient(top, #aaa2a1 0%, #746665 100%); background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#aaa2a1), color-stop(100%,#746665)); background:-webkit-linear-gradient(top, #aaa2a1 0%,#746665 100%); background:-o-linear-gradient(top, #aaa2a1 0%,#746665 100%); background: -ms-linear-gradient(top, #aaa2a1 5%, #746665 100%); color:#fff; font-size:12px; letter-spacing:-1px; box-shadow: inset 0px 1px 0px 0px #d5d1d1; -webkit-box-shadow:inset 0 1px 0 0px #d5d1d1; -moz-box-shadow:inset 0 1px 0 0px #d5d1d1;}
+.myphoto_box .myphoto_ment {display:inline-block;float:right;margin-right:6px;color:#727272;font-size:13px;letter-spacing:-1px;line-height:100%}
+.save_photo {
+	clear: both;
+	display: block;
+	font-size: 14px;
+	font-weight:bold;
+	color: #b80a0e;
+	letter-spacing: -1px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+.select_box_01 { border-bottom:2px solid #d3d3d3; background-color:#f3f2f2; padding-top:0px; padding-bottom:2px;}
+.select_box_disable{background-color:#F2F2F2;}
+.now_job_txta { width:95%; height:23px; margin:0 10px; border:none; resize:none; padding-left: 0px;padding-right: 0px; }
+.select_dropbox_month {float:right; width:47%; height:38px; margin-right:7.5px; border:1px solid #d3d3d3; border-radius:3px; -webkit-appearance: none; color:#b80a0e;
+border-right:#ffffff; background: url(http://image.yeoboya.com/imgs/new_wedding/mobile/img4/selectbox_arrow.gif) right no-repeat; background-size: 48px 38px; padding-left:11px;}
+.select_color_02 {color:#b80a0e;} /* 20150715 수정 */
+.month_col_txt { display:inline-block; float:left; padding-left:5%; line-height:38px; }
+/*160223 가입경로 */
+.select_joinway_box { display:block; margin:0 auto; width:95%; height:auto; overflow:hidden; text-align:center; margin-top:2px; margin-bottom:2px}
+.select_joinway_box .select_joinway { display:block; margin:0 auto; width:98%; height:38px; border:1px solid #d3d3d3; border-radius:3px; }
+.select_joinway_box .arrow_box_area { width:100%; height:38px; font-size:14px; border:1px solid #d3d3d3; border-radius:3px; -webkit-appearance: none; color:#b80a0e;border-right:#ffffff; background: url(http://image.yeoboya.com/imgs/new_wedding/mobile/img4/selectbox_arrow.gif) right no-repeat; background-size: 48px 38px; padding-left:11px;}
+/* 중매회원 추가 */
+.talk_id_arrange {display:inline-block; float:right; width:98%; height:23px; margin:0; padding:8px 0; overflow:hidden; border:1px solid #9ea1a6; border-radius:3px; background-color:#fff; line-height:23px; resize:none;-webkit-box-shadow:inset 1px 1px 3px rgba(0,0,0,.5);}
+#nickMsg {display:none; margin-bottom:5px; margin-top:-5px; font-size:12px; }
+.talk_id_arrange_input { width:90%; height:23px; margin-left:5px; padding:0 5px; border:none; outline:none; }
+.padding_wrap { padding-bottom:0; padding-top:2px;}
+.padding_wrap_arrange {padding-top:15px; padding-bottom:2px;}
+.txt_arrange_cost { float:left; width:95%; height:23px; margin-top: 5px;  padding:8px 5px; overflow:hidden; border:1px solid #9ea1a6; border-radius:3px; background-color:#fff; line-height:23px; resize:none;-webkit-box-shadow:inset 1px 1px 3px rgba(0,0,0,.5);}
+.select_arrange_dropbox {float:right; width:49%; height:38px; padding-left:11px; border:1px solid #d3d3d3; border-right:#ffffff; border-radius:3px; background:url(http://image.yeoboya.com/imgs/new_wedding/mobile/img4/selectbox_arrow.gif) right no-repeat; background-size:48px 38px; color:#b80a0e; -webkit-appearance:none;}
+.select_arrange_cost {float:left; width:100%; height:38px; margin-right:7.5px; padding-left:11px; border:1px solid #d3d3d3; border-right:#ffffff; border-radius:3px; background:url(http://image.yeoboya.com/imgs/new_wedding/mobile/img4/selectbox_arrow.gif) right no-repeat; background-size:48px 38px;  color:#727272; -webkit-appearance:none; }
+/* 중매회원 추가2 (20160617) */
+.select_dropbox_child { width: 48.5%; margin: 0; }
+.select_dropbox { margin-right:7px; margin-top:2px; }
+.select_out_box { float:right; width:73%; margin-right:7.5px; margin-top:2px;}
+.select_out_box2 { float:right; width:73%; height:30px; margin-right:6.5px; margin-top:2px; border:1px solid #d3d3d3; border-radius:3px; font-size:15px; padding-top:8px; }
+.select_inner1 { clear:both; float:left; }
+.select_inner2 { float:right; }
+.select_joinway_box_arrange { margin-bottom: 40px; }
+/*20160831 결혼계획추가*/
+@media (min-width:160px) {
+.select_box_wd,.select_box_di {height:0 !important;}
+.select_box_al {height:55px !important;}
+.select_dropbox_child_04 {width:50% !important;}
+}
+@media (min-width:360px) {
+.select_box_wd,.select_box_di,.select_box_al,.select_box_br {height:0 !important;}
+}
+@media (min-width:468px) {
+.select_dropbox_child_04 {width:65% !important;}
+}
+.select_box_wd,.select_box_di,.select_box_al {clear:both; width:100%; height:50px; padding-bottom:8px; margin-bottom:40px;}
+.select_box_preg {clear:both; width:100%; height:0; padding-bottom:8px; margin-bottom:40px;}
+.select_box_preg_height { height:50px; }
+.select_wd {margin-top:10px; font-size:14px; line-height:20px; margin-bottom:10px;}
+.select_di {margin-top:10px; font-size:14px; line-height:20px; margin-bottom:10px;}
+.icon_wd {float:left; padding-right:4px; margin-top:-2px;}
+.select_wd_tit {margin-top:10px;}
+.wd_radio .radio_hope {float:left; font-size:13px; margin-top:5px; margin-left:3%; color:#263238; }
+.wd_radio {float:left; width:100%; height:50px; }
+.wd_radio_div { clear:both; }
+.radio_btn_hope { float:left; font-size:18px; margin-top:5px; margin-left:15%; color:#263238; }
+input[type=radio].wd_radio01 { border:0; clip:rect(0 0 0 0); height:1px; left:-1000px; margin:-1px; overflow:hidden; padding:0; position:absolute; vertical-align:middle; width:1px; z-index:-1000; }
+input[type=radio].wd_radio01 { background-position:0 0; background-repeat:no-repeat; display:inline-block; height:23px; vertical-align:middle; }
+.wd_radio.radio_match02 { background-position:0 0; background-repeat:no-repeat; display:inline-block; height:23px; }
+input[type=radio].wd_radio01:checked + .radio_match02 { background-position:0 -22px; }
+input[type=radio].radio_match02 { background-position:0 -23px; }
+label.radio_match02 {display:inline-block; height:22px; padding-left:26px; cursor:pointer; background-image: url("http://image.yeoboya.com/imgs/new_wedding/mobile/img/hope_radio02.png"); background-size: 22px; line-height:22px; }
+input[type=radio].wd_radio02 { border:0; clip:rect(0 0 0 0); height:1px; left:-1000px; margin:-1px; overflow:hidden; padding:0; position:absolute; vertical-align:middle; width:1px; z-index:-1000; }
+input[type=radio].wd_radio02 { background-position:0 0; background-repeat:no-repeat; display:inline-block; height:22px; vertical-align:middle; }
+.wd_radio.radio_match03 { background-position:0 0; background-repeat:no-repeat; display:inline-block; height:22px; }
+input[type=radio].wd_radio02:checked + .radio_match03 { background-position:0 -22px; }
+input[type=radio].radio_match03 { background-position:0 -22px; }
+label.radio_match03 {display:inline-block; height:22px; padding-left:26px; cursor:pointer; background-image: url("http://image.yeoboya.com/imgs/new_wedding/mobile/img/hope_radio02.png"); background-size: 22px; line-height:22px;  }
+.info_text{margin-bottom: 2px !important; }
+.hope_partner{margin:0 0 !important; }
+
+.select_dropbox_child_01 { width:31%; margin:0; }
+.select_dropbox_child_02 { width:65%; margin:0; }
+.select_ment { margin-left:2px; }
+.arrow_box { width:30px; }
+.arrow_box img { left:10px; }
+
+.select_dropbox_sibling_01 { float:left; width:31%; margin-right:5px; border:1px solid #d3d3d3; border-radius:3px;} /* 20161014 kossy2k[프라임정보추가] */
+.select_dropbox_sibling_03 { float:right; width:31%; border:1px solid #d3d3d3; border-radius:3px;}
+.select_dropbox_out { float:right; width:73%; height:40px; margin-right:7.5px; margin-top:2px; padding-top:0; }
+.select_dropbox_child_04 {float:right; width:29%; height:38px; margin-top:-8px; margin-right:8px; margin-left:4px; border:1px solid #d3d3d3; border-radius:3px;}
+.select_dropbox_child_05 {float:left; width:48%; height:38px; border:1px solid #d3d3d3; border-radius:3px;}
+.select_dropbox_child_06 {float:right; width:48%; height:38px; border:1px solid #d3d3d3; border-radius:3px;}
+@media (min-width:360px) {
+	.select_ment { margin-left:9px; }
+	.arrow_box { width:35px; }
+	.arrow_box img { left:13px; }
+	.select_dropbox_sibling_01 { margin-right:6px; }
+}
+
+.selTxt {
+	border:none; width:100%; outline:none;
+}
+.selTxt2 {
+	border:none; outline:none;
+}
+
+.input_empty::placeholder {font-size:11px;color:#c1c1c1}
+.input_empty::-webkit-input-placeholder {font-size:11px;color:#c1c1c1}
+.input_empty::-moz-placeholder {font-size:11px;color:#c1c1c1}
+.input_empty:-ms-input-placeholder {font-size:11px;color:#c1c1c1}
+.input_empty:-moz-placeholder {font-size:11px;color:#c1c1c1}
+
+.prime_mark_01 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/img_prime_secret.jpg) no-repeat; background-size:65px 24px;  }
+.prime_mark_02 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/img_prime_secret.jpg) no-repeat; background-size:150px 24px; }
+.prime_mark_03 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/img_prime_secret.jpg) no-repeat; background-size:100px 24px; }
+.prime_mark_04 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/img_prime_secret.jpg) no-repeat; background-size:220px 24px; }
+.prime_mark_05 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/img_prime_secret.jpg) no-repeat; background-size:170px 24px; }
+
+.prime_error_01 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/background_bg_error.png) no-repeat; background-size:65px 24px; }
+.prime_error_02 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/background_bg_error.png) no-repeat; background-size:150px 24px; }
+.prime_error_03 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/background_bg_error.png) no-repeat; background-size:100px 24px; }
+.prime_error_04 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/background_bg_error.png) no-repeat; background-size:220px 24px; }
+.prime_error_05 {background:url(http://image.yeoboya.com/imgs/new_wedding/prime/background_bg_error.png) no-repeat; background-size:170px 24px; }
+
+.tit_txt {font-size:13px; line-height:20px; margin:2px 6px 0 6px; border:1px solid #000; padding:5px 4px; border-radius:3px; background-color:#5b4868; color:#fff;}
+.tit_txt img {vertical-align:middle; }
+
+/* 프로필항목 수정 */
+.text_box_fam {display:block; width:90%; height:55px; margin-right:auto; margin-left:auto; padding:7px 10px 10px 7px; border:1px solid #d3d3d3; border-radius:3px; color:#727272; font-size:14px; resize:none;}
+.text_box_min {display: inline; width:95px; height:20px; padding:5px; border:1px solid #d3d3d3; border-radius:3px; color:#727272; font-size:14px; resize:none; float:right; position:absolute; top:-3px; left:208px;}
+.sel_box_min {display: inline; width:65px; height:30px; padding-left:5px; border:1px solid #d3d3d3; border-radius:3px; color:#727272; font-size:14px; resize:none; position:absolute; top:-3px; left:220px;}
+@media (min-width:360px) {
+.text_box_min { width:115px; }
+}
+@media (min-width:375px) {
+.text_box_min { width:120px; }
+}
+@media (min-width:414px) {
+.text_box_min { width:160px; }
+}
+@media (min-width:768px) {
+.text_box_min { width:160px; }
+}
+    
+/**********20170821 정우아***********/    
+/*프로필등록 페이지상단 누적집계노출*/
+.plofile_wrap .count_c{clear:both; width:100%; height:auto; background-color:#f7ecf0; font-size:15px; text-align:center; color:#493335; padding:10px 0; font-weight:600; letter-spacing:-0.5px;}    
+    .plofile_wrap .count_c span{font-size:17px; color:#c4414d; font-weight:700;}
+    
+</style>
+<div class="wedding_wrap">
+	<header>
+		<a href="javascript:$.tmpSave('back');" class="btn_back"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/btn_back.jpg" width="30" height="31" alt="뒤로"></a>
+		<p class="title_header font_m">내정보</p>
+		<a href="javascript:void(0);" onclick="$.tmpSave('home')" class="btn_home">
+			<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/home.png" width="33" height="31" alt="홈으로">
+		</a>
+	<span id="connectionStatus" style="position:absolute; top:-5px; left:-3px;">&nbsp;<b><font color="red" size="2">OO</font></b></span></header>	<a name="myInfo"></a>
+	<div class="plofile_wrap">
+		<form name="fmate" id="fmate" method="post" onsubmit="return false;">
+		<input type="hidden" name="flagUpdate" id="flagUpdate" value="">
+		<input type="hidden" name="insertMode" id="insertMode" value="modify">
+		<input type="hidden" name="memNo" id="memNo" value="">
+		<div id="matchMemImgInfo"></div>
+        <!--20170821 추가-->
+        <div class="count_c">
+			 여보야에서 2016년 11월 21일(집계시작일) 이후
+            <br /><span>1,234</span> 분이 결혼상대를 만났습니다.
+		</div>
+        <!--//20170821 추가-->
+		<div class="hope_partner font_b">
+			 내정보 입력
+		</div>
+    <div class="select_box_01">
+      <div class="select_title_box_01 font_b select_color text_align_center">성혼유형</div>
+      <div>
+        <span>
+					<div class="select_radio_hope">
+												<p class="radio_btn_hope font_m" style="margin-left:3%">
+							<input type="radio" name="mateSlct" id="radio_msg02" class="msg_radio" value="w" checked="">
+							<span> 결혼</span>
+						</p>
+											</div>
+        </span>
+      </div>
+    </div>
+		<div id="secretInfo">
+			<div class="tit_txt font_m">※ <img src="http://image.yeoboya.com/imgs/new_wedding/prime/img_prime_secret03.png" width="34" height="14" alt="숨김정보"> 는 <span style="color:#e0ff75;">별명</span>님의 가려지는 정보입니다.</div>
+		</div>
+		<input type="hidden" name="mem_nick" id="mem_nick" value="김영희">
+    <div class="select_box_wrap">
+      <div class="padding_wrap">
+				<div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">이름</div>
+          <div class="select_dropbox_name">
+												<input type="hidden" name="memLastName" id="memLastName" value="김">
+						<input type="hidden" name="memFirstName" id="memFirstName" value="영희">
+						<div id="memFullName" class="name_col_txt font_r select_color_03" data-val="set">
+						김영희						</div>
+												<div class="check_box_name">
+							<input name="memNameSlct" type="checkbox" class="name_check" id="memNameSlct" checked="" value="y">
+							<label class="css-label_01 font_r" for="memNameSlct"><span class="name_check_txt font_r">성씨만표기</span></label>
+						</div>
+					</div>
+        </div>
+
+				<!--나이 생월-->
+				<div class="select_box_02">
+					<div class="select_title_box_02 font_b select_li_color text_align_left">나이</div>
+					<input type="hidden" name="memBirthYear" id="memBirthYear" value="1973">
+					<div class="month_col_txt font_r select_color_02">1973년</div>
+					<select class="select_dropbox_month font_r" id="memBirthMonth" name="memBirthMonth">
+												<option value="1" selected="" id="clickMonth" style="color:black;">1월</option>
+												<option value="2" id="clickMonth" style="color:black;">2월</option>
+												<option value="3" id="clickMonth" style="color:black;">3월</option>
+												<option value="4" id="clickMonth" style="color:black;">4월</option>
+												<option value="5" id="clickMonth" style="color:black;">5월</option>
+												<option value="6" id="clickMonth" style="color:black;">6월</option>
+												<option value="7" id="clickMonth" style="color:black;">7월</option>
+												<option value="8" id="clickMonth" style="color:black;">8월</option>
+												<option value="9" id="clickMonth" style="color:black;">9월</option>
+												<option value="10" id="clickMonth" style="color:black;">10월</option>
+												<option value="11" id="clickMonth" style="color:black;">11월</option>
+												<option value="12" id="clickMonth" style="color:black;">12월</option>
+										</select>
+		    </div>
+
+		    <!--// 20161014 kossy2k[프라임정보추가] 형제관계 //-->
+				<a name="brothersSisters" id="brothersSisters"></a>
+						    <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="형제관계" id="broTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_sibling_01 focusBack" id="focusBro">
+							<span>
+								<input type="hidden" name="brothers" id="brothers" value="6">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('몇남','brothers','brothers');" class="select_ment font_r slctColor">
+									<span id="brothersText">6남</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+
+						<div class="select_dropbox_sibling_01 focusBack" id="focusSis">
+							<span>
+								<input type="hidden" name="sisters" id="sisters" value="1">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('몇녀','sisters','sisters');" class="select_ment font_r slctColor">
+									<span id="sistersText">1녀</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+
+						<div class="select_dropbox_sibling_03 focusBack" id="focusXth">
+							<span>
+								<input type="hidden" name="xth" id="xth" value="7">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('몇째','xth','xth');" class="select_ment font_r slctColor">
+									<span id="xthText">7째</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+
+		    </div>
+
+		    <!-- 고향 //-->
+		    <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="고향" id="homeTownTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_child_01 focusBack" id="focusTownL">
+							<span>
+								<input type="hidden" name="mateHomeTownL" id="mateHomeTownL" value="g">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('고향','mateHomeTownL','loc');" class="select_ment font_r slctColor">
+									<span id="mateHomeTownLText">대전</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+						<div class="select_dropbox_child_02 focusBack select_box_disable" id="focusTownS">
+							<span>
+								<input type="hidden" name="mateHomeTownS" id="mateHomeTownS" value="g02">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('고향','mateHomeTownS','sloc');" class="select_ment font_r slctColor">
+									<span id="mateHomeTownSText">동구</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+		    </div>
+
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="직업" id="jobTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusJob">
+            <span>
+							<input type="hidden" name="mateJob" id="mateJob" value="0">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('직업','mateJob','job');" class="select_ment font_r slctColor">
+								<span id="mateJobText">기타</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+				<div><!--직업명입력-->
+					<span>
+<!-- 						<input type="hidden" name="mateJobDetail" id="nameJob" value="사무원"> -->
+						<div class="select_out_box2" style="margin-bottom:5px;">
+							<input type="text" onclick="$.openProfileAttr('직업','mateJob','job');" class="now_job_txta" style="font-size:14px;" name="mateJobDetail" id="nameJob" value="사무원" placeholder="직업명을 입력하세요!" readonly>
+<!-- 							<textarea href="javascript:void(0);" onclick="$.openProfileAttr('직업','mateJob','job');" class="now_job_txta" style="font-size:14px;" name="job" id="job" readonly>사무원</textarea> -->
+<!-- 							<textarea href="javascript:void(0);" onclick="$.popJobName();" class="now_job_txta" style="font-size:14px;" name="job" id="job">사무원</textarea> -->
+						</div>
+					</span>
+				</div>
+
+		    <!--// 20161014 kossy2k[프라임정보추가] 유학경험 //-->
+				<a name="studyAbroad"></a>
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="유학경험" id="studyTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusAborad">
+            <span>
+							<input type="hidden" name="studyAbroad" id="studyAbroad" value="n">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('유학경험','studyAbroad','studyAbroad');" class="select_ment font_r slctColor">
+								<span id="studyAbroadText">해외 유학 경험 없음</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+
+		    <!--// 20161024 kossy2k[프라임정보추가2 : 수정] 학력/연봉 //-->
+								<div class="select_box_02">
+					<div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="학력/연봉" id="salaryTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_child_05 focusBack" id="focusCareer">
+							<span>
+								<input type="hidden" name="mateCareer" id="mateCareer" value="6">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('학력','mateCareer','school');" class="select_ment font_r slctColor">
+									<span id="mateCareerText">대학(2년)졸</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+						<div class="select_dropbox_child_06 focusBack" id="focusSalary">
+							<span>
+								<input type="hidden" name="mateAnnSalary" id="mateAnnSalary" value="10">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('연봉','mateAnnSalary','salary');" class="select_ment font_r slctColor">
+									<span id="mateAnnSalaryText">1억 이상</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+
+		    <!--// 20161014 kossy2k[프라임정보추가] 보유재산 //-->
+								<a name="possessProperty"></a>
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="보유재산" id="propertyTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusProperty">
+            <span>
+							<input type="hidden" name="memProperty" id="memProperty" value="h">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('보유재산','memProperty','memProperty');" class="select_ment font_r slctColor">
+								<span id="memPropertyText">10억 이상</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+
+		    <!--// 20161014 kossy2k[프라임정보추가] 외국어능력 //-->
+				<!--
+				<a name="languageSkills"></a>
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="외국어능력" id="foreignTxt" class="selTxt" readonly="readonly">
+					</div>
+          <div class="select_dropbox focusBack" id="focusForeignL">
+            <span>
+							<input type="hidden" name="foreignL" id="foreignL" value="">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('외국어능력','foreignL','foreignL');" class="select_ment font_r">
+								<span id="foreignLText">선택하세요</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+				-->
+
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="스타일" id="styleTxt" class="selTxt" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusStyle">
+            <span>
+							<input type="hidden" name="mateStyle" id="mateStyle" value="12">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('스타일','mateStyle','style');" class="select_ment font_r slctColor">
+								<span id="mateStyleText">시크함</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+
+				<a name="myHeight"></a>
+		    <!--// 20161014 kossy2k[프라임정보추가] 패션스타일 //-->
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="패션스타일" id="fashionTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusFashion">
+            <span>
+							<input type="hidden" name="fashionStyle" id="fashionStyle" value="11,19,">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('패션스타일','fashionStyle','fashionStyle');" class="select_ment font_r slctColor">
+								<span id="fashionStyleText" class="strOver">청담동 며느리룩,감각적인 모던시크룩</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+
+		    <!--// 20161024 kossy2k[프라임정보추가2 : 수정] 키/몸무게 //-->
+				<div class="select_box_02">
+					<div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="키/몸무게" id="heightTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_child_05 focusBack" id="focusHeight">
+							<span>
+								<input type="hidden" name="mateHeight" id="mateHeight" value="176">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('키','mateHeight','height');" class="select_ment font_r slctColor">
+									<span id="mateHeightText">176㎝</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+						<div class="select_dropbox_child_06 focusBack" id="focusWeight">
+							<span>
+								<input type="hidden" name="mateWeight" id="mateWeight" value="53">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('몸무게','mateWeight','weight');" class="select_ment font_r slctColor">
+									<span id="mateWeightText">53㎏</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+
+
+		    <!--// 20161024 kossy2k[프라임정보추가2] 흡연경력 //-->
+								<a name="mySmoke"></a>
+				<div class="select_box_02" style="display:none;">
+					<div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="흡연경력" id="smokeTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_child_05 focusBack" id="focusSmokeTypeL">
+							<span>
+								<input type="hidden" name="smokeTypeL" id="smokeTypeL" value="">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('흡연경력','smokeTypeL','smokeTypeL');" class="select_ment font_r">
+									<span id="smokeTypeLText">선택하세요</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+						<div class="select_dropbox_child_06 focusBack" id="focusSmokeTypeS" style="display:none;">
+							<span>
+								<input type="hidden" name="smokeTypeS" id="smokeTypeS" value="">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('흡연경력','smokeTypeS','smokeTypeS');" class="select_ment font_r">
+									<span id="smokeTypeSText">선택하세요</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+
+		    <!--// 20161024 kossy2k[프라임정보추가2] 음주량 //-->
+								<a name="myAlcohol"></a>
+				<div class="select_box_02">
+					<div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="음주량" id="alcoholTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_child_05 focusBack" id="focusAlcohol">
+							<span>
+								<input type="hidden" name="alcohol" id="alcohol" value="a">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('음주량','alcohol','alcohol');" class="select_ment font_r slctColor">
+									<span id="alcoholText">음주 안함</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+						<div class="select_dropbox_child_06 focusBack" id="focusAlcoholType" style="display:none;">
+							<span>
+								<input type="hidden" name="alcoholType" id="alcoholType" value="">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('음주량','alcoholType','alcoholType');" class="select_ment font_r">
+									<span id="alcoholTypeText">선택하세요</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+
+		    <!--// 20161024 kossy2k[프라임정보추가2] 건강관리 //-->
+								<div class="select_box_02">
+					<div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="건강관리" id="healthTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_child_05 focusBack" id="focusHealth">
+							<span>
+								<input type="hidden" name="health" id="health" value="d">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('건강관리','health','health');" class="select_ment font_r slctColor">
+									<span id="healthText">주 3회 이상</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+						<div class="select_dropbox_child_06 focusBack" id="focusHealthType" style="">
+							<span>
+								<input type="hidden" name="healthType" id="healthType" value="c">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('건강관리','healthType','healthType');" class="select_ment font_r slctColor">
+									<span id="healthTypeText">달리기수준</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+
+		    <!--// 20161024 kossy2k[프라임정보추가2 : 수정] 혈액형/종교 //-->
+				<div class="select_box_02">
+					<div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="혈액형/종교" id="bloodTxt" class="selTxt prime_mark_01" readonly style="font-size:13px;">
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_child_05 focusBack" id="focusBlood">
+							<span>
+								<input type="hidden" name="mateBlood" id="mateBlood" value="4">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('혈액형','mateBlood','blood');" class="select_ment font_r slctColor">
+									<span id="mateBloodText">AB형</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+						<div class="select_dropbox_child_06 focusBack" id="focusReligion">
+							<span>
+								<input type="hidden" name="mateReligion" id="mateReligion" value="5">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('종교','mateReligion','religion');" class="select_ment font_r slctColor">
+									<span id="mateReligionText">무교</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+
+
+		    <!--// 20161024 kossy2k[프라임정보추가2] 반려동물 //-->
+				
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="차량정보" id="carTxt" class="selTxt" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusCar">
+            <span>
+							<input type="hidden" name="mateCar" id="mateCar" value="9">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('차량정보','mateCar','car');" class="select_ment font_r slctColor">
+								<span id="mateCarText">없음</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+
+        <a name="digamy"></a>
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="성격" id="charcTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusCharc">
+            <span>
+							<input type="hidden" name="mateCharc" id="mateCharc" value="2,17,18,">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('성격','mateCharc','character');" class="select_ment font_r slctColor">
+								<span id="mateCharcText" class="strOver">도도함,터프함,왕고집</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="취미" id="hobbyTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusHobby">
+            <span>
+							<input type="hidden" name="mateHobby" id="mateHobby" value="2,6,">
+							<!-- 2,6, 체크박스 no-->
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('취미','mateHobby','hobby');" class="select_ment font_r slctColor">
+								<span id="mateHobbyText" class="strOver">애완동물,쇼핑</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+
+		    <!--// 20161014 kossy2k[프라임정보추가] 선호음식 //-->
+        <div class="select_box_02">
+          <div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="선호음식" id="foodTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+          <div class="select_dropbox focusBack" id="focusFood">
+            <span>
+							<input type="hidden" name="favoriteFood" id="favoriteFood" value="1,2,6,7,">
+							<a href="javascript:void(0);" onclick="$.openProfileAttr('선호음식','favoriteFood','favoriteFood');" class="select_ment font_r slctColor">
+								<span id="favoriteFoodText" class="strOver">리소토,까르보나라,킹크랩,랍스타</span>
+								<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+							</a>
+            </span>
+          </div>
+        </div>
+
+				<!-- 자녀수 -->
+				<div class="select_box_02 mate_offspring remarry_box" style="display:none;">
+					<div class="select_title_box_02 font_b select_li_color text_align_left">
+						<input type="text" value="자녀수" id="chnumTxt" class="selTxt prime_mark_01" readonly>
+					</div>
+
+					<div class="select_dropbox_out">
+						<div class="select_dropbox_child_05 focusBack" id="focusOffspringM">
+							<span>
+								<input type="hidden" name="mateOffspring_m" id="mateOffspring_m" value="0">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('아들','mateOffspring_m','children');" class="select_ment font_r slctColor">
+									<span id="mateOffspring_mText">0명</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+						<div class="select_dropbox_child_06 focusBack" id="focusOffspringF">
+							<span>
+								<input type="hidden" name="mateOffspring_f" id="mateOffspring_f" value="0">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('딸','mateOffspring_f','children');" class="select_ment font_r slctColor">
+									<span id="mateOffspring_fText">0명</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+
+				</div>
+
+		    <!--// 20161014 kossy2k[프라임정보추가] 부모생존여부 //-->
+				<a name="myParents"></a>
+				<div class="select_box_al">
+					<div class="font_b text_align_left select_wd">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/icon_p.png" class="icon_wd" width="25" height="25" alt="부모님">
+						<span class="select_wd_tit">
+							<input type="text" value="부모님 살아계십니까?" id="parentsTxt" class="selTxt2 prime_mark_02" readonly style="width:150px">
+						</span>
+					</div>
+					<span>
+					  <div class="wd_radio">
+						  <p class="radio_hope font_m"><span><input type="radio" name="parents" id="parentsa" class="wd_radio01 backColorOut2 selRadio" value="a" checked="checked"><label for="parentsa" class="radio_match02">예(모두) </label></span></p><p class="radio_hope font_m"><span><input type="radio" name="parents" id="parentsb" class="wd_radio01 backColorOut2 selRadio" value="b"><label for="parentsb" class="radio_match02">아버지만 </label></span></p><p class="radio_hope font_m"><span><input type="radio" name="parents" id="parentsc" class="wd_radio01 backColorOut2 selRadio" value="c"><label for="parentsc" class="radio_match02">어머니만 </label></span></p><p class="radio_hope font_m"><span><input type="radio" name="parents" id="parentsd" class="wd_radio01 backColorOut2 selRadio" value="d"><label for="parentsd" class="radio_match02">아니오(작고) </label></span></p>							<script type="text/javascript">
+								$('input:radio[name="parents"]:input[value="a"]').attr("checked", true);
+						  </script>
+					  </div>
+				  </span>
+				</div>
+				
+				<!-- 이혼절차 -->
+				<div class="select_box_wd divorce_rslt remarry_box" style="display:none;" "="">
+					<div class="font_b text_align_left select_wd">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/icon_re.png" class="icon_wd" width="25" height="25" alt="재혼">
+						<span class="select_wd_tit">
+							<input type="text" value="이혼절차는 깔끔하게 마무리 되셨나요?" id="divorceTxt" class="selTxt2" readonly style="width:223px">
+						</span>
+					</div>
+					<span>
+					  <div class="wd_radio">
+						  <p class="radio_hope font_m"><span><input type="radio" name="divorceRslt" id="radio_re_01" class="wd_radio02 selRadio" value="1"><label for="radio_re_01" class="radio_match03">예</label></span></p><p class="radio_hope font_m"><span><input type="radio" name="divorceRslt" id="radio_re_02" class="wd_radio02 selRadio" value="2"><label for="radio_re_02" class="radio_match03">혼인신고 안했음</label></span></p><p class="radio_hope font_m"><span><input type="radio" name="divorceRslt" id="radio_re_03" class="wd_radio02 selRadio" value="3"><label for="radio_re_03" class="radio_match03">사별</label></span></p>							<script type="text/javascript">
+								$('input:radio[name="divorceRslt"]:input[value=""]').attr("checked", true);
+						  </script>
+					  </div>
+				  </span>
+				</div>
+
+
+		    <!--// 20161014 kossy2k[프라임정보추가] 이혼(사별) 연도 //-->
+								<a name="myDivorce"></a>
+				<div class="select_box_di divorce_date remarry_box" style="display:none;">
+					<div class="font_b text_align_left select_wd">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/icon_day.png" class="icon_wd" width="25" height="25" alt="사별기간">
+						<span class="select_wd_tit">
+							<input type="text" value="이혼(사별) 연도" id="divorceYTxt" class="selTxt2 prime_mark_03" readonly style="width:102px">
+						</span>
+						<div class="select_dropbox_child_04 focusBack" id="focusDivorce">
+							<span>
+								<input type="hidden" name="divorceDate" id="divorceDate" value="">
+								<a href="javascript:void(0);" onclick="$.openProfileAttr('이혼(사별) 연도','divorceDate','divorceDate');" class="select_ment font_r">
+									<span id="divorceDateText">선택하세요</span>
+									<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+
+
+		    <!--// 20161014 kossy2k[프라임정보추가] 자녀양육 여부 //-->
+								<a name="myChildRaise"></a>
+				<div id="bringUpBox" class="select_box_br remarry_box" style="display:none;">
+					<div class="font_b text_align_left select_wd">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/icon_baby.png" class="icon_wd" width="25" height="25" alt="결혼">
+						<span class="select_wd_tit">
+							<input type="text" value="자녀 양육은 누가 하나요?" id="bringUpTxt" class="selTxt2 prime_mark_02" readonly style="width:146px">
+						</span>
+					</div>
+					<span>
+					  <div class="wd_radio">
+						  <p class="radio_hope font_m"><span><input type="radio" name="bringUp" id="bringUpa" class="wd_radio01 backColorOut2 selRadio" value="a"><label for="bringUpa" class="radio_match02">나 </label></span></p><p class="radio_hope font_m"><span><input type="radio" name="bringUp" id="bringUpb" class="wd_radio01 backColorOut2 selRadio" value="b"><label for="bringUpb" class="radio_match02">전 배우자 </label></span></p><p class="radio_hope font_m"><span><input type="radio" name="bringUp" id="bringUpc" class="wd_radio01 backColorOut2 selRadio" value="c"><label for="bringUpc" class="radio_match02">가족/친척 </label></span></p><p class="radio_hope font_m"><span><input type="radio" name="bringUp" id="bringUpz" class="wd_radio01 backColorOut2 selRadio" value="z"><label for="bringUpz" class="radio_match02">기타 </label></span></p>							<script type="text/javascript">
+								$('input:radio[name="bringUp"]:input[value=""]').attr("checked", true);
+						  </script>
+					  </div>
+				  </span>
+				</div>
+
+				<!-- 자기소개글 -->
+				<a name="myConts"></a>
+				<div class="select_box_03">
+					<p>
+					</p><div class="select_wd font_b select_li_color text_align_left">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/icon_pr.png" class="icon_wd" width="25" height="25" alt="자기소개">자기소개
+						<span class="font_m id_age_txt id_woman_color" style="color:gray">(한글 30자~300자까지,&nbsp;</span>
+						<span class="font_m id_age_txt id_woman_color" style="color:gray; font-weight:bold;">수정횟수&nbsp;:&nbsp;0회)</span>
+					</div>
+					<div class="select_wd font_b select_li_color text_align_left">
+						<span class="font_m id_age_txt id_woman_color" style="color:red">※ 주의 - 연락처, 카톡(SNS) 아이디 작성 및 요구시 이용 정지됨</span>
+					</div>
+					<p></p>
+					<textarea class="text_box font_r" name="mateConts" id="mateConts" placeholder="꼭! 결혼에 적합한 자기소개글을 등록해주세요~광고글, SNS아이디(카톡), 전화번호 등 결혼과 관련없는 글은 관리자가 삭제합니다.">안녕하세요. 결혼하실분찾습니다. 재혼말고 결혼하실분구하고있습니다.</textarea>
+				</div>
+		
+		    <!--// 20161014 kossy2k[프라임정보추가] 가족소개글 //-->
+
+				<a name="myFamily"></a>
+				<div class="select_box_03">
+					<p>
+					</p><div class="select_wd font_b select_li_color text_align_left">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/icon_fm.png" class="icon_wd" width="25" height="25" alt="가족소개">
+						<span id="familyTxt" class="prime_mark_01" style="display:inline-block; width:70px;">가족소개</span>
+						<span class="font_m id_age_txt id_woman_color" style="color:gray">(한글 30자~300자까지,&nbsp;</span>
+						<span class="font_m id_age_txt id_woman_color" style="color:gray; font-weight:bold;">수정횟수&nbsp;:&nbsp;0회)</span>
+					</div>
+					<p></p>					
+					<textarea class="text_box_fam font_r backColorOut2" name="familyConts" id="familyConts" placeholder="가족구성/가족들이 하는 일/가족에 관한 이야기 등 당신의 가족에 대해 알려주세요!">부모님 모두 잘 살아계시고 7째 딸입니다. 입소문듣고가입했어요</textarea>
+				</div>					
+				
+				
+				<a name="myPoint"></a>
+				<div class="select_box_03">
+					<div class="select_wd font_b select_li_color text_align_left">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/prime/icon_score.png" class="icon_wd" width="25" height="25" alt="점수">
+						<span id="myPointTxt" class="prime_mark_05">배우자로서 나는 몇점 인가요?</span>
+						<select name="myPointCont" id="myPointCont" class="sel_box_min" data-title="배우자로서 나는 몇점 인가요?">
+							<option value="">선택</option>
+						  <option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60" selected="">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option><option value="100">100</option>						  
+						</select>
+                        <p style="margin-bottom:18px;"></p>
+                    </div>
+				</div>
+
+				<!-- 결혼 언제할꺼야 추가 #819 -->
+				<a name="wAnchor"></a>
+				<div class="select_box_wd">
+					<div class="font_b text_align_left select_wd">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/icon_wd.png" class="icon_wd" width="25" height="25" alt="결혼">
+						<span class="select_wd_tit">
+							<input type="text" value="언제 결혼할 계획이세요?" id="webPlanTxt" class="selTxt2" readonly style="width:143px">
+<!-- 							<span id="webPlanTxt" class="selTxt2" >언제 결혼할 계획이세요?</span> -->
+						</span>
+					</div>
+					<span>
+					  <div class="wd_radio">
+						  <p class="radio_hope font_m"><span><input type="radio" name="wedPlan" id="radio_whenMarry3m" class="wd_radio01 selRadio" value="3m"><label for="radio_whenMarry3m" class="radio_match02">3개월 내</label></span></p><p class="radio_hope font_m"><span><input type="radio" name="wedPlan" id="radio_whenMarry6m" class="wd_radio01 selRadio" value="6m"><label for="radio_whenMarry6m" class="radio_match02">6개월 내</label></span></p><p class="radio_hope font_m"><span><input type="radio" name="wedPlan" id="radio_whenMarry1y" class="wd_radio01 selRadio" value="1y" checked="checked"><label for="radio_whenMarry1y" class="radio_match02">1년 내</label></span></p><p class="radio_hope font_m"><span><input type="radio" name="wedPlan" id="radio_whenMarrya" class="wd_radio01 selRadio" value="a"><label for="radio_whenMarrya" class="radio_match02">언제든지 </label></span></p>							<script type="text/javascript">
+								$('input:radio[name="wedPlan"]:input[value="1y"]').attr("checked", true);
+						  </script>
+					  </div>
+				  </span>
+				</div>
+
+		    <!--// 20161024 kossy2k[프라임정보추가] 결혼후 자녀계획 //-->
+				<a name="myBabyPlan"></a>
+				<div class="select_box_preg ">
+					<div class="font_b text_align_left select_wd">
+						<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/icon_preg.png" class="icon_wd" width="25" height="25" alt="자녀계획">
+						<span class="select_wd_tit">
+ 							<input type="text" value="결혼 후 자녀 계획을 갖고 계신가요?" id="babyPlanTxt" class="selTxt2 prime_mark_04" readonly style="width:235px">
+<!--  							<span  id="babyPlanTxt" class="selTxt2 prime_mark_04">결혼 후 자녀 계획을 갖고 계신가요?</span> -->
+						</span>
+					</div>
+					<span>
+					  <div class="wd_radio">
+						  <p class="radio_hope font_m babyPlan_w"><span><input type="radio" name="babyPlan" id="radio_babyPlana" class="wd_radio01 backColorOut2 selRadio" value="a" checked="checked"><label for="radio_babyPlana" class="radio_match02">아니요</label></span></p><p class="radio_hope font_m babyPlan_w"><span><input type="radio" name="babyPlan" id="radio_babyPlanb" class="wd_radio01 backColorOut2 selRadio" value="b"><label for="radio_babyPlanb" class="radio_match02">예</label></span></p><p class="radio_hope font_m babyPlan_w"><span><input type="radio" name="babyPlan" id="radio_babyPlanc" class="wd_radio01 backColorOut2 selRadio" value="c"><label for="radio_babyPlanc" class="radio_match02">배우자와 함께 결정</label></span></p><p class="radio_hope font_m babyPlan_r" style="display:none"><span><input type="radio" name="babyPlan" id="radio_babyPland" class="wd_radio01 backColorOut2 selRadio" value="d"><label for="radio_babyPland" class="radio_match02">나이관계로 계획없음</label></span></p>					  </div>
+				  </span>
+				</div>
+
+
+
+				<!-- 희망 배우자 정보-->
+				<a name="myWant"></a>
+        <div class="hope_partner font_b">
+          희망 배우자 정보
+        </div>
+        <div class="select_box_wrap">
+          <div class="padding_wrap">
+		  <input type="hidden" name="wishAge" id="wishAge" value="">
+		  <!--
+            <div class="select_box_02">
+              <div class="select_title_box_02 font_b select_li_color text_align_left">희망나이</div>
+              <div class="select_dropbox">
+								<span>
+									<input type="hidden" name="wishAge" id="wishAge" value="">
+									<a href="javascript:void(0);" onclick="$.openProfileAttr('희망나이','wishAge','age');" class="select_ment font_r">
+										<span id="wishAgeText">상관없음</span>
+										<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+									</a>
+								</span>
+              </div>
+            </div>
+			-->
+            <div class="select_box_02">
+              <div class="select_title_box_02 font_b select_li_color text_align_left">
+					<input type="text" value="희망지역" id="wishLocTxt" class="selTxt prime_mark_01" readonly>
+			  </div>
+              <div class="select_dropbox focusBack" id="focusWishLoc">
+								<span>
+									<input type="hidden" name="wishLoc" id="wishLoc" value="z,">
+									<a href="javascript:void(0);" onclick="$.openProfileAttr('희망지역','wishLoc','wishLoc');" class="select_ment font_r slctColor">
+										<span id="wishLocText">세종</span>
+										<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+									</a>
+								</span>
+              </div>
+            </div>
+            <div class="select_box_02">
+              <div class="select_title_box_02 font_b select_li_color text_align_left">
+					<input type="text" value="희망종교" id="chnumTxt" class="selTxt prime_mark_01" readonly>
+			  </div>
+              <div class="select_dropbox">
+								<span>
+									<input type="hidden" name="wishReligion" id="wishReligion" value="9">
+									<a href="javascript:void(0);" onclick="$.openProfileAttr('희망종교','wishReligion','religion');" class="select_ment font_r slctColor">
+										<span id="wishReligionText">힌두교</span>
+										<span class="arrow_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/arrow_dropdown.jpg" width="11" height="6" alt=""></span>
+									</a>
+								</span>
+              </div>
+            </div>
+
+						<div class="hope_partner font_b">
+							 본인소개사진 (최대20장까지)
+						</div>
+						<div class="myphoto_box">
+							<span class="photo_save_btn">
+								<a href="javascript:void(0);" onclick="$.addPhoto();" class="main_photo_btn font_m">사진등록</a>
+							</span>
+							<span class="myphoto_ment font_r">
+								<span style="color:red;">본인사진만 등록가능</span>하며, 관리자 인증 후<br>
+								대표사진으로 설정하실 수 있습니다.<br>
+								<span style="letter-spacing:-1px;font-size:12px;color:#ff3333;line-height:22px;">※본인 식별이 어려운 경우 대표사진 인증불가</span><br>
+								<span style="letter-spacing:-1px;font-size:12px;color:#ff3333;line-height:8px;">※이미지 도용 및 불건전한 사진은 삭제처리</span>
+							</span>
+						</div>
+						<div class="info_text">
+							<div class="info_txt_list2">
+								<div class="info_pr_photo_box font_m">
+									<p class="save_photo font_m">
+										총 0장 ( <span style="color:#4f6dc1">인증사진 0장</span> / <span style="color:#818181">소개사진 0장</span> )
+									</p>
+									<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/no_photo.jpg" class="no_photo" width="118" height="83" alt="등록된 포토가 없습니다">
+								</div>
+							</div>
+						</div>
+						<!-- 20160225 가입경로 추가 / cuteohj-->
+						<div class="hope_partner font_b">가입경로</div>
+												<input type="hidden" name="joinSlct" id="joinSlct" value="i">
+						<div class="select_joinway_box">
+							<div class="select_joinway">
+								<span class="select_ment font_r">입소문 듣고 가입했어요!</span>
+							</div>
+						</div>
+												<input type="hidden" name="hpAuthChk" id="hpAuthChk" value="1">
+						
+
+						<div style="height:48px"></div>
+			<div id="sendBtnOut">
+								<a href="javascript:void(0);" onclick="$.fmate_submit();" id="sendBtn" class="btn_send_bottom font_m btn_send_bottom_mobile ">프로필등록하기</a>
+							</div>
+          </div>
+        </div>
+      </div>
+    </div>
+		</form><!-- form -->
+  </div>
+</div>
+<!-- foot navigation -->
+<div id="profileAttr">
+	<div class="hd">
+		<a href="javascript:void(0);" onclick="$.closeProfileAttr(); history.back();" class="btn_back"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/btn_back.jpg" width="30" height="31" alt="뒤로">
+		<p class="title_header font_m" id="profileAttrTitle">&nbsp;</p>
+		</a>
+	</div>
+	<div id="profileSlct" class="slct"></div>
+	<div class="ft"></div>
+</div>
+<!-- profileAttr -->
+<script>
+(function($) {
+	var wrapHeight = $('#wrap').height(); // copyright 제외한 문서의 높이
+	var winHeight = window.innerHeight; // 브라우저의 크기
+	var hpAuthView = '';
+
+	$(window).scroll(function(){
+		if($.cookie('siteLayout') == 'w'){
+			var scrollTop = $(window).scrollTop();
+			var nowHeight = scrollTop + winHeight;
+			if(nowHeight > wrapHeight){
+				$('#sendBtn').removeClass('btn_send_bottom_pc');
+				$('#sendBtn').addClass('btn_send_bottom_pc2');
+			}else{
+				$('#sendBtn').removeClass('btn_send_bottom_pc2');
+				$('#sendBtn').addClass('btn_send_bottom_pc');
+			}
+		}
+	});
+
+
+	$(window).scroll(function(){
+		var stPos = ($.cookie('siteLayout') == 'w') ? '205' : '133';
+		var widthWrap = ($.cookie('siteLayout') == 'w') ? $('.content_wrap').width()+'px' : '100%';
+		if($(window).scrollTop() > stPos) {
+			if($isAppIOS) {
+				//$('#secretInfo').css({'position':'fixed','z-index':999,'top':0,'width':widthWrap}).children('.tit_txt').css({'margin-top':'0'});
+			}else{
+				$('#secretInfo').css({'position':'fixed','z-index':999,'top':0,'width':widthWrap}).children('.tit_txt').css({'margin-top':'0'});
+			}
+		}
+		else {
+			$('#secretInfo').removeAttr('style').children('.tit_txt').removeAttr('style');
+		}
+	});
+
+	if($isAppIOS) {
+		$('input,textarea,select').on({
+			'focus' : function(){ $('#sendBtn,#secretInfo').hide(); },
+			'blur' : function(){ $('#sendBtn,#secretInfo').show(); },
+		});
+	}
+
+	// 중매인 사진처리
+	//   - insert : 아직 중매회원이 만들어지지 않은상태에서는 중매회원의 회원번호를 알수 없으므로 사진등록버튼을 눌렀을 때 기존 사진처리가 안됨
+	//   - modify : 중매회원 수정모드에서는 이제 중매회원번호를 알고 있으므로 기존 사진등록처리 루틴을 태울 수 있음. 단, gCCV를 쓰지 않고 중매회원번호를 넘겨줘서 그걸로 처리 해야 함.
+	var insertMode = 'modify';
+	var isMatchInsert = '';
+	var isMatchModify = '';
+	var isr = null;
+	var $arCommonCode = {"loc":{"i":"\uc11c\uc6b8","b":"\uacbd\uae30","k":"\uc778\ucc9c","g":"\ub300\uc804","f":"\ub300\uad6c","h":"\ubd80\uc0b0","e":"\uad11\uc8fc","z":"\uc138\uc885","j":"\uc6b8\uc0b0","p":"\ucda9\ubd81","o":"\ucda9\ub0a8","n":"\uc804\ubd81","l":"\uc804\ub0a8","d":"\uacbd\ubd81","c":"\uacbd\ub0a8","a":"\uac15\uc6d0","m":"\uc81c\uc8fc","y":"\ubd81\ud55c","q":"\ud574\uc678"},"sloc":{"i":{"i01":"\uac15\ub0a8\uad6c","i02":"\uac15\ub3d9\uad6c","i03":"\uac15\ubd81\uad6c","i04":"\uac15\uc11c\uad6c","i05":"\uad00\uc545\uad6c","i06":"\uad11\uc9c4\uad6c","i07":"\uad6c\ub85c\uad6c","i08":"\uae08\ucc9c\uad6c","i09":"\ub178\uc6d0\uad6c","i10":"\ub3c4\ubd09\uad6c","i11":"\ub3d9\ub300\ubb38\uad6c","i12":"\ub3d9\uc791\uad6c","i13":"\ub9c8\ud3ec\uad6c","i14":"\uc11c\ub300\ubb38\uad6c","i15":"\uc11c\ucd08\uad6c","i16":"\uc131\ub3d9\uad6c","i17":"\uc131\ubd81\uad6c","i18":"\uc1a1\ud30c\uad6c","i19":"\uc591\ucc9c\uad6c","i20":"\uc601\ub4f1\ud3ec\uad6c","i21":"\uc6a9\uc0b0\uad6c","i22":"\uc740\ud3c9\uad6c","i23":"\uc885\ub85c\uad6c","i24":"\uc911\uad6c","i25":"\uc911\ub791\uad6c","i00":"\uae30\ud0c0"},"k":{"k01":"\uac15\ud654\uad70","k02":"\uacc4\uc591\uad6c","k03":"\ub0a8\uad6c","k04":"\ub0a8\ub3d9\uad6c","k05":"\ub3d9\uad6c","k06":"\ubd80\ud3c9\uad6c","k07":"\uc11c\uad6c","k08":"\uc5f0\uc218\uad6c","k09":"\uc639\uc9c4\uad70","k10":"\uc911\uad6c","k00":"\uae30\ud0c0"},"b":{"b01":"\uac00\ud3c9\uad70","b02":"\uace0\uc591\uc2dc \ub355\uc591\uad6c","b03":"\uace0\uc591\uc2dc \uc77c\uc0b0\ub3d9\uad6c","b04":"\uace0\uc591\uc2dc \uc77c\uc0b0\uc11c\uad6c","b05":"\uacfc\ucc9c\uc2dc","b06":"\uad11\uba85\uc2dc","b07":"\uad11\uc8fc\uc2dc","b08":"\uad6c\ub9ac\uc2dc","b09":"\uad70\ud3ec\uc2dc","b10":"\uae40\ud3ec\uc2dc","b11":"\ub0a8\uc591\uc8fc\uc2dc","b12":"\ub3d9\ub450\ucc9c\uc2dc","b13":"\ubd80\ucc9c\uc2dc \uc18c\uc0ac\uad6c","b14":"\ubd80\ucc9c\uc2dc \uc624\uc815\uad6c","b15":"\ubd80\ucc9c\uc2dc \uc6d0\ubbf8\uad6c","b16":"\uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c","b17":"\uc131\ub0a8\uc2dc \uc218\uc815\uad6c","b18":"\uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c","b19":"\uc218\uc6d0\uc2dc \uad8c\uc120\uad6c","b20":"\uc218\uc6d0\uc2dc \uc601\ud1b5\uad6c","b21":"\uc218\uc6d0\uc2dc \uc7a5\uc548\uad6c","b22":"\uc218\uc6d0\uc2dc \ud314\ub2ec\uad6c","b23":"\uc2dc\ud765\uc2dc","b24":"\uc548\uc0b0\uc2dc \ub2e8\uc6d0\uad6c","b25":"\uc548\uc0b0\uc2dc \uc0c1\ub85d\uad6c","b26":"\uc548\uc131\uc2dc","b27":"\uc548\uc591\uc2dc \ub3d9\uc548\uad6c","b28":"\uc548\uc591\uc2dc \ub9cc\uc548\uad6c","b29":"\uc591\uc8fc\uc2dc","b30":"\uc591\ud3c9\uad70","b31":"\uc5ec\uc8fc\uad70","b32":"\uc5f0\ucc9c\uad70","b33":"\uc624\uc0b0\uc2dc","b34":"\uc6a9\uc778\uc2dc \uae30\ud765\uad6c","b35":"\uc6a9\uc778\uc2dc \uc218\uc9c0\uad6c","b36":"\uc6a9\uc778\uc2dc \ucc98\uc778\uad6c","b37":"\uc758\uc655\uc2dc","b38":"\uc758\uc815\ubd80\uc2dc","b39":"\uc774\ucc9c\uc2dc","b40":"\ud30c\uc8fc\uc2dc","b41":"\ud3c9\ud0dd\uc2dc","b42":"\ud3ec\ucc9c\uc2dc","b43":"\ud558\ub0a8\uc2dc","b44":"\ud654\uc131\uc2dc","b00":"\uae30\ud0c0"},"h":{"h01":"\uac15\uc11c\uad6c","h02":"\uae08\uc815\uad6c","h03":"\uae30\uc7a5\uad70","h04":"\ub0a8\uad6c","h05":"\ub3d9\uad6c","h06":"\ub3d9\ub798\uad6c","h07":"\ubd80\uc0b0\uc9c4\uad6c","h08":"\ubd81\uad6c","h09":"\uc0ac\uc0c1\uad6c","h10":"\uc0ac\ud558\uad6c","h11":"\uc11c\uad6c","h12":"\uc218\uc601\uad6c","h13":"\uc5f0\uc81c\uad6c","h14":"\uc601\ub3c4\uad6c","h15":"\uc911\uad6c","h16":"\ud574\uc6b4\ub300\uad6c","h00":"\uae30\ud0c0"},"f":{"f01":"\ub0a8\uad6c","f02":"\ub2ec\uc11c\uad6c","f03":"\ub2ec\uc131\uad70","f04":"\ub3d9\uad6c","f05":"\ubd81\uad6c","f06":"\uc11c\uad6c","f07":"\uc218\uc131\uad6c","f08":"\uc911\uad6c","f00":"\uae30\ud0c0"},"e":{"e01":"\uad11\uc0b0\uad6c","e02":"\ub0a8\uad6c","e03":"\ub3d9\uad6c","e04":"\ubd81\uad6c","e05":"\uc11c\uad6c","e00":"\uae30\ud0c0"},"g":{"g01":"\ub300\ub355\uad6c","g02":"\ub3d9\uad6c","g03":"\uc11c\uad6c","g04":"\uc720\uc131\uad6c","g05":"\uc911\uad6c","g00":"\uae30\ud0c0"},"j":{"j01":"\ub0a8\uad6c","j02":"\ub3d9\uad6c","j03":"\ubd81\uad6c","j04":"\uc6b8\uc8fc\uad70","j05":"\uc911\uad6c","j00":"\uae30\ud0c0"},"z":{"z01":"\uc138\uc885","z00":"\uae30\ud0c0"},"o":{"o01":"\uacc4\ub8e1\uc2dc","o02":"\uacf5\uc8fc\uc2dc","o03":"\uae08\uc0b0\uad70","o04":"\ub17c\uc0b0\uc2dc","o05":"\ub2f9\uc9c4\uc2dc","o06":"\ubcf4\ub839\uc2dc","o07":"\ubd80\uc5ec\uad70","o08":"\uc11c\uc0b0\uc2dc","o09":"\uc11c\ucc9c\uad70","o10":"\uc544\uc0b0\uc2dc","o11":"\uc608\uc0b0\uad70","o12":"\ucc9c\uc548\uc2dc \ub3d9\ub0a8\uad6c","o13":"\ucc9c\uc548\uc2dc \uc11c\ubd81\uad6c","o14":"\uccad\uc591\uad70","o15":"\ud0dc\uc548\uad70","o16":"\ud64d\uc131\uad70","o00":"\uae30\ud0c0"},"p":{"p01":"\uad34\uc0b0\uad70","p02":"\ub2e8\uc591\uad70","p03":"\ubcf4\uc740\uad70","p04":"\uc601\ub3d9\uad70","p05":"\uc625\ucc9c\uad70","p06":"\uc74c\uc131\uad70","p07":"\uc81c\ucc9c\uc2dc","p08":"\uc99d\ud3c9\uad70","p09":"\uc9c4\ucc9c\uad70","p10":"\uccad\uc8fc\uc2dc \uc0c1\ub2f9\uad6c","p11":"\uccad\uc8fc\uc2dc \uc11c\uc6d0\uad6c","p12":"\uccad\uc8fc\uc2dc \uccad\uc6d0\uad6c","p13":"\uccad\uc8fc\uc2dc \ud765\ub355\uad6c","p14":"\ucda9\uc8fc\uc2dc","p00":"\uae30\ud0c0"},"l":{"l01":"\uac15\uc9c4\uad70","l02":"\uace0\ud765\uad70","l03":"\uace1\uc131\uad70","l04":"\uad11\uc591\uc2dc","l05":"\uad6c\ub840\uad70","l06":"\ub098\uc8fc\uc2dc","l07":"\ub2f4\uc591\uad70","l08":"\ubaa9\ud3ec\uc2dc","l09":"\ubb34\uc548\uad70","l10":"\ubcf4\uc131\uad70","l11":"\uc21c\ucc9c\uc2dc","l12":"\uc2e0\uc548\uad70","l13":"\uc5ec\uc218\uc2dc","l14":"\uc601\uad11\uad70","l15":"\uc601\uc554\uad70","l16":"\uc644\ub3c4\uad70","l17":"\uc7a5\uc131\uad70","l18":"\uc7a5\ud765\uad70","l19":"\uc9c4\ub3c4\uad70","l20":"\ud568\ud3c9\uad70","l21":"\ud574\ub0a8\uad70","l22":"\ud654\uc21c\uad70","l00":"\uae30\ud0c0"},"n":{"n01":"\uace0\ucc3d\uad70","n02":"\uad70\uc0b0\uc2dc","n03":"\uae40\uc81c\uc2dc","n04":"\ub0a8\uc6d0\uc2dc","n05":"\ubb34\uc8fc\uad70","n06":"\ubd80\uc548\uad70","n07":"\uc21c\ucc3d\uad70","n08":"\uc644\uc8fc\uad70","n09":"\uc775\uc0b0\uc2dc","n10":"\uc784\uc2e4\uad70","n11":"\uc7a5\uc218\uad70","n12":"\uc804\uc8fc\uc2dc \ub355\uc9c4\uad6c","n13":"\uc804\uc8fc\uc2dc \uc644\uc0b0\uad6c","n14":"\uc815\uc74d\uc2dc","n15":"\uc9c4\uc548\uad70","n00":"\uae30\ud0c0"},"c":{"c01":"\uac70\uc81c\uc2dc","c02":"\uac70\ucc3d\uad70","c03":"\uace0\uc131\uad70","c04":"\uae40\ud574\uc2dc","c05":"\ub0a8\ud574\uad70","c06":"\ubc00\uc591\uc2dc","c07":"\uc0ac\ucc9c\uc2dc","c08":"\uc0b0\uccad\uad70","c09":"\uc591\uc0b0\uc2dc","c10":"\uc758\ub839\uad70","c11":"\uc9c4\uc8fc\uc2dc","c12":"\ucc3d\ub155\uad70","c13":"\ucc3d\uc6d0\uc2dc \ub9c8\uc0b0\ud569\ud3ec\uad6c","c14":"\ucc3d\uc6d0\uc2dc \ub9c8\uc0b0\ud68c\uc6d0\uad6c","c15":"\ucc3d\uc6d0\uc2dc \uc131\uc0b0\uad6c","c16":"\ucc3d\uc6d0\uc2dc \uc758\ucc3d\uad6c ","c17":"\ucc3d\uc6d0\uc2dc \uc9c4\ud574\uad6c","c18":"\ud1b5\uc601\uc2dc","c19":"\ud558\ub3d9\uad70","c20":"\ud568\uc548\uad70","c21":"\ud568\uc591\uad70","c22":"\ud569\ucc9c\uad70","c00":"\uae30\ud0c0"},"d":{"d01":"\uacbd\uc0b0\uc2dc","d02":"\uacbd\uc8fc\uc2dc","d03":"\uace0\ub839\uad70","d04":"\uad6c\ubbf8\uc2dc","d05":"\uad70\uc704\uad70","d06":"\uae40\ucc9c\uc2dc","d07":"\ubb38\uacbd\uc2dc","d08":"\ubd09\ud654\uad70","d09":"\uc0c1\uc8fc\uc2dc","d10":"\uc131\uc8fc\uad70","d11":"\uc548\ub3d9\uc2dc","d12":"\uc601\ub355\uad70","d13":"\uc601\uc591\uad70","d14":"\uc601\uc8fc\uc2dc","d15":"\uc601\ucc9c\uc2dc","d16":"\uc608\ucc9c\uad70","d17":"\uc6b8\ub989\uad70","d18":"\uc6b8\uc9c4\uad70","d19":"\uc758\uc131\uad70","d20":"\uccad\ub3c4\uad70","d21":"\uccad\uc1a1\uad70","d22":"\uce60\uace1\uad70","d23":"\ud3ec\ud56d\uc2dc \ub0a8\uad6c","d24":"\ud3ec\ud56d\uc2dc \ubd81\uad6c","d00":"\uae30\ud0c0"},"a":{"a01":"\uac15\ub989\uc2dc","a02":"\uace0\uc131\uad70","a03":"\ub3d9\ud574\uc2dc","a04":"\uc0bc\ucc99\uc2dc","a05":"\uc18d\ucd08\uc2dc","a06":"\uc591\uad6c\uad70","a07":"\uc591\uc591\uad70","a08":"\uc601\uc6d4\uad70","a09":"\uc6d0\uc8fc\uc2dc","a10":"\uc778\uc81c\uad70","a11":"\uc815\uc120\uad70","a12":"\ucca0\uc6d0\uad70","a13":"\ucd98\ucc9c\uc2dc","a14":"\ud0dc\ubc31\uc2dc","a15":"\ud3c9\ucc3d\uad70","a16":"\ud64d\ucc9c\uad70","a17":"\ud654\ucc9c\uad70","a18":"\ud6a1\uc131\uad70","a00":"\uae30\ud0c0"},"m":{"m01":"\uc11c\uadc0\ud3ec\uc2dc","m02":"\uc81c\uc8fc\uc2dc","m00":"\uae30\ud0c0"},"y":{"y01":"\ud3c9\uc591","y02":"\ub098\uc120","y03":"\ub0a8\ud3ec","y04":"\ud669\ud574\ub0a8\ub3c4","y05":"\ud669\ud574\ubd81\ub3c4","y06":"\ud3c9\uc548\ub0a8\ub3c4","y07":"\ud3c9\uc548\ubd81\ub3c4","y08":"\uc790\uac15\ub3c4","y09":"\uc591\uac15\ub3c4","y10":"\ud568\uacbd\ub0a8\ub3c4","y11":"\ud568\uacbd\ubd81\ub3c4","y12":"\uac15\uc6d0\ub3c4(\ubd81)","y00":"\uae30\ud0c0"},"q":{"qcn":"\uc911\uad6d","qus":"\ubbf8\uad6d","qjp":"\uc77c\ubcf8","qca":"\uce90\ub098\ub2e4","qau":"\ud638\uc8fc","qhk":"\ud64d\ucf69","qvn":"\ubca0\ud2b8\ub0a8","qnz":"\ub274\uc9c8\ub79c\ub4dc","qtw":"\ub300\ub9cc","qbr":"\ube0c\ub77c\uc9c8","qmm":"\ubbf8\uc580\ub9c8","qph":"\ud544\ub9ac\ud540","qgb":"\uc601\uad6d","qde":"\ub3c5\uc77c","qgh":"\uac00\ub098","qga":"\uac00\ubd09","qgy":"\uac00\uc774\uc544\ub098","qgm":"\uac10\ube44\uc544","qgp":"\uacfc\ub378\ub85c\ud504","qgt":"\uacfc\ud14c\ub9d0\ub77c","qgu":"\uad0c","qva":"\uad50\ud669\uccad","qgd":"\uadf8\ub808\ub098\ub2e4","qge":"\uadf8\ub8e8\uc9c0\uc544","qgr":"\uadf8\ub9ac\uc2a4","qgl":"\uadf8\ub9b0\ub79c\ub4dc","qgw":"\uae30\ub124\ube44\uc18c","qgn":"\uae30\ub2c8","qna":"\ub098\ubbf8\ube44\uc544","qnr":"\ub098\uc6b0\ub974","qng":"\ub098\uc774\uc9c0\ub9ac\uc544","qza":"\ub0a8\uc544\ud504\ub9ac\uce74","qgs":"\ub0a8\uc870\uc9c0\uc544 & \ub0a8\uc0cc\ub4dc\uc704\uce58 \uad70\ub3c4","qnl":"\ub124\ub35c\ub780\ub4dc","qan":"\ub124\ub35c\ub780\ub4dc \uc5f4\ub3c4","qnp":"\ub124\ud314","qno":"\ub178\ub974\uc6e8\uc774","qnf":"\ub178\ud3f4\ud06c \uc544\uc77c\ub79c\ub4dc","qnc":"\ub274 \uce7c\ub808\ub3c4\ub2c8\uc544","qnu":"\ub2c8\uc6b0\uc5d0","qne":"\ub2c8\uc81c\ub974","qni":"\ub2c8\uce74\ub77c\uacfc","qdk":"\ub374\ub9c8\ud06c","qdm":"\ub3c4\ubbf8\ub2c8\uce74","qdo":"\ub3c4\ubbf8\ub2c8\uce74 \uacf5\ud654\uad6d","qla":"\ub77c\uc624\uc2a4","qlr":"\ub77c\uc774\ubca0\ub9ac\uc544","qlv":"\ub77c\ud2b8\ube44\uc544","qru":"\ub7ec\uc2dc\uc544 \uc5f0\ubc29","qlb":"\ub808\ubc14\ub17c","qls":"\ub808\uc18c\ud1a0","qro":"\ub8e8\ub9c8\ub2c8\uc544","qrw":"\ub8e8\uc548\ub2e4","qlu":"\ub8e9\uc148\ubd80\ub974\uadf8","qly":"\ub9ac\ube44\uc544","qlt":"\ub9ac\ud22c\uc544\ub2c8\uc544","qli":"\ub9ac\ud788\ud150\uc288\ud0c0\uc778","qmg":"\ub9c8\ub2e4\uce74\uc2a4\uce74\ub974","qmh":"\ub9c8\uc0ec\uad70\ub3c4","qmk":"\ub9c8\uc138\ub3c4\ub2c8\uc544","qum":"\ub9c8\uc774\ub108 \uc544\uc6b0\ud2c0\ub9c1 \ud569\uc911\uad6d \uad70\ub3c4","qfm":"\ub9c8\uc774\ud06c\ub85c\ub124\uc2dc\uc544","qmo":"\ub9c8\uce74\uc624","qmq":"\ub9c8\ud2f0\ub2c8\ud06c","qmw":"\ub9d0\ub77c\uc704","qmy":"\ub9d0\ub808\uc774\uc9c0\uc544","qml":"\ub9d0\ub9ac","qyt":"\uba54\uc694\ud2b8","qmx":"\uba55\uc2dc\ucf54","qmc":"\ubaa8\ub098\ucf54","qma":"\ubaa8\ub85c\ucf54","qmu":"\ubaa8\ub9ac\uc154\uc2a4","qmr":"\ubaa8\ub9ac\ud0c0\ub2c8","qmz":"\ubaa8\uc7a0\ube44\ud06c","qms":"\ubaac\ud2b8\uc138\ub77c\ud2b8","qmd":"\ubab0\ub3c4\ubc14","qmv":"\ubab0\ub514\ube0c","qmt":"\ubab0\ud0c0","qmn":"\ubabd\uace8","qvi":"\ubbf8\ub839 \ubc84\uc9c4\uad70\ub3c4","qvu":"\ubc14\ub204\uc544\ud22c","qbh":"\ubc14\ub808\uc778","qbb":"\ubc14\ubca0\uc774\ub3c4\uc2a4","qbs":"\ubc14\ud558\ub9c8","qbd":"\ubc29\uae00\ub77c\ub370\uc2dc","qbm":"\ubc84\ubba4\ub2e4","qve":"\ubca0\ub124\uc8fc\uc5d8\ub77c","qbj":"\ubca0\ub2dd","qby":"\ubca0\ub77c\ub8e8\uc2a4","qbe":"\ubca8\uae30\uc5d0","qbz":"\ubca8\ub9ac\uc81c","qbv":"\ubcf4\ube57\uad70\ub3c4","qba":"\ubcf4\uc2a4\ub2c8\uc544-\ud5e4\ub974\uccb4\uace0\ube44\ub098","qbw":"\ubcf4\uce20\uc640\ub098","qbo":"\ubcfc\ub9ac\ube44\uc544","qbi":"\ubd80\ub8ec\ub514","qbf":"\ubd80\ub974\ud0a4\ub098 \ud30c\uc18c","qbt":"\ubd80\ud0c4","qmp":"\ubd81\ub9c8\ub9ac\uc544\ub098 \uad70\ub3c4","qkp":"\ubd81\ud55c","qbg":"\ubd88\uac00\ub9ac\uc544","qgf":"\ubd88\ub839 \uac00\uc774\uc544\ub098","qtf":"\ubd88\ub839 \ub0a8\ubd80\uc9c0\uc5ed","qre":"\ubd88\ub839 \ub9ac\uc720\ub2c8\uc628,\ucf54\ubaa8\ub3c4 \uc81c\ub3c4","qpf":"\ubd88\ub839 \ud3f4\ub9ac\ub124\uc2dc\uc544","qbn":"\ube0c\ub8e8\ub098\uc774","qws":"\uc0ac\ubaa8\uc544","qsa":"\uc0ac\uc6b0\ub514\uc544\ub77c\ube44\uc544","qcy":"\uc0ac\uc774\ud504\ub7ec\uc2a4","qsm":"\uc0b0\ub9c8\ub9ac\ub178","qst":"\uc0c1\ud1a0\uba54 \ud504\ub9b0\uc2a4\ud398","qeh":"\uc11c\uc0ac\ud558\ub77c","qsn":"\uc138\ub124\uac08","qsc":"\uc138\uc774\uc258","qlc":"\uc138\uc778\ud2b8 \ub8e8\uc2dc\uc544","qvc":"\uc138\uc778\ud2b8 \ube48\uc13c\ud2b8 \uadf8\ub808\ub098\ub518","qkn":"\uc138\uc778\ud2b8 \ud0a4\uce20 \ub124\ube44\uc2a4","qpm":"\uc138\uc778\ud2b8 \ud53c\ub808 \ubbf8\ucf08\ub860","qsh":"\uc138\uc778\ud2b8 \ud5ec\ub808\ub098","qso":"\uc18c\ub9d0\ub9ac\uc544","qsb":"\uc194\ub85c\ubaac \uad70\ub3c4","qsd":"\uc218\ub2e8","qsr":"\uc218\ub9ac\ub0a8","qlk":"\uc2a4\ub9ac\ub791\uce74","qsj":"\uc2a4\ubc1c\ube44\ub4dc \uad70\ub3c4","qsz":"\uc2a4\uc640\uc9c8\ub79c\ub4dc","qse":"\uc2a4\uc6e8\ub374","qch":"\uc2a4\uc704\uc2a4","qes":"\uc2a4\ud398\uc778","qsk":"\uc2ac\ub85c\ubc14\ud0a4\uc544","qsi":"\uc2ac\ub85c\ubca0\ub2c8\uc544","qsy":"\uc2dc\ub9ac\uc544","qsl":"\uc2dc\uc5d0\ub77c \ub9ac\uc628","qsg":"\uc2f1\uac00\ud3ec\ub974","qae":"\uc544\ub78d\uc5d0\ubbf8\ub9ac\ud2b8 \uc5f0\ud569","qaw":"\uc544\ub8e8\ubc14","qam":"\uc544\ub974\uba54\ub2c8\uc544","qar":"\uc544\ub974\ud5e8\ud2f0\ub098","qas":"\uc544\uba54\ub9ac\uce78 \uc0ac\ubaa8\uc544","qis":"\uc544\uc774\uc2ac\ub780\ub4dc","qht":"\uc544\uc774\ud2f0","qie":"\uc544\uc77c\ub79c\ub4dc","qaz":"\uc544\uc81c\ub974\ubc14\uc774\uc794","qaf":"\uc544\ud504\uce74\ub2c8\uc2a4\ud0c4","qad":"\uc548\ub3c4\ub77c","qaq":"\uc548\ud0c0\ud2f0\uce74","qag":"\uc548\ud2f0\uac00 \ubc14\ubd80\ub2e4","qal":"\uc54c\ubc14\ub2c8\uc544","qdz":"\uc54c\uc81c\ub9ac","qao":"\uc559\uace8\ub77c","qai":"\uc559\uadc8\ub77c","qer":"\uc5d0\ub9ac\ud2b8\ub9ac\uc544","qee":"\uc5d0\uc2a4\ud1a0\ub2c8\uc544","qec":"\uc5d0\ucfe0\uc544\ub3c4\ub974","qsv":"\uc5d8\uc0b4\ubc14\ub3c4\ub974","qvg":"\uc601\ub839 \ubc84\uc9c4\uad70\ub3c4","qio":"\uc601\ub839 \uc778\ub3c4\uc591","qky":"\uc601\ub839 \uce90\uc774\ub9e8 \uad70\ub3c4","qye":"\uc608\ub9e8","qom":"\uc624\ub9cc","qat":"\uc624\uc2a4\ud2b8\ub9ac\uc544","qhn":"\uc628\ub450\ub77c\uc2a4","qwf":"\uc648\ub77c\uc2a4 & \ud4e8\ud22c\ub098 \uad70\ub3c4","qjo":"\uc694\ub974\ub2e8","qug":"\uc6b0\uac04\ub2e4","quy":"\uc6b0\ub8e8\uacfc\uc774","quz":"\uc6b0\uc988\ubca0\ud06c","qua":"\uc6b0\ud06c\ub77c\uc774\ub098","qyu":"\uc720\uace0","qet":"\uc774\ub514\uc624\ud53c\uc544","qiq":"\uc774\ub77c\ud06c","qir":"\uc774\ub780","qil":"\uc774\uc2a4\ub77c\uc5d8","qeg":"\uc774\uc9d1\ud2b8","qit":"\uc774\ud0c8\ub9ac\uc544","qid":"\uc778\ub3c4\ub124\uc2dc\uc544","qin":"\uc778\ub514\uc544","qjm":"\uc790\ub9c8\uc774\uce74","qzr":"\uc790\uc774\ub808","qzm":"\uc7a0\ube44\uc544","qgq":"\uc801\ub3c4 \uae30\ub2c8","qcf":"\uc911\uc559\uc544\ud504\ub9ac\uce74","qdj":"\uc9c0\ubd80\ud2f0","qgi":"\uc9c0\ube0c\ub784\ud0c0","qzw":"\uc9d0\ubc14\ube0c\uc6e8","qtd":"\ucc60\ub4dc","qcz":"\uccb4\ucf54\uacf5\ud654\uad6d","qcl":"\uce60\ub808","qcm":"\uce74\uba54\ub8ec","qcv":"\uce74\ubcf4 \ubca0\ub974\ub370","qkz":"\uce74\uc790\ud750","qqa":"\uce74\ud0c0\ub974","qkh":"\uce84\ubcf4\ub514\uc544","qke":"\ucf00\ub0d0","qkm":"\ucf54\ubaa8\ub85c\uc2a4","qcc":"\ucf54\uc2a4 \uad70\ub3c4","qcr":"\ucf54\uc2a4\ud0c0\ub9ac\uce74","qci":"\ucf54\ud2b8\ub514\ubd10\ub974","qco":"\ucf5c\ub86c\ube44\uc544","qcg":"\ucf69\uace0","qcu":"\ucfe0\ubc14","qkw":"\ucfe0\uc6e8\uc774\ud2b8","qck":"\ucfe1 \uc544\uc77c\ub79c\ub4dc","qhr":"\ud06c\ub85c\uc544\ud2f0\uc544","qcx":"\ud06c\ub9ac\uc2a4\ub9c8\uc2a4 \uc544\uc77c\ub79c\ub4dc","qkg":"\ud0a4\ub974\uae30\uc2a4","qki":"\ud0a4\ub9ac\ubc14\ud2f0","qtj":"\ud0c0\uc9c0\ud06c","qtz":"\ud0c4\uc790\ub2c8\uc544","qth":"\ud0dc\uad6d","qtr":"\ud130\ud0a4","qtg":"\ud1a0\uace0","qtk":"\ud1a0\ucf08\ub77c\uc6b0","qto":"\ud1b5\uac00","qtc":"\ud22c\ub974\ud06c & \uce74\uc774\ucf54\uc2a4 \uad70\ub3c4","qtm":"\ud22c\ub974\ud06c\uba58","qtv":"\ud22c\ubc1c\ub8e8","qtn":"\ud280\ub2c8\uc9c0","qtt":"\ud2b8\ub9ac\ub2c8\ub2e4\ub4dc \ud1a0\ubc14\uace0","qtl":"\ud2f0\ubaa8\ub974","qpa":"\ud30c\ub098\ub9c8","qpy":"\ud30c\ub77c\uacfc\uc774","qfo":"\ud30c\ub85c\uc5d0 \uad70\ub3c4","qpk":"\ud30c\ud0a4\uc2a4\ud0c4","qpg":"\ud30c\ud478\uc544 \ub274\uae30\ub2c8","qpw":"\ud314\ub77c\uc6b0","qps":"\ud314\ub808\uc2a4\ud0c0\uc778","qpe":"\ud398\ub8e8","qpt":"\ud3ec\ub974\ud22c\uac08","qfk":"\ud3ec\ud074\ub79c\ub4dc \uad70\ub3c4","qpl":"\ud3f4\ub780\ub4dc","qpr":"\ud478\uc5d0\ub974\ud1a0\ub9ac\ucf54","qfr":"\ud504\ub791\uc2a4","qfj":"\ud53c\uc9c0","qpn":"\ud53c\ud2b8\uce74\uc774\ub978","qfi":"\ud540\ub780\ub4dc","qkr":"\ud55c\uad6d","qhu":"\ud5dd\uac00\ub9ac","q00":"\uae30\ud0c0"}},"sex":{"f":"\uc5ec","m":"\ub0a8"},"want":{"w":"\uacb0\ud63c","r":"\uc7ac\ud63c"},"style":{"f":{"1":"\ud3c9\ubc94\ud568","2":"\uccad\uc21c\ud568","3":"\uadc0\uc5ec\uc6c0","4":"\uc139\uc2dc\ud568","5":"\ub0a0\uc52c\ud568","6":"\ud1b5\ud1b5\ud568","7":"\ub6b1\ub6b1\ud568","8":"\uae54\ub054\ud568","9":"\ud138\ud138\ud568","10":"\uaf43\ubbf8\ub140","11":"\ud328\uc158\uc655","12":"\uc2dc\ud06c\ud568","13":"\ub1cc\uc21c\ub140","14":"\ub1cc\uc139\ub140"},"m":{"1":"\ud3c9\ubc94\ud568","2":"\uadc0\uc5ec\uc6c0","3":"\uc139\uc2dc\ud568","4":"\uaf43\ubbf8\ub0a8","5":"\ub0a0\uc52c\ud568","6":"\ub4ec\uc9c1\ud568","7":"\ub6b1\ub6b1\ud568","8":"\uae54\ub054\ud568","9":"\ud138\ud138\ud568","11":"\ud328\uc158\uc655","12":"\uc2dc\ud06c\ud568","13":"\ub1cc\uc21c\ub0a8","14":"\ub1cc\uc139\ub0a8","15":"\uadfc\uc721\uc9c8","16":"\uac74\uc7a5\ud568"}},"character":{"f":{"1":"\uc870\uc6a9\ud568","2":"\ub3c4\ub3c4\ud568","3":"\uc720\uba38\/\uc7ac\uce58","4":"\ub2e4\uc815\ub2e4\uac10","5":"\uc560\uad50\ub118\uce68","6":"\ub9e4\uc0ac\uae0d\uc815","7":"\uc774\ud574\uc2ec\uae4a\uc74c","8":"\uc790\uc720\ubd84\ubc29","9":"\ucc9c\uc0c1\uc5ec\uc790","10":"\ub099\ucc9c\uc801","11":"\ub0b4\uc131\uc801","12":"\uac10\uc131\uc801","13":"\uc5f4\uc815\uc801","14":"\uc0c1\ub0e5\ud568","15":"\uc720\ucf8c\ud568","16":"\uae4c\uce60\ud568","17":"\ud130\ud504\ud568","18":"\uc655\uace0\uc9d1","19":"4\ucc28\uc6d0\uc801","20":"\uc194\uc9c1\ud568","21":"\uc9c1\uc124\uc801","22":"\uc2e0\uc911\ud568"},"m":{"1":"\uc870\uc6a9\ud568","2":"\ud130\ud504\ud568","3":"\uc720\uba38\/\uc7ac\uce58","4":"\ub2e4\uc815\ub2e4\uac10","5":"\ub9e4\uc0ac\uae0d\uc815","6":"\uc774\ud574\uc2ec\uae4a\uc74c","7":"\uc790\uc720\ubd84\ubc29","8":"\ub0a8\uc790\ub2e4\uc6c0","9":"\ub099\ucc9c\uc801","10":"\ub0b4\uc131\uc801","11":"\uac10\uc131\uc801","12":"\uc5f4\uc815\uc801","13":"\uc720\ucf8c\ud568","14":"\uae4c\uce60\ud568","15":"\uc655\uace0\uc9d1","16":"4\ucc28\uc6d0\uc801","17":"\uc194\uc9c1\ud568","18":"\uc9c1\uc124\uc801","19":"\uc2e0\uc911\ud568"}},"job":{"1":"\uacbd\uc601","50":"\uae30\ud68d","51":"\uc0ac\ubb34\/\uad00\ub9ac","2":"\ub9c8\ucf00\ud305","52":"\ud64d\ubcf4\/\uad11\uace0","21":"\uc815\ubd80\ud589\uc815","31":"\uacf5\uae30\uc5c5\/\uae30\uad00","30":"\ubc95\ub960","3":"\ubb34\uc5ed","4":"\uc720\ud1b5","5":"\uc5f0\uad6c\/\uac1c\ubc1c","35":"\uc6b4\uc1a1(\ubc84\uc2a4\/\ucca0\ub3c4 \ub4f1)","36":"\ubb3c\ub958\/\ubc30\uc1a1","37":"\uc124\uce58","53":"\uc815\ube44\/AS","38":"\uc678\uad6d\uc5b4\/\ubc88\uc5ed","39":"\ubcf4\uc548\/\uacbd\ube44\/\uacbd\ud638","40":"\ubdf0\ud2f0","54":"\ubbf8\uc6a9\/\uc774\uc6a9","55":"\uc608\uc2dd","56":"\uc7a5\ub840","41":"\uc678\uc2dd","57":"\ud504\ub79c\ucc28\uc774\uc988","42":"\uc219\ubc15","58":"\uc5ec\ud589","6":"\uae30\uacc4","59":"\uc0dd\uc0b0\/\uc81c\uc870","7":"\uc804\uae30","60":"\uc804\uc790","61":"\uac00\uc2a4\/\uc218\ub3c4","8":"\uc790\ub3d9\ucc28","43":"\uc870\uc120","62":"\uae08\uc18d\/\uc7ac\ub8cc","63":"\uc12c\uc720\ud654\ud559","64":"\uc11d\uc720\ud654\ud559","65":"\uc815\uc720","66":"\uc2dd\ud488\uacf5\ud559","67":"\uc2dd\ud488\uac00\uacf5\/\uc81c\uc870","44":"\ud310\ub9e4","9":"\uc11c\ube44\uc2a4","68":"\uc758\ub958","69":"\uc720\uc544\/\uc644\uad6c","10":"\uad50\uc721","11":"\uae08\uc735","45":"\uc99d\uad8c","70":"\ud22c\uc790","71":"\ubcf4\ud5d8","46":"\ud68c\uacc4\/\uc138\ubb34","12":"\uc601\uc5c5","47":"\uace0\uac1d\uc0c1\ub2f4","13":"\ubb38\ud654\/\uc608\uc220","72":"\uacf5\uc5f0","73":"\uacf5\uc608","14":"\ubc29\uc1a1","49":"\uc2e0\ubb38\/\uc7a1\uc9c0","74":"\ub3c4\uc11c\/\ucd9c\ud310","75":"\uc0ac\uc9c4","76":"\uc778\uc1c4\/\uc778\ud654","77":"\uc74c\uc545\/\uc545\uae30","15":"\uc5f0\uadf9\/\uc601\ud654","78":"\uc5d4\ud130\ud14c\uc778\uba3c\ud2b8","79":"\uac8c\uc784","80":"\ub9cc\ud654\/\uc6f9\ud230","16":"IT(\uc815\ubcf4\uae30\uc220)","81":"\ud1b5\uc2e0","82":"ICT","83":"\ubc18\ub3c4\uccb4","84":"LED\/\uad11\uc0b0\uc5c5","85":"\ud658\uacbd","17":"\uc778\ud130\ub137","86":"\ubaa8\ubc14\uc77c","102":"\ube45\ub370\uc774\ud130","87":"\ub85c\ubd07","88":"\ub098\ub178","89":"\ubc14\uc774\uc624","90":"\uc2e0\uc18c\uc7ac","91":"\uc2e0\uc7ac\uc0dd\uc5d0\ub108\uc9c0","92":"\uc6b0\uc8fc\/\ud56d\uacf5","18":"\ub514\uc790\uc778","93":"\uc778\ud14c\ub9ac\uc5b4","19":"\uac74\uc124","94":"\ud1a0\ubaa9","95":"\uc124\uacc4","48":"\ubd80\ub3d9\uc0b0\/\uc784\ub300","20":"\uc758\ub8cc\/\ubcf4\uac74","96":"\uc81c\uc57d","97":"\uc885\uad50","22":"\ub18d\uc5c5","98":"\uc5b4\uc5c5","99":"\ucd95\uc0b0\uc5c5","103":"\ub099\ub18d\uc5c5","100":"\uc784\uc5c5","101":"\uad11\uc0b0\uc5c5","23":"\uc790\uc601\uc5c5","24":"\uc804\ubb38\uc9c1\/\ud2b9\uc218\uc9c1","32":"\uad70\uc778\/\uad70\ubb34\uc6d0","33":"\uc2a4\ud3ec\uce20","34":"\uc0ac\ud68c\ubcf5\uc9c0","27":"\ud504\ub9ac\ub79c\uc11c","25":"\ucde8\uc5c5\uc900\ube44","26":"\ucc3d\uc5c5\uc900\ube44","28":"\uc544\ub974\ubc14\uc774\ud2b8","29":"\ud559\uc0dd","0":"\uae30\ud0c0"},"salary":{"12":"2000\ub9cc\uc6d0\ubbf8\ub9cc","2":"2000\ub9cc\uc6d0\ub300","3":"3000\ub9cc\uc6d0\ub300","4":"4000\ub9cc\uc6d0\ub300","5":"5000\ub9cc\uc6d0\ub300","6":"6000\ub9cc\uc6d0\ub300","7":"7000\ub9cc\uc6d0\ub300","8":"8000\ub9cc\uc6d0\ub300","9":"9000\ub9cc\uc6d0\ub300","10":"1\uc5b5 \uc774\uc0c1"},"school":{"1":"\ucd08,\uc911\uc878","2":"\uace0\uc878","6":"\ub300\ud559(2\ub144)\uc878","3":"\ub300\ud559(4\ub144)\uc878","7":"\ub300\ud559\uc7ac\ud559","8":"\ub300\ud559\uc911\ud1f4","4":"\ub300\ud559\uc6d0\uc878","9":"\ub300\ud559\uc6d0\uc7ac\ud559","10":"\ub300\ud559\uc6d0\uc911\ud1f4","11":"\ubc15\uc0ac\ud559\uc704","5":"\ubc15\uc0ac\uacfc\uc815","0":"\uae30\ud0c0"},"car":{"1":"\uc18c\ud615","2":"\uc900\uc911\ud615","3":"\uc911\ud615","4":"\ub300\ud615","5":"\uc218\uc785","6":"SUV","7":"\uc2b9\ud569","0":"\uae30\ud0c0","9":"\uc5c6\uc74c"},"religion":{"1":"\uae30\ub3c5\uad50","2":"\ubd88\uad50","3":"\ucc9c\uc8fc\uad50","4":"\uc6d0\ubd88\uad50","5":"\ubb34\uad50","6":"\uc720\uad50","7":"\ub3c4\uad50","8":"\uc774\uc2ac\ub78c\uad50","9":"\ud78c\ub450\uad50","0":"\uae30\ud0c0"},"blood":{"1":"A\ud615","2":"B\ud615","3":"O\ud615","4":"AB\ud615"},"height":{"150":"150\u339d","151":"151\u339d","152":"152\u339d","153":"153\u339d","154":"154\u339d","155":"155\u339d","156":"156\u339d","157":"157\u339d","158":"158\u339d","159":"159\u339d","160":"160\u339d","161":"161\u339d","162":"162\u339d","163":"163\u339d","164":"164\u339d","165":"165\u339d","166":"166\u339d","167":"167\u339d","168":"168\u339d","169":"169\u339d","170":"170\u339d","171":"171\u339d","172":"172\u339d","173":"173\u339d","174":"174\u339d","175":"175\u339d","176":"176\u339d","177":"177\u339d","178":"178\u339d","179":"179\u339d","180":"180\u339d","181":"181\u339d","182":"182\u339d","183":"183\u339d","184":"184\u339d","185":"185\u339d","186":"186\u339d","187":"187\u339d","188":"188\u339d","189":"189\u339d","190":"190\u339d","191":"191\u339d","192":"192\u339d","193":"193\u339d","194":"194\u339d","195":"195\u339d","196":"196\u339d","197":"197\u339d","198":"198\u339d","199":"199\u339d","200":"200\u339d"},"weight":{"40":"40\u338f","41":"41\u338f","42":"42\u338f","43":"43\u338f","44":"44\u338f","45":"45\u338f","46":"46\u338f","47":"47\u338f","48":"48\u338f","49":"49\u338f","50":"50\u338f","51":"51\u338f","52":"52\u338f","53":"53\u338f","54":"54\u338f","55":"55\u338f","56":"56\u338f","57":"57\u338f","58":"58\u338f","59":"59\u338f","60":"60\u338f","61":"61\u338f","62":"62\u338f","63":"63\u338f","64":"64\u338f","65":"65\u338f","66":"66\u338f","67":"67\u338f","68":"68\u338f","69":"69\u338f","70":"70\u338f","71":"71\u338f","72":"72\u338f","73":"73\u338f","74":"74\u338f","75":"75\u338f","76":"76\u338f","77":"77\u338f","78":"78\u338f","79":"79\u338f","80":"80\u338f","81":"81\u338f","82":"82\u338f","83":"83\u338f","84":"84\u338f","85":"85\u338f","86":"86\u338f","87":"87\u338f","88":"88\u338f","89":"89\u338f","90":"90\u338f","91":"91\u338f","92":"92\u338f","93":"93\u338f","94":"94\u338f","95":"95\u338f","96":"96\u338f","97":"97\u338f","98":"98\u338f","99":"99\u338f","100":"100\u338f","101":"101\u338f","102":"102\u338f","103":"103\u338f","104":"104\u338f","105":"105\u338f","106":"106\u338f","107":"107\u338f","108":"108\u338f","109":"109\u338f","110":"110\u338f","111":"111\u338f","112":"112\u338f","113":"113\u338f","114":"114\u338f","115":"115\u338f","116":"116\u338f","117":"117\u338f","118":"118\u338f","119":"119\u338f","120":"120\u338f"},"hobby":{"1":"\uc74c\uc8fc\uac00\ubb34","2":"\uc560\uc644\ub3d9\ubb3c","3":"\ubbf8\ud305&\ucc44\ud305","4":"\uac8c\uc784","5":"\uc885\uad50","6":"\uc1fc\ud551","7":"\ubd09\uc0ac\ud65c\ub3d9","8":"\uc2dd\ub3c4\ub77d","9":"\uccad\ucd98\uc0ac\uc5c5","10":"\ud328\uc158","11":"\ub304\uc2a4","12":"\ub4f1\uc0b0","13":"TV\/\ube44\ub514\uc624","14":"\ub77c\ub514\uc624","15":"\ub180\uc774\ub3d9\uc0b0","16":"\uc5ec\ud589","17":"\uc694\ub9ac","18":"\ub09a\uc2dc","19":"\ub4dc\ub77c\uc774\ube0c","20":"\uc778\ud14c\ub9ac\uc5b4","21":"\uc5f0\uadf9\/\uc601\ud654","22":"\ubbf8\uc6a9","23":"\uc815\uce58","24":"\uc74c\uc545","25":"\uc0ac\uc9c4\/\uc601\uc0c1","26":"\uc5f0\uc608\uacc4","27":"\ub3c5\uc11c\/\ub9cc\ud654","28":"\uc7ac\ud14c\ud06c","29":"AV&\ud648\uc2dc\uc5b4\ud130","30":"\uc7a5\uae30\/\ubc14\ub451","31":"\uc218\ub2e4\ub5a8\uae30","32":"\ucef4\ud4e8\ud130&\uc778\ud130\ub137","33":"\uacf5\uc5f0\uad00\ub78c","34":"SNS\uad00\ub9ac","35":"\ube14\ub85c\uadf8\uad00\ub9ac","36":"\uace8\ub3d9\ud488\uc218\uc9d1","37":"\uae30\ud0c0\uc218\uc9d1","38":"\uc57d\ucd08(\ub09c)\uce90\uae30","39":"\uc545\uae30\uc5f0\uc8fc","40":"\uc218\uc601","41":"\uace8\ud504","42":"\ubcfc\ub9c1","43":"\uc790\uc804\uac70","44":"\uc624\ud1a0\ubc14\uc774","45":"\uc790\ub3d9\ucc28\ud29c\ub2dd","0":"\uae30\ud0c0"},"whenMarry":{"3m":"3\uac1c\uc6d4","6m":"6\uac1c\uc6d4","1y":"1\ub144","a":"\uc5b8\uc81c\ub4e0\uc9c0"},"digamy":{"1":"\ub124 \uc815\ub9ac\ub418\uc5c8\uc2b5\ub2c8\ub2e4","2":"\ud63c\uc778\uc2e0\uace0\ub97c \ud558\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4","3":"\uc0ac\ubcc4\ud588\uc2b5\ub2c8\ub2e4"},"age":{"1":"25\uc138 \ubbf8\ub9cc","2":"26\uc138 \uc774\uc0c1 ~ 30\uc138 \uc774\ud558","3":"31\uc138 \uc774\uc0c1 ~ 35\uc138 \uc774\ud558","4":"36\uc138 \uc774\uc0c1 ~ 40\uc138 \uc774\ud558","5":"41\uc138 \uc774\uc0c1 ~ 45\uc138 \uc774\ud558","6":"46\uc138 \uc774\uc0c1 ~ 50\uc138 \uc774\ud558","7":"50\uc138 \uc774\uc0c1 ~ 55\uc138 \uc774\ud558","8":"56\uc138 \uc774\uc0c1 ~ 60\uc138 \uc774\ud558","9":"61\uc138 \uc774\uc0c1","":"\uc0c1\uad00\uc5c6\uc74c"},"children":["0\uba85","1\uba85","2\uba85","3\uba85","4\uba85","5\uba85","6\uba85","7\uba85","8\uba85","9\uba85"],"wishLoc":{"i":"\uc11c\uc6b8","b":"\uacbd\uae30","k":"\uc778\ucc9c","g":"\ub300\uc804","f":"\ub300\uad6c","h":"\ubd80\uc0b0","e":"\uad11\uc8fc","z":"\uc138\uc885","j":"\uc6b8\uc0b0","p":"\ucda9\ubd81","o":"\ucda9\ub0a8","n":"\uc804\ubd81","l":"\uc804\ub0a8","d":"\uacbd\ubd81","c":"\uacbd\ub0a8","a":"\uac15\uc6d0","m":"\uc81c\uc8fc","":"\uc804\uad6d","q":"\ud574\uc678"},"lastName":{"\uae40":"2","\uc774":"3","\ubc15":"4","\uc815":"5","\ucd5c":"6","\uc870":"7","\uac15":"8","\uc720":"9","\uc724":"10","\uc7a5":"11","\uc2e0":"12","\uc784":"40","\ud55c":"14","\uc624":"15","\uc11c":"16","\uc804":"17","\uad8c":"18","\ud669":"19","\uc1a1":"20","\uc548":"21","\ud64d":"22","\uc591":"23","\uace0":"24","\ubb38":"25","\uc190":"26","\ubc30":"27","\ubc31":"28","\ud5c8":"29","\ub178":"30","\ub0a8":"31","\uc2ec":"32","\uc8fc":"33","\ud558":"34","\uad6c":"35","\uacfd":"36","\uc131":"37","\ucc28":"38","\uc6b0":"39","\ub098":"41","\ubbfc":"42","\uc9c4":"74","\uc9c0":"44","\uc5c4":"45","\ubcc0":"46","\uc6d0":"47","\ucc44":"48","\ucc9c":"49","\uacf5":"50","\ud604":"51","\ubc29":"122","\ud568":"53","\uc5ec":"54","\uc5fc":"55","\uc11d":"56","\ucd94":"57","\ub3c4":"58","\uc18c":"59","\uc124":"60","\uc120":"61","\ub9c8":"62","\uc5f0":"64","\uae38":"65","\uc704":"66","\ud45c":"67","\uba85":"68","\uae30":"69","\ubc18":"70","\uae08":"71","\uc655":"72","\uc721":"73","\uc778":"75","\ub9f9":"76","\uc81c":"77","\ubaa8":"78","\ud0c1":"79","\uad6d":"80","\ub0a8\uad81":"81","\uc5b4":"82","\uc740":"83","\ud3b8":"84","\uc6a9":"85","\uc608":"86","\ubd09":"141","\uacbd":"106","\uc0ac":"89","\ubd80":"90","\ud669\ubcf4":"91","\uac00":"92","\ubcf5":"93","\ubaa9":"94","\ud0dc":"95","\ud615":"96","\ud53c":"97","\uacc4":"98","\ud638":"99","\uac10":"100","\ub450":"101","\uc74c":"102","\ub3d9":"103","\ube48":"104","\uc628":"105","\uc81c\uac08":"107","\uc0ac\uacf5":"108","\uc2dc":"109","\uc120\uc6b0":"110","\ubc94":"111","\uc2b9":"112","\uac08":"113","\uc88c":"114","\ud33d":"115","\uac04":"116","\uc0c1":"117","\uc11c\ubb38":"118","\ub2e8":"185","\uc21c":"120","\uacac":"134","\ucc3d":"161","\uc639":"124","\uc885":"125","\ud654":"126","\ub3c5\uace0":"127","\ube59":"194","\uc544":"129","\ud3c9":"130","\ub300":"131","\ud48d":"132","\uad81":"133","\uc810":"135","\ud765":"136","\uc12d":"137","\ub0b4":"138","\ucd08":"139","\ub0ad":"140","\ud574":"142","\ud310":"143","\ud544":"144","\uad89":"145","\uadfc":"146","\uc6b4":"147","\ub9e4":"148","\ub3d9\ubc29":"149","\ubbf8":"150","\uc218":"151","\uc694":"152","\uc57c":"153","\ubb35":"154","\uc790":"155","\uc601":"170","\ub9cc":"157","\ud658":"158","\uace1":"159","\ud0c4":"160","\ub3c8":"162","\ud3ec":"163","\uc5fd":"164","\uc560":"165","\ud6c4":"166","\ud559":"167","\ube44":"168","\uac1c":"169","\uc2ed":"171","\ub09c":"172","\ub1cc":"188","\ucd98":"174","\uc900":"175","\ubb18":"176","\ub2f4":"177","\uc7a5\uace1":"178","\uac15\uc804":"179","\uc0bc":"180","\uc5b4\uae08":"181","\uc800":"182","\uad70":"183","\uad50":"184","\ub204":"186","\uc18c\ubd09":"187","\ub9dd\uc808":"189","\uc999":"190","\uc99d":"192","\ub2f9":"193","\ub958":"195","\uc625":"196","\uae30\ud0c0":"1"},"sipgan":{"4":"\uac11","5":"\uc744","6":"\ubcd1","7":"\uc815","8":"\ubb34","9":"\uae30","0":"\uacbd","1":"\uc2e0","2":"\uc784","3":"\uacc4"},"sipeji":{"4":"\uc790","5":"\ucd95","6":"\uc778","7":"\ubb18","8":"\uc9c4","9":"\uc0ac","10":"\uc624","11":"\ubbf8","0":"\uc2e0","1":"\uc720","2":"\uc220","3":"\ud574"},"ddi":{"4":"\uc950","5":"\uc18c","6":"\ubc94","7":"\ud1a0\ub07c","8":"\uc6a9","9":"\ubc40","10":"\ub9d0","11":"\uc591","0":"\uc6d0\uc22d\uc774","1":"\ub2ed","2":"\uac1c","3":"\ub3fc\uc9c0"},"stopReason":{"0":"\uae30\ud0c0","5":"\uce74\ud1a1\uc544\uc774\ub514 \ubc18\ubcf5\ub4f1\ub85d.\uc2e0\uace0\uc811\uc218","4":"\ub3c4\ubc30\uae00\ub4f1\ub85d \uc2e0\uace0\uc13c\ud130\uc811\uc218","3":"\ud0c0\ud68c\uc6d0 \ubd88\ucf8c\uac10 \ucd08\ub300 \ubc0f \uc2e0\uace0\uc13c\ud130\uc811\uc218","2":"\uc74c\ub780 \uae00\/\uc0ac\uc9c4 \ub4f1\ub85d \ubc0f \uc2e0\uace0\uc13c\ud130\uc811\uc218","1":"\uad11\uace0 \uae00\/\uc0ac\uc9c4 \ub4f1\ub85d \ubc0f \uc2e0\uace0\uc811\uc218","6":"\uc74c\ub780\uba54\uc2dc\uc9c0 \uc2e0\uace0\uc811\uc218","7":"\uacb0\ud63c\/\uc7ac\ud63c\uacfc \uc0c1\uad00\uc5c6\ub294 \uae00 \ub4f1\ub85d \ubc0f \uc2e0\uace0\uc13c\ud130\uc811\uc218","8":"\uc5ec\ubcf4\uc57c \uc6b4\uc601\uc815\ucc45\uc5d0 \ub9de\uc9c0 \uc54a\ub294 \ub0b4\uc6a9 \ub4f1\ub85d","9":"\ubd88\ucf8c\ud55c\uae00 \ub4f1\ub85d\uc73c\ub85c \uc2e0\uace0\uc811\uc218","10":"\uc18c\uac1c\uae00 \uac1c\uc778\uc815\ubcf4 \ub4f1\ub85d \ubc0f \uc2e0\uace0\uc811\uc218","11":"sns, \uc804\ud654\ubc88\ud638 \uc694\uad6c \uc18c\uac1c\uae00 \ub4f1\ub85d","12":"\uac00\uc785\uc0ac\uc720\uac00 \uc548\ub418\ub294 \uc18c\uac1c\uae00","13":"\uac1c\uc778\uc815\ubcf4\ud5c8\uc704"},"joinInfo":{"a":"\uc9c0\uc778 \uc18c\uac1c\ub85c \uac00\uc785\ud588\uc5b4\uc694!","b":"\uad11\uace0\ub97c \ubcf4\uace0 \uac00\uc785\ud588\uc5b4\uc694!","c":"\u2018\uacb0\ud63c\u2019,\u2019\uc7ac\ud63c\u2019 \uc778\ud130\ub137 \uac80\uc0c9\uc73c\ub85c \uac00\uc785\ud588\uc5b4\uc694!","d":"\uc2a4\ub9c8\ud2b8\ud3f0\uc5d0\uc11c \uac80\uc0c9\ud558\uc5ec \uac00\uc785\ud588\uc5b4\uc694!","e":"TV\uad11\uace0\ub97c \ubcf4\uace0 \uac00\uc785\ud588\uc5b4\uc694!","f":"\uce74\ud398\/\ube14\ub85c\uadf8 \uc18c\uac1c\ub97c \ubcf4\uace0 \uac00\uc785\ud588\uc5b4\uc694!","g":"\uac00\uc871\uc5d0\uac8c \ucd94\ucc9c \ubc1b\uace0 \uac00\uc785\ud588\uc5b4\uc694!","h":"\uc5ec\ubcf4\uc57c \ud68c\uc6d0\uc5d0\uac8c \uc18c\uac1c\ub97c \ubc1b\uace0 \uac00\uc785\ud588\uc5b4\uc694!","i":"\uc785\uc18c\ubb38 \ub4e3\uace0 \uac00\uc785\ud588\uc5b4\uc694!"},"loc_key":["i","b","k","g","f","h","e","z","j","p","o","n","l","d","c","a","m","y","q"],"sloc_key":["i","k","b","h","f","e","g","j","z","o","p","l","n","c","d","a","m","y","q"],"sex_key":["f","m"],"want_key":["w","r"],"style_key":{"f":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"m":[1,2,3,4,5,6,7,8,9,11,12,13,14,15,16]},"character_key":{"f":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],"m":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]},"job_key":[1,50,51,2,52,21,31,30,3,4,5,35,36,37,53,38,39,40,54,55,56,41,57,42,58,6,59,7,60,61,8,43,62,63,64,65,66,67,44,9,68,69,10,11,45,70,71,46,12,47,13,72,73,14,49,74,75,76,77,15,78,79,80,16,81,82,83,84,85,17,86,102,87,88,89,90,91,92,18,93,19,94,95,48,20,96,97,22,98,99,103,100,101,23,24,32,33,34,27,25,26,28,29,0],"salary_key":[12,2,3,4,5,6,7,8,9,10],"school_key":[1,2,6,3,7,8,4,9,10,11,5,0],"car_key":[1,2,3,4,5,6,7,0,9],"religion_key":[1,2,3,4,5,6,7,8,9,0],"blood_key":[1,2,3,4],"height_key":[150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200],"weight_key":[40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120],"hobby_key":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,0],"whenMarry_key":["3m","6m","1y","a"],"digamy_key":[1,2,3],"age_key":[1,2,3,4,5,6,7,8,9,""],"children_key":[0,1,2,3,4,5,6,7,8,9],"wishLoc_key":["i","b","k","g","f","h","e","z","j","p","o","n","l","d","c","a","m","","q"],"lastName_key":["\uae40","\uc774","\ubc15","\uc815","\ucd5c","\uc870","\uac15","\uc720","\uc724","\uc7a5","\uc2e0","\uc784","\ud55c","\uc624","\uc11c","\uc804","\uad8c","\ud669","\uc1a1","\uc548","\ud64d","\uc591","\uace0","\ubb38","\uc190","\ubc30","\ubc31","\ud5c8","\ub178","\ub0a8","\uc2ec","\uc8fc","\ud558","\uad6c","\uacfd","\uc131","\ucc28","\uc6b0","\ub098","\ubbfc","\uc9c4","\uc9c0","\uc5c4","\ubcc0","\uc6d0","\ucc44","\ucc9c","\uacf5","\ud604","\ubc29","\ud568","\uc5ec","\uc5fc","\uc11d","\ucd94","\ub3c4","\uc18c","\uc124","\uc120","\ub9c8","\uc5f0","\uae38","\uc704","\ud45c","\uba85","\uae30","\ubc18","\uae08","\uc655","\uc721","\uc778","\ub9f9","\uc81c","\ubaa8","\ud0c1","\uad6d","\ub0a8\uad81","\uc5b4","\uc740","\ud3b8","\uc6a9","\uc608","\ubd09","\uacbd","\uc0ac","\ubd80","\ud669\ubcf4","\uac00","\ubcf5","\ubaa9","\ud0dc","\ud615","\ud53c","\uacc4","\ud638","\uac10","\ub450","\uc74c","\ub3d9","\ube48","\uc628","\uc81c\uac08","\uc0ac\uacf5","\uc2dc","\uc120\uc6b0","\ubc94","\uc2b9","\uac08","\uc88c","\ud33d","\uac04","\uc0c1","\uc11c\ubb38","\ub2e8","\uc21c","\uacac","\ucc3d","\uc639","\uc885","\ud654","\ub3c5\uace0","\ube59","\uc544","\ud3c9","\ub300","\ud48d","\uad81","\uc810","\ud765","\uc12d","\ub0b4","\ucd08","\ub0ad","\ud574","\ud310","\ud544","\uad89","\uadfc","\uc6b4","\ub9e4","\ub3d9\ubc29","\ubbf8","\uc218","\uc694","\uc57c","\ubb35","\uc790","\uc601","\ub9cc","\ud658","\uace1","\ud0c4","\ub3c8","\ud3ec","\uc5fd","\uc560","\ud6c4","\ud559","\ube44","\uac1c","\uc2ed","\ub09c","\ub1cc","\ucd98","\uc900","\ubb18","\ub2f4","\uc7a5\uace1","\uac15\uc804","\uc0bc","\uc5b4\uae08","\uc800","\uad70","\uad50","\ub204","\uc18c\ubd09","\ub9dd\uc808","\uc999","\uc99d","\ub2f9","\ub958","\uc625","\uae30\ud0c0"],"sipgan_key":[4,5,6,7,8,9,0,1,2,3],"sipeji_key":[4,5,6,7,8,9,10,11,0,1,2,3],"ddi_key":[4,5,6,7,8,9,10,11,0,1,2,3],"stopReason_key":[0,5,4,3,2,1,6,7,8,9,10,11,12,13],"joinInfo_key":["a","b","c","d","e","f","g","h","i"],"birthYear":{"1998":1998,"1997":1997,"1996":1996,"1995":1995,"1994":1994,"1993":1993,"1992":1992,"1991":1991,"1990":1990,"1989":1989,"1988":1988,"1987":1987,"1986":1986,"1985":1985,"1984":1984,"1983":1983,"1982":1982,"1981":1981,"1980":1980,"1979":1979,"1978":1978,"1977":1977,"1976":1976,"1975":1975,"1974":1974,"1973":1973,"1972":1972,"1971":1971,"1970":1970,"1969":1969,"1968":1968,"1967":1967,"1966":1966,"1965":1965,"1964":1964,"1963":1963,"1962":1962,"1961":1961,"1960":1960,"1959":1959,"1958":1958,"1957":1957,"1956":1956,"1955":1955,"1954":1954,"1953":1953,"1952":1952,"1951":1951,"1950":1950,"1949":1949,"1948":1948,"1947":1947,"1946":1946,"1945":1945,"1944":1944,"1943":1943,"1942":1942,"1941":1941,"1940":1940,"1939":1939,"1938":1938,"1937":1937,"1936":1936,"1935":1935,"1934":1934,"1933":1933,"1932":1932,"1931":1931,"1930":1930,"1929":1929,"1928":1928,"1927":1927,"1926":1926,"1925":1925,"1924":1924,"1923":1923,"1922":1922,"1921":1921,"1920":1920,"1919":1919},"birthMonth":{"1":1,"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10,"11":11,"12":12},"tokSrv":["http:\/\/sol66.yeoboya.com:7901","http:\/\/devsol4.yeoboya.com:7901"],"matchAmt":{"1":"\ub300\ud654\ud558\uba74\uc11c \uc54c\ub824\ub4dc\ub9b4\uaed8\uc694","2":"\uba3c\uc800 \uc81c\uc548\ud574\uc8fc\uc138\uc694","3":"\uc18c\uc815\uc758 \uc218\uace0\ub8cc \uc815\ub3c4 \uc218\uc900\uc785\ub2c8\ub2e4.","4":"\ubd80\ub2f4\uc2a4\ub7fd\uc9c0 \uc54a\uc740 \ube44\uc6a9\uc815\ub3c4 \uc785\ub2c8\ub2e4.","5":"\ud0c0 \uc911\ub9e4\uc778\uc5d0 \ube44\ud574 \uc800\ub834\ud558\uac8c \ubaa8\uc2ed\ub2c8\ub2e4.","6":"\ud569\ub9ac\uc801\uc778 \uc218\uc900\uc5d0\uc11c \ud611\uc758 \uac00\ub2a5\ud569\ub2c8\ub2e4.","7":"\uc9c1\uc811\uc785\ub825"},"brothers":["0\ub0a8","1\ub0a8","2\ub0a8","3\ub0a8","4\ub0a8","5\ub0a8","6\ub0a8","7\ub0a8","8\ub0a8","9\ub0a8"],"sisters":{"1":"1\ub140","2":"2\ub140","3":"3\ub140","4":"4\ub140","5":"5\ub140","6":"6\ub140","7":"7\ub140","8":"8\ub140","9":"9\ub140"},"xth":{"1":"1\uc9f8","2":"2\uc9f8","3":"3\uc9f8","4":"4\uc9f8","5":"5\uc9f8","6":"6\uc9f8","7":"7\uc9f8","8":"8\uc9f8","9":"9\uc9f8","10":"10\uc9f8","11":"11\uc9f8","12":"12\uc9f8","13":"13\uc9f8","14":"14\uc9f8","15":"15\uc9f8","16":"16\uc9f8","17":"17\uc9f8","18":"18\uc9f8"},"memProperty":{"b":"3\ucc9c\ub9cc\uc6d0 \ubbf8\ub9cc","c":"7\ucc9c\ub9cc\uc6d0 \ubbf8\ub9cc","d":"1\uc5b5 \ubbf8\ub9cc","e":"3\uc5b5 \ubbf8\ub9cc","f":"5\uc5b5 \ubbf8\ub9cc","g":"10\uc5b5 \ubbf8\ub9cc","h":"10\uc5b5 \uc774\uc0c1"},"foreignL":{"a":"\uc0c1","b":"\uc911","c":"\ud558","z":"\ubaa8\ub984"},"foreignLView":{"a":"\ub9e4\uc6b0 \uc798\ud569\ub2c8\ub2e4","b":"\uc5b4\ub290 \uc815\ub3c4\ub294 \ud569\ub2c8\ub2e4","c":"\uae30\ubcf8\ub9cc \uc555\ub2c8\ub2e4","z":"\uac70\uc758 \ubaa8\ub985\ub2c8\ub2e4"},"studyAbroad":{"y":"\ud574\uc678 \uc720\ud559 \uacbd\ud5d8 \uc788\uc74c","n":"\ud574\uc678 \uc720\ud559 \uacbd\ud5d8 \uc5c6\uc74c"},"fashionStyle":{"f":{"1":"\uc815\uac08\ud55c \uc624\ud53c\uc2a4\/\uc815\uc7a5\ub8e9","2":"\ub2e8\uc544\ud55c \uc6d0\ud53c\uc2a4","3":"\ud004\ub9ac\ud2f0 \uba85\ud488 \uc2a4\ud0c0\uc77c","4":"\uba85\ub791\ud55c \uce90\uc96c\uc5bc","5":"\uc790\uc720\ubd84\ubc29\ud55c \ube48\ud2f0\uc9c0","6":"\ud65c\ub3d9\uc801\uc778 \uc544\uc6c3\ub3c4\uc5b4","7":"\ud53c~\uc2a4! \ud799\ud569\uc2a4\ud0c0\uc77c","8":"\uc720\ub2c8\ud06c\ud55c \ubcf4\uc138\uc2a4\ud0c0\uc77c","9":"\ubc1c\ub784\ud55c \ud2b8\ub808\uc774\ub2dd\ubcf5","10":"\ud3c9\ubc94\ud55c \uba70\ub290\ub9ac\ub8e9","11":"\uccad\ub2f4\ub3d9 \uba70\ub290\ub9ac\ub8e9","12":"\uc694\uc5fc\uc139\uc2dc\ud55c \ud074\ub7fd\uc758\uc0c1","13":"\ube14\ub9c1\ube14\ub9c1 \ud5d0\ub9ac\uc6b0\ub4dc\uc2a4\ud0c0\uc77c","14":"\uc139\uc2dc\ubc1c\ub784 \ucf54\uc2a4\ud504\ub808 \uc758\uc0c1","15":"\uac78\ud06c\ub7ec\uc26c \ubc00\ub9ac\ud130\ub9ac\ub8e9","16":"\uc790\uc720\ub85c\uc6b4 \ubcf4\ud5e4\ubbf8\uc548\ub8e9","17":"\uace0\ud488\uaca9 \ub825\uc154\ub9ac \ubbf8\uc2dc\uc2a4\ud0c0\uc77c","18":"7080 \ubcf5\uace0\uc2a4\ud0c0\uc77c","19":"\uac10\uac01\uc801\uc778 \ubaa8\ub358\uc2dc\ud06c\ub8e9"},"m":{"1":"\uc2e0\uc0ac\uc801\uc778 \ub304\ub514\uc815\uc7a5\ub8e9","2":"\ud328\uc158 \uc138\ubbf8\uc815\uc7a5","3":"\ud004\ub9ac\ud2f0 \uba85\ud488 \uc2a4\ud0c0\uc77c","4":"\ud770\ud2f0\uc5d0 \uccad\ubc14\uc9c0 \uce90\uc96c\uc5bc","5":"\ud2b8\ub79c\ub514 \uce90\uc96c\uc5bc","6":"\uc720\ub2c8\ud06c\ud55c \ubcf4\uc138\uc2a4\ud0c0\uc77c","7":"\ud65c\ub3d9\uc801\uc778 \uc544\uc6c3\ub3c4\uc5b4","8":"\ud53c~\uc2a4! \ud799\ud569\uc2a4\ud0c0\uc77c","9":"\ud3b8\ud55c \ud2b8\ub808\uc774\ub2dd\ubcf5","10":"\ud3c9\ubc94\ud55c \ub370\uc77c\ub9ac\ub8e9","11":"\ubd80\ud2f0\ub098\ub294 \uace8\ud504\uc6e8\uc5b4","12":"\uce74\ub9ac\uc2a4\ub9c8 \uc81c\ubcf5\uc758\uc0c1","13":"\uc2ec\ucff5 \ub0a8\uce5c\ub8e9","14":"\uc790\uc720\ub85c\uc6b4 \ubcf4\ud5e4\ubbf8\uc548\ub8e9","15":"7080 \ubcf5\uace0\uc2a4\ud0c0\uc77c","16":"\uac10\uac01\uc801\uc778 \ubaa8\ub358\uc2dc\ud06c\ub8e9"}},"favoriteFood":{"1":"\ub9ac\uc18c\ud1a0","2":"\uae4c\ub974\ubcf4\ub098\ub77c","3":"\ubd09\uace8\ub808","4":"\uc2a4\ud14c\uc774\ud06c","5":"\uc0cc\ub4dc\uc704\uce58","6":"\ud0b9\ud06c\ub7a9","7":"\ub78d\uc2a4\ud0c0","8":"\ud06c\ub85c\uc640\uc0c1","9":"\uc640\ud50c","10":"\ud06c\ub808\ud398","11":"\ubca0\uc774\ucee8","12":"\uc251\uc251\ubc84\uac70","13":"\ud504\ub77c\uc774\ub4dc\uce58\ud0a8","14":"\ub3c4\ub11b","15":"\ud56b\ub3c4\uadf8","16":"\uce98\ub9ac\ud3ec\ub2c8\uc544\ub864","17":"\ud478\ub529","18":"\uce58\uc988","19":"\uc2a4\uc2dc","20":"\ub77c\uba58","21":"\ud0c0\ucf54\uc57c\ud0a4","22":"\ub098\uac00\uc0ac\ud0a4 \uc9ec\ubf55","23":"\uc624\ucf54\ub178\ubbf8\uc57c\ud0a4","24":"\ub3c8\ubd80\ub9ac","25":"\ub3c8\uac00\uce20","26":"\uc18c\ubc14","27":"\uc0ac\uc2dc\ubbf8","28":"\ucd08\ubc25","29":"\uc5f0\uc5b4\ud68c","30":"\ucc38\uce58\ud68c","31":"\uc0e4\ube0c\uc0e4\ube0c","32":"\ub524\uc12c","33":"\ubd81\uacbd\uc624\ub9ac","34":"\ud0d5\uc218\uc721","35":"\uc9dc\uc7a5\uba74","36":"\ub77c\uc870\uae30","37":"\uae50\ud48d\uae30","38":"\uc720\uc0b0\uc2ac","39":"\ud314\ubcf4\ucc44","40":"\uae30\uc2a4\uba74","41":"\uc0bc\uc120\uc790\uc7a5\uba74","42":"\uc6b0\ub3d9","43":"\ubcf6\uc74c\ubc25","44":"\ucd98\uad8c","45":"\ub9c8\ud30c\ub450\ubd80","46":"\uc0e5\uc2a4\ud540","47":"\uc813\uac08","48":"\ubd88\uace0\uae30","49":"\ucda9\ubb34\uae40\ubc25","50":"\ube44\ube54\ubc25","51":"\ubd95\uc5b4\ucc1c","52":"\ube48\ub300\ub5a1","53":"\ub098\uc8fc\uacf0\ud0d5","54":"\ub0c9\uba74","55":"\uc548\ub3d9\ucc1c\ub2ed","56":"\uc0bc\uacc4\ud0d5","57":"\ucd98\ucc9c\ub2ed\uac08\ube44","58":"\uc7a5\uc5b4\uad6c\uc774","59":"\uc120\uc9d3\uad6d","60":"\uc218\uc81c\ube44","61":"\ucc0c\uac1c","62":"\ub9e4\uc6b4\ud0d5","63":"\uc0dd\uc120\uc870\ub9bc","64":"\uacc4\ub780\uc694\ub9ac","65":"\ucc1c\uc694\ub9ac","66":"\uac08\ube44","67":"\uc0bc\uacb9\uc0b4","68":"\ubcf4\uc308","69":"\uc871\ubc1c","70":"\ud64d\uc5b4","71":"\uae30\ud0c0 \ud55c\uc2dd","72":"\ub098\uc2dc\uace0\ub7ad","73":"\ub620\uc591\uafcd","74":"\ud31f\ud0c0\uc774","75":"\uc300\uad6d\uc218","76":"\uc6d4\ub0a8\uc308","77":"\ucf00\ubc25","78":"\ucee4\ub9ac","79":"\uc591\uace0\uae30","80":"\ud401\ub4c0","81":"\uc18c\uc2dc\uc9c0","82":"\uba55\uc2dc\uce78\uc694\ub9ac","83":"\ub098\ucd78","84":"\uc624\ub9ac\ud6c8\uc81c","85":"\ub3fc\uc9c0\ubc14\ubca0\ud050","86":"\uc0dd\uace0\uae30","87":"\uc870\uac1c\uad6c\uc774","88":"\ucca0\ud310\ubcf6\uc74c","89":"\ud1a0\uc2a4\ud2b8","90":"\ud3ed\ub9bd","91":"\uc26c\ub9bc\ud504","92":"\ud280\uae40","93":"\ub77c\uba74","94":"\uc21c\ub300","95":"\ub5a1\ubcf6\uc774","96":"\ud584\ubc84\uac70","97":"\ud53c\uc790","98":"\uce58\ud0a8","99":"\ub5a1","100":"\uce58\ud0a8\uc0d0\ub7ec\ub4dc"},"parents":{"a":"\uc608(\ubaa8\ub450)","b":"\uc544\ubc84\uc9c0\ub9cc","c":"\uc5b4\uba38\ub2c8\ub9cc","d":"\uc544\ub2c8\uc624(\uc791\uace0)"},"parentsView":{"a":"\uc608! \ub450\ubd84 \ub2e4 \uc0b4\uc544\uacc4\uc2ed\ub2c8\ub2e4","b":"\uc544\ubc84\uc9c0\ub9cc \uc0b4\uc544\uacc4\uc2ed\ub2c8\ub2e4","c":"\uc5b4\uba38\ub2c8\ub9cc \uc0b4\uc544\uacc4\uc2ed\ub2c8\ub2e4","d":"\ub450\ubd84 \ub2e4 \ub3cc\uc544\uac00\uc168\uc2b5\ub2c8\ub2e4"},"divorceDate":["2017\ub144","2016\ub144","2015\ub144","2014\ub144","2013\ub144","2012\ub144","2011\ub144","2010\ub144","2009\ub144","2008\ub144","2007\ub144 \uc774\uc804"],"bringUp":{"a":"\ub098","b":"\uc804 \ubc30\uc6b0\uc790","c":"\uac00\uc871\/\uce5c\ucc99","z":"\uae30\ud0c0"},"bringUpView":{"a":"\uc81c\uac00 \uc591\uc721\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4","b":"\uc804 \ubc30\uc6b0\uc790\uac00 \uc591\uc721\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4","c":"\uac00\uc871 \ub610\ub294 \uce5c\ucc99\uc774 \uc591\uc721\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4","z":"\uae30\ud0c0\uc758 \uc0ac\uc720\ub85c \ud604\uc7ac \uac19\uc774 \uc0b4\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4"},"smokeTypeL":{"a":"\uacbd\ud5d8\uc5c6\uc74c","b":"\uae08\uc5f0","c":"\ud761\uc5f0"},"smokeTypeS":{"b":{"b01":"1\ub144\ucc28","b02":"2\ub144\ucc28","b03":"3\ub144\ucc28","b04":"4\ub144\ucc28","b05":"5\ub144\uc774\uc0c1"},"c":{"c01":"\uc77c 5\uac1c\ube44\u2193","c02":"\uc77c 10\uac1c\ube44\u2191","c03":"\uc77c 1\uac11\u2193","c04":"\uc77c 1\uac11\u2191"}},"smokeTypeSview":{"c":{"c01":"\ud558\ub8e8 5\uac1c\ube44 \uc774\ud558","c02":"\ud558\ub8e8 10\uac1c\ube44 \uc774\ud558","c03":"\ud558\ub8e8 1\uac11 \uc774\ud558","c04":"\ud558\ub8e8 1\uac11 \uc774\uc0c1"}},"alcohol":{"a":"\uc74c\uc8fc \uc548\ud568","b":"\uc6d4 1~2\ud68c","c":"\uc8fc 1~2\ud68c","d":"\uc8fc 3\ud68c \uc774\uc0c1"},"alcoholType":{"a":"1~2\uc794","b":"\ubc18\ubcd1\uc815\ub3c4","c":"1\ubcd1\uc815\ub3c4","d":"1\ubcd1\uc774\uc0c1"},"alcoholTypeView":{"a":"1~2\uc794 \uae30\ubd84\uc88b\uac8c","b":"\ubc18\ubcd1\uc815\ub3c4 \ubd84\uc704\uae30 \ub9de\ucd94\uba70","c":"1\ubcd1\uc815\ub3c4 \uc990\uac81\uac8c","d":"1\ubcd1\uc774\uc0c1 \uc9c4\ud558\uac8c"},"health":{"a":"\uc228\uc26c\uae30 \uc6b4\ub3d9","b":"\uc6d4 1~2\ud68c","c":"\uc8fc 1~2\ud68c","d":"\uc8fc 3\ud68c \uc774\uc0c1"},"healthType":{"a":"\uc0b0\ucc45\uc218\uc900","b":"\uc870\uae45\uc218\uc900","c":"\ub2ec\ub9ac\uae30\uc218\uc900"},"healthTypeView":{"a":"\uad6c\uacbd\ud558\uba70 \uc0b0\ucc45\ud558\ub294 \uc815\ub3c4\ub85c","b":"\ub540\uc774 \uc1a1\uae00\uc1a1\uae00 \ub9fa\ud788\uac8c","c":"\ub540\uc5d0 \ud760\ubed1 \uc816\uc744 \ub9cc\ud07c"},"animalNow":{"a":"\ud0a4\uc6b4\ub2e4.","b":"\ud0a4\uc6b0\uc9c0 \uc54a\ub294\ub2e4."},"animalMarry":{"a":"\ud0a4\uc6b4\ub2e4.","b":"\ud0a4\uc6b0\uc9c0 \uc54a\ub294\ub2e4."},"animalView":{"a":{"a":"\uacb0\ud63c\ud6c4\uc5d0\ub3c4 \ud0a4\uc6b0\uace0 \uc2f6\uc2b5\ub2c8\ub2e4","b":"\ud604\uc7ac\ud0a4\uc6b0\uba70 \ud0a4\uc6b0\uc9c0\uc54a\uc744\uc218 \uc788\uc2b5\ub2c8\ub2e4."},"b":{"a":"\ud604\uc7ac\ud0a4\uc6b0\uc9c0\uc54a\uc73c\uba70 \ud0a4\uc6b8\uc218 \uc788\uc2b5\ub2c8\ub2e4.","b":"\uacb0\ud63c\ud6c4\uc5d0\ub3c4 \ud0a4\uc6b0\uc9c0 \uc54a\uace0\uc2f6\uc2b5\ub2c8\ub2e4."}},"babyPlan":{"a":"\uc544\ub2c8\uc694","b":"\uc608","c":"\ubc30\uc6b0\uc790\uc640 \ud568\uaed8 \uacb0\uc815","d":"\ub098\uc774\uad00\uacc4\ub85c \uacc4\ud68d\uc5c6\uc74c"},"babyView":{"a":"\uc11c\ub85c\ub9cc \ubc14\ub77c\ubcf4\uba70 \uc0b4\uace0 \uc2f6\uc2b5\ub2c8\ub2e4.","b":"\uc6b0\ub9ac\ub97c \ub2ee\uc740 \uc544\uc774\ub97c \ub0b3\uace0 \uc2f6\uc2b5\ub2c8\ub2e4.","c":"\uc2e0\ub791\uacfc \uc0c1\uc758\ud574\uc11c \uacb0\uc815\ud558\uace0 \uc2f6\uc2b5\ub2c8\ub2e4.","d":"\ub098\uc774\uad00\uacc4\ub85c \uacc4\ud68d\uc774 \uc5c6\uc2b5\ub2c8\ub2e4."},"divorceRslt":{"1":"\uc608","2":"\ud63c\uc778\uc2e0\uace0 \uc548\ud588\uc74c","3":"\uc0ac\ubcc4"}};
+	var ajaxUrl = (isMatchInsert) ? '/?chnl=cont&ctrl=profile/ajax&dest=ajaxProfilePhotoIns_matchMem' : '/?chnl=cont&ctrl=profile/ajax&dest=ajaxProfilePhotoIns';
+	var consParm = {
+		isApp:$isApp,
+		type:'photo',
+		photoCount: 20,
+		pmemNo: '',
+		isMatchInsert: isMatchInsert,
+		insertMode: insertMode,
+		callback: function(data) {
+			$.photoUploadDone(data);
+		}
+	};
+	var photoProc = new photoUpload(consParm);
+	$.photoUploadDone = function(data) {
+		// 중매인이 신규중매회원 프로필등록중 : 아직 중매회원번호가 없으므로 사진정보를 디비에 기록하지 않고 포토서버에 생성된 파일을 hidden 요소에 기록해줌
+		// (웹 / 앱 공통)
+		if(isMatchInsert){
+			var index = ($('.matchMemImg').attr('name')) ? ($('.matchMemImg').last().data('index'))+1 : 0;
+			var html = '<input type="hidden" class="matchMemImg" id="matchMemImg_'+(index+1)+'" name="matchMemImg[]" data-index="'+index+'" value="'+data.files[0].imginfo+'">';
+			$('#matchMemImgInfo').append(html);
+		}
+		// 이부분부터는 저장하기 버튼을 눌렀을 때 처리되는 부분
+		if($.getError(data.retmsg)) {
+			$.toast($.getError(data.retmsg));
+		}
+		else {
+			var thatData = data;
+			// photo	: 1 -> 프로필 상단 사진영역
+			// list		: 2 -> 하단 사진 목록
+			// both		: 3 -> 둘다
+			thatData.reqcode = 2;
+			thatData.pmemNo = '';
+			//====== 중매인이 중매회원 소개사진 최초등록시 디비에 기록하지 않고 서버에 저장된 파일들 값을 넘겨주고자 할 때
+			if(isMatchInsert) {
+				arrImg = [];
+				$('.matchMemImg').each(function(){
+					$this = $(this);
+					arrImg.push($this.val());
+				});
+				thatData.arrPhoto = arrImg;
+			}
+			$.ajax({
+				url: ajaxUrl,
+				method: 'POST',
+				data: thatData,
+				dataType: 'json',
+				timeout: 10000
+			})
+			.done(function(data) {
+				if($.getError(data.retmsg)) {
+					$.toast($.getError(data.retmsg));
+				}
+				else {
+					// list		: 2 -> 하단 사진 목록
+					if(thatData.reqcode & 2) {
+						$('.info_pr_photo_box').html(data.list);
+					}
+					photoProc.setDefault('photoCount',data.allowCount);
+				}
+			});
+		}
+	}
+	// 사진삭제
+	$.photoDel = function(obj) {
+		var delType = 'self';
+		var $this = $(obj);
+		var photoNo = $this.data('photono');
+		var $img	= $('#photo_'+photoNo).find('img');
+		var urlInfo = {};
+		var imgUrlInfo = $img.attr('src').split('?');
+		var imgQry = imgUrlInfo[1].split('&');
+		var imgQryData = '';
+		for(k in imgQry) {
+			imgQryData = imgQry[k].split('=');
+			urlInfo[imgQryData[0]] = imgQryData[1];
+		}
+		var _type = (urlInfo.type) ? urlInfo.type : '';
+		var _sdir = (urlInfo.sdir) ? urlInfo.sdir : '';
+		var _viewname = (urlInfo.viewname) ? urlInfo.viewname : '';
+		var _reqcode = 2;
+		var ajaxUrl = (isMatchInsert) ? '/?chnl=cont&ctrl=profile/ajax&dest=ajaxProfilePhotoDel_matchMem' : '/?chnl=cont&ctrl=profile/ajax&dest=ajaxProfilePhotoDel';
+		var postData = {
+			'type':_type,
+			'sdir':_sdir,
+			'viewname':_viewname,
+			'photoNo':photoNo,
+			'reqcode':_reqcode,
+			'delType':delType,
+			'pmemNo':''
+		};
+		// 중매인이 중매회원등록화면에서 사진삭제누를때 해당 사진정보(37751_20160623184400_b.jpg)가 필요하므로 데이터만들어서 전송
+		if(isMatchInsert){		// 중매인 && insertMode=='insert' 에서만 실행
+			var matchMemImg	= $('#matchMemImg_'+photoNo).val();
+			var splitImg = matchMemImg.split('|');
+			postData.matchMemImg = splitImg[0];
+		}
+		$.ajax({
+			url: ajaxUrl,
+			method: 'POST',
+			data: postData,
+			dataType: 'json',
+			timeout: 10000
+		})
+		.done(function(data) {
+			if($.getError(data.retmsg)) {
+				$.toast($.getError(data.retmsg));
+			}
+			else {
+				// list		: 2 -> 하단 사진 목록
+				if(_reqcode & 2) {
+					if(!isMatchInsert){  // 중매인-중매회원 프로필신규등록 아님(디비에 사진저장)
+						$('.info_pr_photo_box').html(data.list);
+					}else{  // 중매인-중매회원 프로필신규등록중(디비에 사진저장 안함)
+						var delId = 'photo_wrap_'+photoNo;
+						var hiddenId = 'matchMemImg_'+photoNo;
+						$('#'+delId).remove();
+						$('#'+hiddenId).remove();
+						var photoChild = $('.info_pr_photo_box').has('span').length;
+						var html = '<img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/no_photo.jpg" class="no_photo" width="118" height="83" alt="등록된 포토가 없습니다">';
+						if(photoChild == 0){
+							$('.info_pr_photo_box').html(html);
+						}
+					}
+				}
+				if(isMatchInsert){ // 중매인이 중매회원 프로필 신규등록시 서버에 저장된 내용을 접근할 수 없으므로 photoProc객체의 photoCount값을 컨트롤함
+					var thisPhotoCount = photoProc.getDefault('photoCount'); // 최대 저장할수 있는 갯수 카운트
+					photoProc.setDefault('photoCount',thisPhotoCount+1);  // 최대 저장할 수 있는 갯수를 늘림
+				}else{
+					photoProc.setDefault('photoCount',data.allowCount);
+				}
+			}
+		});
+	}
+	// 사진등록
+	$.addPhoto = function() {
+		photoProc.togPhotoSaveLy();
+	}
+	// 성만노출시 안내
+	$('#memNameSlct').on('change', function() {
+		var $this = $(this);
+		if(!$this.is(":checked")) {
+			$.confirm('체크해제 하시면 전체 이름이<br>표기됩니다.<br><br>변경하시겠습니까?', '닫기', '변경하기', function() {
+				$this.prop('checked',true);
+			},function() {
+			});
+		}
+	});
+	// 성씨 입력 체크
+	$('#memLastName').on('blur', function() {
+		return $.lastNameCheck();
+	});
+	// 성씨 입력 체크
+	$.lastNameCheck = function() {
+		var $this = $('#memLastName');
+		var szVal = $this.val();
+		// 한글만 입력
+		var korChk = /([^가-힣ㄱ-ㅎㅏ-ㅣ\x20])/i;
+		if (korChk.test(szVal)) {
+			$.alert('한글만 입력 가능합니다.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+
+		if($.cookie('gCCV:LOC') != 'q'){
+				// 한글 최대 2자
+				if(szVal.length > 2) {
+					$.alert('한글 2자까지만 입력 가능합니다.', '확인', function(){
+						$this.focus();
+					});
+					return false;
+				}
+
+				// 성씨 체크
+				if(szVal && !$arCommonCode['lastName'][szVal]) {
+					$.alert('성씨 정보를 잘못 입력하셨습니다.<br>다시 입력하여 주세요.', '확인', function(){
+						$this.val('');
+						$this.focus();
+					});
+					return false;
+				}
+		}
+		return true;
+	}
+	// 이름 입력 체크
+	$('#memFirstName').on('blur', function() {
+		return $.firstNameCheck();
+	});
+	// 이름 체크
+	$.firstNameCheck = function() {
+		var $this = $('#memFirstName');
+		var szVal = $this.val();
+		// 한글만 입력
+		var korChk = /([^가-힣ㄱ-ㅎㅏ-ㅣ\x20])/i;
+		if (korChk.test(szVal)) {
+			$.alert('한글만 입력 가능합니다.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+		// 한글 최대 5자
+		if(szVal.length > 5 && $.cookie('gCCV:LOC') != 'q') {
+			$.alert('한글 5자까지만 입력 가능합니다.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+		return true;
+	}
+	// 중매회원 등록시 대화명 검증 / 중복검사
+	$.matchMemNickChk = function(){
+		var jsonBadWord = ["\ubcc0\uad0b\uc1e0","\uae4c\ud1a0\uc625:61456","\uae4c\ud1a0\uc625","61456","\uc815\uc790","\ub09c\uc790","\ud5a5\ubb38","\ubd64\uc9c0","\ud56d\ubb38","\ubd64\uc9c0\ud6c4\ud5a5\ubba8","\ud1a1\ud574\uc6a9","\uc544\uc774\ub514","\ud1a1\ud574\uc694","\ube68\uace0","\uc886","\uc886\ube68\uace0\uc788\ub124","\uc139\ub9c8","\uc57c\uc139\ub9c8","\uacb0\ud63c\uc0c1\ub2f4","\uc0c1\ub2f4","\uc5d0\uc2a4\uc5d0\uc2a4","\uc18d\uad81","0199","vv0199","\uc528\uc5d4\uc5d4\uacf5\uc0ac\uc77c\uc0bc","\uac1c\uc0c8\ub07c","\ubcd1\uc2e0","\ube05\uc2e0","\ud1a1\uc8fc\uc138\uc694","\uc5d0\uc774","\uba39\uae30","\ud3ec\uc778\ud2b8","Kkkkk","Kkkkk672","\uae08\uc83c","\uae08\uc804","\ud558\uccb4","\ub9e8\uc2a4","\uba58\uc2a4","\uc0dd\ub9ac","\uaf43\uc78e","\ubc14\uc2a4\ud2b8","\uc6e8\uc2a4\ud2b8","\ud788\ud504","\uc5c9\ub369\uc774","\uc918","\ud55c\ubc88","\ud560\ub798","\ubcf4\uc790","\ubcf4\uc5ec\uc918","\ubcfc\ub798","\uc790\uc790","\ud64d\ucf69","\ud790\ub85c\ud3f0","\ube68\uc790","\ud788\ub85c\ud401","\ud788\ub85c\ud3f0","\ube60\uafb8\ub9ac","\ubc14\uafb8\ub9ac","\ubc14\uad6c\ub9ac","\ube60\uad6c\ub9ac","\ub538\ub538\uc774","\ud5a9\uae30","\uc624\ub7f4","\uc624\ub784","\ucb48\ucb48\ubc14","\uc0ac\uae4c\uc2dc","\uc329","\u3148\u3131","\uc870\uac74","\ubc97\uc790","\uc601\uc0c1","\uc9c0\ub7f4","\uc9c0\ub784","\uc2dc\ubc29\uc0c8","\uc784\ube59","\uc784\ubcd1","\uc5fc\ubcd1","\ud638\ub85c","\uc57c\ud55c","\uc57c\ub3d9","\uc57c\uc124","\ud3ec\ub974\ub178","\uc74c\ub780","\uc74c\uae30","\uad6c\uba4d","\uc0c8\ub07c","\uc528\ubc1c","\uc528\ud314","\uc2dc\ubc1c","\ub188","\ud1a0\uc625","\ud1a1","\ud130\ub975","\uc720\ub450","\uc695\uad6c","\ub300\ubb3c","\ud560\ub818","\uc0c9\uc2a4","\uc721\uad6c","\ub9c8\uc57d","\uc816","\uc720\ubc29","\uc7a0\uc9c0","\ud138","\uc883","\uc139\uc2a4","\uc131\uae30","\ubcf4\uc9c0","\uc790\uc9c0","\uce74\ud1a1","\u314b\u314f\ud1a1"];
+		var chkChar2 = /[^\u0030-\u0039]/; //숫자
+		var chkChar3 = /[^\uac00-\ud7af]/; //한글
+		var $this = $('#mateNick');
+		$('#nickMsg').hide();
+		if($.trim($("#mateNick").val())){
+			var nickChk2		= 'y';
+			$("#mateNick").attr('nickChk','n');
+			var nickVal = $.trim($("#mateNick").val());
+			// 금지단어 점검
+			var cleanNickVal = nickVal.replace(/\s/gi,'');
+			if(jsonBadWord && (new RegExp("(" + jsonBadWord.join('|') + ")","i")).test(cleanNickVal)) {
+				$.alert('금지단어가 포함된 단어입니다.', '확인', function(){
+					$this.focus();
+				});
+				return false;
+			}
+			if (chkChar3.test($("#mateNick").val())) {
+				$.alert('한글만 입력 가능합니다.', '확인', function(){
+					$this.focus();
+				});
+				return false;
+			}
+			if(nickChk2		== 'y'){
+				var postData = {'chkType':'2','chkVal':nickVal};
+				$.ajax({
+					async: false,
+					type: "post",
+					url: "/?chnl=cont&ctrl=profile/ajax&dest=ajaxMatchMemNickCheck",
+					data: postData,
+					dataType: "html",
+					timeout: 30000,
+					success: function(result){	// 성공시
+						//alert( "success: " + result );
+						var pattern = /"/gi;
+						var retVal = result.replace(pattern, '');
+						switch(retVal){
+							case '1':
+								$("#nickMsg").show().html("<font color='blue'>! 등록 가능합니다.</font>");
+							break;
+							case '-2':
+								$("#mateNick").val('');
+								$("#nickMsg").show().html("<font color='red'>! 이미 사용중인 대화명입니다.</font>");
+							break;
+							case '-3':
+								$("#mateNick").val('');
+								$("#nickMsg").show().html("<font color='red'>! 한글 2자~8자만 사용가능합니다.</font>");
+							break;
+							default:
+								$("#mateNick").val('');
+								$("#nickMsg").show().html("<font color='red'>! 시스템에 문제가 있습니다.</font>");
+							break;
+						}
+					},
+					error: function(request,status,error){ //실패시
+							//alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+					}
+				});
+			}
+		}
+	}
+	// 대화명 체크
+	$.nickCheck = function() {
+		var $this = $('#mateNick');
+		var szVal = $this.val();
+		// 입력내용
+		if($.trim(szVal) == '') {
+			$.alert('대화명을 입력해주세요.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+		// 한글만 입력
+		var korChk = /([^가-힣ㄱ-ㅎㅏ-ㅣ\x20])/i;
+		if (korChk.test(szVal)) {
+			$.alert('한글만 입력 가능합니다.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+
+		// 한글 최대 2자~8자
+		if(szVal.length < 2 || szVal.length > 8) {
+			$.alert('한글 2자~8자까지만 입력 가능합니다.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+/*
+		// 한글 최대 3자
+		if(szVal.length > 3) {
+			$.alert('한글 3자까지만 입력 가능합니다.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+*/
+		return true;
+	}
+	// 생년체크
+	$.birthYearCheck = function() {
+		var $this = $('#mateBirthYear');
+		var szVal = $this.val();
+		// 입력내용
+		if($.trim(szVal) == '') {
+			$.alert('생년을 선택해주세요.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+		return true;
+	};
+	// 생월체크
+	$.birthMonthCheck = function() {
+		var $this = $('#mateBirthMonth');
+		var szVal = $this.val();
+		// 입력내용
+		if($.trim(szVal) == '') {
+			$.alert('생월를 선택해주세요.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+		return true;
+	};
+	// 성별체크
+	$.memSexCheck = function() {
+		var $this = $('#mateSex');
+		var szVal = $this.val();
+		// 입력내용
+		if($.trim(szVal) == '') {
+			$.alert('성별을 선택해주세요.', '확인', function(){
+				$this.focus();
+			});
+			return false;
+		}
+		return true;
+	};
+	$.mateContsCheck = function(conts){
+		var txt = (conts == 'family') ? '가족소개글' : '자기소개글';
+		// 한글 30자 이상 300자 미만
+		var $mateConts = (conts == 'family') ? $('#familyConts') : $("#mateConts");
+		if($.trim($mateConts.val()).length < 30) {
+			$.toast(txt+"을 30자 이상 입력하여주세요.");
+			$mateConts.val($.trim($mateConts.val()));
+			$mateConts.focus();
+			return false;
+		}
+		if($.trim($mateConts.val()).length > 300) {
+			$.toast(txt+"을 300자 이하로 입력하여주세요.");
+			$mateConts.val($.trim($mateConts.val()).substring(0,300));
+			$mateConts.focus();
+			return false;
+		}
+		return true;
+	};
+	// add conts check - respectPersonCont, myPointCont
+	$.addContsCheck = function(_id, _startCnt, _endCnt){
+		if(!_id) return false;
+
+		_startCnt = _startCnt || 10;
+		_endCnt = _endCnt || 100;
+		
+		var $_addConts = $('#'+_id);
+		var txt = $_addConts.data('title');
+
+		if($.trim($_addConts.val()).length < _startCnt) {
+			$.toast(txt+"을 " + _startCnt + "자 이상 입력하여주세요.");
+			$_addConts.val($.trim($_addConts.val()));
+			$_addConts.focus();
+			return false;
+		}
+		if($.trim($_addConts.val()).length > _endCnt) {
+			$.toast(txt+"을 " + _endCnt + "자 이하로 입력하여주세요.");
+			$_addConts.val($.trim($_addConts.val()).substring(_endCnt));
+			$_addConts.focus();
+			return false;
+		}
+		return true;
+	};	
+/*
+	$.mateContsCheck = function(){
+		var memSlct = $.cookie('gCCV:SLCT');
+		var txt = (memSlct == 'j' || memSlct == 'p') ? '회원소개글' : '자기소개글';
+		// 한글 30자 이상 300자 미만
+		var $mateConts = $("#mateConts");
+		if($.trim($mateConts.val()).length < 30) {
+			$.toast(txt+"을 30자 이상 입력하여주세요.");
+			$mateConts.val($.trim($mateConts.val()));
+			$mateConts.focus();
+			return false;
+		}
+		if($.trim($mateConts.val()).length > 300) {
+			$.toast(txt+"을 300자 이하로 입력하여주세요.");
+			$mateConts.val($.trim($mateConts.val()).substring(0,300));
+			$mateConts.focus();
+			return false;
+		}
+		return true;
+	};
+*/
+	// 주선&성혼비
+	$.matchMemCostCheck = function() {
+		var $selCost = $('#matchMemCost');
+		var selVal = $selCost.val();
+		var $txtCost = $('#matchMemCostText');
+		var txtVal = $txtCost.val();
+		// 입력내용
+		if($.trim(selVal) == '3' && $.trim(txtVal) == '' ) {
+			$.alert('주선&성혼비를 입력해주세요.', '확인', function(){
+				$txtCost.focus();
+			});
+			return false;
+		}
+		return true;
+	};
+	// 일반/가족회원 필수체크
+	$.fNormal_chk = function() {
+		// 가입경로
+		if($('#joinSlct').val() == '') {
+			backColor('joinWay', '');
+			$.toast("가입경로를 선택하여주세요.");
+			$('#joinSlct').focus();
+			return false;
+		}
+		return true;
+	}
+	// 중매/가족회원 필수체크
+	$.fMatchMem_chk = function() {
+		// 대화명 (가족회원은 닉네임 입력받지 않음)
+		if($.cookie('gCCV:SLCT')=='j' && !$.nickCheck()) {
+			return false;
+		}
+		// 생년
+		if(!$.birthYearCheck()) {
+			return false;
+		}
+		// 생월
+		if(!$.birthMonthCheck()) {
+			return false;
+		}
+		// 성별
+		if(!$.memSexCheck()) {
+			return false;
+		}
+		// 회원소개글 및 추천글
+		if(!$.mateContsCheck()) {
+			return false;
+		}
+		// 주선&성혼비
+		if(!$.matchMemCostCheck()) {
+			return false;
+		}
+		return true;
+	};
+
+	// 빈값 하이라이트
+	function backColor(id, titleId){
+		passId = ['parentsTxt', 'bringUpTxt', 'familyTxt', 'myRespectTxt', 'myPointTxt', 'babyPlanTxt'];
+		var passIdChk = true;
+		for(var i=0;i<passId.length;i++){
+			if(passId[i] == id) passIdChk = false;
+		}
+
+		if(titleId){	// 셀렉트박스 하이라이트
+			var strClass = $('#'+titleId).attr('class');
+			if(!strClass) {
+				return;
+			}
+			var arrClass = strClass.split(' ');
+			for(var k in arrClass){
+				var pattern = /^prime_/;
+				if(pattern.exec(arrClass[k])){
+					var splitTitle = arrClass[k].split('_');
+					var chTitle = splitTitle[0]+"_error_"+splitTitle[2];
+					$('#'+titleId).removeClass(arrClass[k]).addClass(chTitle);
+				}
+			}
+		}
+
+		if(passIdChk){	// 타이틀 하이라이트
+			$('#'+id).css('background-color', '#FFC90E'); // #8ff3a4
+			$('#'+id).blur(function(){
+				$this = $(this);
+				$(this).css('background-color', '');
+			});
+		}
+
+		var offset = $('#'+id).offset();
+		$('html, body').animate({scrollTop : offset.top-70}, 400);
+
+	}
+
+	// 빈값 하이라이트 제거(셀렉트박스/붓터치들어간것)
+	function backColorOut(){
+		$('.focusBack').css('background-color', '');
+		for(var i=1; i<5; i++){ // css 에 등록된 prime_mark_0.. 의 갯수
+			$('.prime_error_0'+i).removeClass('prime_error_0'+i).addClass('prime_mark_0'+i);
+		}
+	}
+
+	// 빈값 하이라이트 제거2 (라디오버튼 타이틀에 붓터치 들어간 것들)
+	$('.backColorOut2').on('click', function(){
+		for(var i=1; i<5; i++){ // css 에 등록된 prime_mark_0.. 의 갯수
+			$('.prime_error_0'+i).removeClass('prime_error_0'+i).addClass('prime_mark_0'+i);
+		}
+	});
+
+	// 빈값 하이라이트 제거3 (라디오버튼 타이틀에 붓터치 없는것들)
+	$('div').on('click', function(){
+		$('#divorceTxt').css('background-color', '');
+		$('#webPlanTxt').css('background-color', '');
+	});
+
+	// 빈값 하이라이트 제거4 (가입경로 값변경시)
+	$('#joinSlct').on('change', function(){
+		if($(this).val()){
+			$('#joinWay').css('background-color', '');
+		}
+		$.fCommon_chk();
+	});
+
+	// 라디오버튼 클릭시 빈값 자동이동(셀렉트박스는 slctProfileAttr 이 메소드에서 자동이동시킴)
+	$('.selRadio').on('click', function(){
+		$.fCommon_chk();
+	});
+
+
+	// 공통 필수체크
+	$.fCommon_chk = function() {
+		var memSex = "f";
+		var memSlct = $.cookie('gCCV:SLCT');
+		var lastName=$('#memLastName').val();
+		var firstName=$('#memFirstName').val();
+		var hpAuthVal = $('#hpAuthChk').val();
+
+		if(!lastName || !firstName){
+			var ment = (!lastName) ? '성씨를' : '이름을';
+			var formFocus = (!lastName) ? $('#memLastName') : $('#memFirstName');
+			$.alert(ment+' 입력해 주세요', '확인', function(){
+				formFocus.focus();
+			});
+			return;
+		}
+		if(memSlct == 'j' || memSlct == 'p') {
+			if(!$.fMatchMem_chk()){
+				return false;
+			}
+		}
+		/*
+		// 사진 필수
+		if($('#rprsnPhoto').val() == '') {
+			$.toast("프로필 사진을 등록하여 주세요.");
+			return false;
+		}
+		*/
+		// 성혼유형
+		if($('input[name="mateSlct"]:checked').val() == '') {
+			$.toast("성혼유형을 선택하여주세요.");
+			return false;
+		}
+		// 성
+		if(!$.lastNameCheck()) {
+			return false;
+		}
+		// 이름
+		if(!$.firstNameCheck()) {
+			return false;
+		}
+
+		// 형제관계
+		if($('#brothers').val() == '' || $('#sisters').val() == '' || $('#xth').val() == ''){
+			var target = 'focusBro';
+			if($('#brothers').val() == ''){
+				target = 'focusBro';
+			}else if($('#sisters').val() == ''){
+				target = 'focusSis';
+			}else{
+				target = 'focusXth';
+			}
+			backColor(target, 'broTxt');
+			$.toast("형제관계를 선택하여 주세요", function(){
+
+			});
+			return false;
+		}
+		// 고향L
+		if($('#mateHomeTownL').val() == '') {
+			backColor('focusTownL', 'homeTownTxt');
+			$.toast("고향을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 고향S
+		if(($('#mateHomeTownL').val() != 'q') && ($('#mateHomeTownS').val() == '')) {
+			backColor('focusTownS', 'homeTownTxt');
+			$.toast("고향을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 직업
+		if($('#mateJob').val() == '') {
+			backColor('focusJob', 'jobTxt');
+			$.toast("직업을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 직업명
+		if($('#nameJob').val() == '') {
+			backColor('focusJob', 'jobTxt');
+			$.toast("직업명을 입력하여주세요.", function(){
+			});
+			return false;
+		}
+
+		// 유학경험
+		if($('#studyAbroad').val() == ''){
+			backColor('focusAborad', 'studyTxt');
+			$.toast("유학경험을 선택하여 주세요", function(){
+			});
+			return false;
+		}
+		// 학력
+		if($('#mateCareer').val() == '') {
+			backColor('focusCareer', 'salaryTxt');
+			$.toast("학력을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 연봉
+		if($('#mateAnnSalary').val() == '') {
+			backColor('focusSalary', 'salaryTxt');
+			$.toast("연봉을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 보유재산
+		if($('#memProperty').val() == ''){
+			backColor('focusProperty', 'propertyTxt');
+			$.toast("보유재산을 선택하여 주세요", function(){
+			});
+			return false;
+		}
+		/*
+		// 외국어능력
+		if($('#foreignL').val() == ''){
+			backColor('focusForeignL');
+			$.toast("외국어능력을 선택하여 주세요", function(){
+			});
+			return false;
+		}
+		*/
+		// 스타일
+		if($('#mateStyle').val() == '') {
+			backColor('focusStyle');
+			$.toast("스타일을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 패션스타일
+		if($('#fashionStyle').val() == '' || $('#fashionStyle').val() == ','){
+			backColor('focusFashion', 'fashionTxt');
+			$.toast("패션스타일을 선택하여 주세요", function(){
+			});
+			return false;
+		}
+		// 키
+		if($('#mateHeight').val() == '') {
+			backColor('focusHeight', 'heightTxt');
+			$.toast("키를 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 몸무게
+		if($('#mateWeight').val() == '') {
+			backColor('focusWeight', 'heightTxt');
+			$.toast("몸무게를 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 흡연경력 // 20161024 kossy2k[프라임정보추가2]
+		if($('#smokeTypeL').val() == '' && memSex == 'm') {
+			backColor('focusSmokeTypeL', 'smokeTxt');
+			$.toast("흡연경력을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 흡연경력2
+		if((($('#smo1keTypeL').val() != '' && $('#smokeTypeL').val() != 'a') && $('#smokeTypeS').val() == '') && memSex == 'm') {
+			backColor('focusSmokeTypeS', 'smokeTxt');
+			$.toast("흡연경력을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+
+		// 음주량 // 20161024 kossy2k[프라임정보추가2]
+		if($('#alcohol').val() == '') {
+			backColor('focusAlcohol', 'alcoholTxt');
+			$.toast("음주량을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 음주량2
+		if(($('#alcohol').val() != '' && $('#alcohol').val() != 'a') && $('#alcoholType').val() == '') {
+			backColor('focusAlcoholType', 'alcoholTxt');
+			$.toast("음주량을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+
+		// 건강관리 // 20161024 kossy2k[프라임정보추가2]
+		if($('#health').val() == '') {
+			backColor('focusHealth', 'healthTxt');
+			$.toast("건강관리를 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 건강관리2
+		if(($('#health').val() != '' && $('#health').val() != 'a') && $('#healthType').val() == '') {
+			backColor('focusHealthType', 'healthTxt');
+			$.toast("건강관리를 선택하여주세요.", function(){
+			});
+			return false;
+		}
+
+		// 혈액형
+		if($('#mateBlood').val() == '') {
+			backColor('focusBlood');
+			$.toast("혈액형을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 종교
+		if($('#mateReligion').val() == '') {
+			backColor('focusReligion');
+			$.toast("종교를 선택하여주세요.", function(){
+			});
+			return false;
+		}
+/*
+		// 반려동물 // 20161024 kossy2k[프라임정보추가2]
+		if($('#animalNow').val() == '') {
+			backColor('focusAnimalNow', 'animalTxt');
+			$.toast("반려동물을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 반려동물2
+		if($('#animalMarry').val() == '') {
+			backColor('focusAnimalMarry', 'animalTxt');
+			$.toast("반려동물을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+*/
+		// 차량정보
+		if($('#mateCar').val() == '') {
+			backColor('focusCar');
+			$.toast("차량정보를 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 성격
+		if($('#mateCharc').val() == '' || $('#mateCharc').val() == ',') {
+			backColor('focusCharc', 'charcTxt');
+			$.toast("성격을 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 취미
+		if($('#mateHobby').val() == '' || $('#mateHobby').val() == ',') {
+			backColor('focusHobby', 'hobbyTxt');
+			$.toast("취미를 선택하여주세요.", function(){
+			});
+			return false;
+		}
+		// 선호음식
+		if($('#favoriteFood').val() == '' || $('#favoriteFood').val() == ','){
+			backColor('focusFood', 'foodTxt');
+			$.toast("선호음식을 선택하여 주세요", function(){
+			});
+			return false;
+		}
+		// 재혼 - 자녀수
+		if($('input[name="mateSlct"]:checked').val() == 'r') {
+			if($('#mateOffspring_m').val() == '') {
+				backColor('focusOffspringM');
+				$.toast("자녀수(아들)를 선택하여주세요.", function(){
+				});
+				return false;
+			}
+			if($('#mateOffspring_f').val() == '') {
+				backColor('focusOffspringF');
+				$.toast("자녀수(딸)를 선택하여주세요.", function(){
+				});
+				return false;
+			}
+		}
+
+		// 부모님 생존여부
+		if($('input:radio[name="parents"]:checked').val() == undefined || $('input:radio[name="parents"]:checked').val() == ''){
+			backColor('parentsTxt', 'parentsTxt');
+			$.toast("부모님 생존여부를 선택하여 주세요", function(){
+				//$('#parentsTxt').focus();
+			});
+			return false;
+		}
+		// 20160905 gree17
+		// 재혼 - 이혼절차  이혼년도  자녀양육
+		if($('input[name="mateSlct"]:checked').val() == 'r') {
+			if($('input[name="divorceRslt"]:checked').val() == undefined) {
+				$.toast("이혼절차는 깔끔하게 마무리 되셨나요?<br \>항목을 선택해주세요.", function(){
+					backColor('divorceTxt');
+					//$('#divorceTxt').focus();
+				});
+				return false;
+			}
+			if($('input[name="divorceDate"]').val() == '') {
+				backColor('focusDivorce', 'divorceYTxt');
+				$.toast("이혼(사별)연도를 선택해주세요.", function(){
+				});
+				return false;
+			}
+			if($('input:radio[name="bringUp"]:checked').val() == undefined && !($('#mateOffspring_m').val()=='0' && $('#mateOffspring_f').val()=='0')) {
+				backColor('bringUpTxt', 'bringUpTxt');
+				$.toast("자녀양육여부 항목을 선택해주세요.", function(){
+					//$('#bringUpTxt').focus();
+				});
+				return false;
+			}
+		}
+
+		// 한글 30자 이상 300자 미만
+		if(!$.mateContsCheck()) { // 자기소개글
+			return false;
+		}
+		if(!$.mateContsCheck('family')) { // 가족소개글
+			backColor('familyTxt', 'familyTxt');
+			return false;
+		}
+		
+		/*
+		if(!$.addContsCheck('respectPersonCont',2,20)) { // 존경글
+			backColor('myRespectTxt', 'myRespectTxt');
+			return false;
+		}
+		*/
+		
+		if(!$.addContsCheck('myPointCont',2,3)) { // 배우자점수
+			backColor('myPointTxt', 'myPointTxt');
+			return false;
+		}
+
+		// 언제 결혼할 계획?
+		if($('input[name="wedPlan"]:checked').val() == undefined) {
+			$.toast("언제 결혼할 계획이세요?<br \>항목을 선택해주세요.", function(){
+				backColor('webPlanTxt');
+				//$('#webPlanTxt').focus();
+			});
+			return false;
+		}
+
+		// 자녀 출산계획 // 20161024 kossy2k[프라임정보추가2]
+		if($('input[name="babyPlan"]:checked').val() == undefined && memSex == 'f') {
+			backColor('babyPlanTxt', 'babyPlanTxt');
+			$.toast("자녀 출산계획<br \>항목을 선택해주세요.", function(){
+				//$('#babyPlanTxt').focus();
+			});
+			return false;
+		}
+
+		/*
+		// 희망나이
+		if($('#wishAge').val() == '') {
+			$.toast("희망나이를 선택하여주세요.");
+			return false;
+		}
+		*/
+		// 희망지역
+		if($('#wishLoc').val() == ''||$('#wishLoc').val().trim() == ',') {
+			backColor('focusWishLoc', 'wishLocTxt');
+			$.toast("최소 1지역 이상 설정하셔야 합니다");
+			return false;
+		}
+		/*
+		// 희망종교
+		if($('#wishReligion').val() == '') {
+			$.toast("희망종교를 선택하여주세요.");
+			return false;
+		}
+		*/
+		if(memSlct != 'j') {
+			var norResult = $.fNormal_chk();
+			if(!norResult){
+				return false;
+			}
+		}
+
+		if(hpAuthVal == '') {
+			backColor('memPhone');
+			$('#memPhone').focus();
+			$.toast("휴대폰 번호를 인증 받으세요.");
+			return false;
+		}
+
+		return true;
+	};
+	var submitted = false; // 딜레이 상황에서 더블클릭으로 동일중매회원 중복가입 안되게
+	$.fmate_submit = function() {
+		if(submitted == true) { return false; }
+		var resultChk = $.fCommon_chk();
+		if(resultChk) {
+			submitted = true;
+			$.removeTmpSave();
+			$.ajax_proc();
+		}else{
+			return false;
+		}
+	}
+	$.ajax_proc = function() {
+		var setWishPushByUser = 'n';
+		if(localStorage.getItem("setWishPushByUser"))
+			setWishPushByUser = 'y';
+		var formData = $('#fmate').serialize();
+		formData += "&setWishPushByUser="+setWishPushByUser;
+		// 프로필 등록
+		$.ajax({
+			url: "/?chnl=cont&ctrl=profile/ajax&dest=ajaxProfileIns",
+			method: 'POST',
+			data: formData,
+			dataType: 'JSON',
+			timeout: 10000
+		})
+		.done(function(data) {
+			var retCode = data.retcode+'';
+			switch(retCode) {
+				case '1' :
+					// 쿠키 갱신
+					$.set_gCCV('SEX', data.retSex);
+					$.set_gCCV('BYEAR', data.retBirthYear);
+
+					// 일반회원 - 여성만 - 2016-08-02
+					if($.cookie('gCCV:SLCT') == 'b' && $.cookie('gCCV:SEX') == 'f') {
+						$.adLinkCall(); //광고타고오면
+						$.adLinkLog();	//광고로그기록
+					}
+
+					if(localStorage.mateNoConts == 'no'){ // 위로올리기 창
+						var dtTomorrow = '20170822164901';
+						localStorage.setItem("todayDate", dtTomorrow);
+						localStorage.removeItem("mateNoConts");
+					}
+
+					$.confirm('프로필 등록이 완료되었습니다.<br>더불어 \'자기소개글\'은 여보야 메인에<br>자동으로 등록되었습니다.<br>내용을 수정하시려면 \'글쓰기\'를 이용하세요.', '내 프로필 확인하기', '홈으로', function(){
+						var memNo = (isMatchInsert) ? data.matchMemNo : $.cookie('gCCV:NO');  // ajaxProfileIns.php 에 중매회원이 생성됨(프로필등록이 아닌 회원가입) => 이때의 중매회원 회원번호를 리턴받음
+						if($isApp){
+							$.finishPop('/');
+							$.goProfile(memNo);
+						}else{
+							if($.cookie('siteLayout') != 'w') window.opener.location.reload();
+							$.goProfile(memNo);
+						}
+					}, function() {
+						if($.cookie('siteLayout') == 'w') window.location.href='/';
+						else $.finishPop('/');
+						});
+					break;
+				case '2' :
+					if(localStorage.mateNoConts == 'no'){ // 위로올리기 창
+						var dtTomorrow = '20170822164901';
+						localStorage.setItem("todayDate", dtTomorrow);
+						localStorage.removeItem("mateNoConts");
+					}
+
+					var memNo = (isMatchModify) ? consParm.pmemNo : $.cookie('gCCV:NO');
+					var btnTxt = (isMatchModify) ? '중매회원' : '내';
+					$.confirm('프로필을 수정하였습니다.', btnTxt+' 프로필 확인하기', '홈으로', function(){
+						if($isApp){
+							$.finishPop('/');
+							$.goProfile(memNo);
+						}else{
+							if($.cookie('siteLayout') != 'w') window.opener.location.reload();
+							$.goProfile(memNo);
+						}
+					}, function() {
+						if($.cookie('siteLayout') == 'w') window.location.href= '/';
+						else $.finishPop('/');
+					});
+					break;
+			}
+		});
+	}
+	$("#mateConts").keyup(function(e){
+		v = $(this).val();
+		/*
+		regexp = /[\[\]{}()<>?|`~#$%^&*_+=,;:\"'\\]/g;
+		if(regexp.test(v)) {
+			$.toast("특수문자는 입력할 수 없습니다.");
+			$(this).val(v.replace(regexp,''));
+		}
+		*/
+		if(v.length > 300) {
+			$.toast("300자 이하로 입력하여주세요.");
+			$(this).val($.trim(v).substring(0,300));
+		}
+	});
+	$('input[name="mateSlct"]').click(function() {
+		var $this = $(this);
+		if($this.val() == 'w') {
+//			$("#mateOffspring_m").val('');
+//			$("#mateOffspring_mText").html('아들');
+//			$("#mateOffspring_f").val('');
+//			$("#mateOffspring_fText").html('딸');
+//			$("#divorce_rslt").val('');
+			$(".mate_offspring").hide();
+			$(".divorce_rslt").hide();
+			$(".divorce_date").hide();
+			$('#bringUpBox').hide();// 20161014 kossy2k[프라임정보추가]
+			$('.babyPlan_r').hide(); // 20161024 kossy2k[프라임정보추가2]
+			$('input[name="babyPlan"]:checked').prop('checked', false); // 20161024 kossy2k[프라임정보추가2]
+			$('.select_box_preg').removeClass('select_box_preg_height'); // 20161024 kossy2k[프라임정보추가2]
+			document.getElementsByName('mateConts')[0].placeholder='꼭! 결혼에 적합한 자기소개글을 등록해주세요~광고글, SNS아이디(카톡), 전화번호 등 결혼과 관련없는 글은 관리자가 삭제합니다.';
+		}
+		else {
+			$(".mate_offspring").show();
+			$(".divorce_rslt").show();
+			$(".divorce_date").show();
+			$('#bringUpBox').show();// 20161014 kossy2k[프라임정보추가]
+			$('.babyPlan_r').show(); // 20161024 kossy2k[프라임정보추가2]
+			$('.select_box_preg').addClass('select_box_preg_height'); // 20161024 kossy2k[프라임정보추가2]
+			document.getElementsByName('mateConts')[0].placeholder='광고글, SNS아이디(카톡), 전화번호 등 결혼과 관련없는 글은 관리자가 삭제합니다.';
+		}
+		if($this.val() == 'r' && $("#mateOffspring_m").val()=='0' && $("#mateOffspring_f").val()=='0') {
+			$('#bringUpBox').hide();// 20161014 kossy2k[프라임정보추가]
+		}
+	});
+	$.closeProfileAttr = function() {
+		$('#secretInfo').show();  // 20161024 kossy2k[프라임정보추가2]
+		$("#profileAttr").hide();
+		$("#profileAttrTitle").html('');
+		$("#profileSlct").empty();
+		delete isr;
+	}
+	// 성격3, 취미5 (멀티셀렉트) - 초기화/확인
+	$.openProfileAttr = function(title, id, key) {
+		backColorOut(); // 20161014 kossy2k[프라임정보추가]
+		$('#secretInfo').hide(); // 20161024 kossy2k[프라임정보추가2]
+
+		// 중매인이 중매회원 최초입력시
+		// 스타일 / 성격 ==> 중매회원의 성별을 먼저 입력해야 성별에 맞는 리스트 가져올 수 있다.
+		// 중매회원 수정시에는 해당 중매회원의 성별을 기준으로 스타일/성격 리스트를 바꾼다.
+		//console.log(key);
+		var mateSex = $('#mateSex').val();
+		if(($.cookie('gCCV:SLCT')=='j' || $.cookie('gCCV:SLCT')=='p') && (key=='style' || key=='character') && !mateSex) {
+			var sexMent = ($.cookie('gCCV:SLCT')=='j') ? '중매회원' : '가족회원';
+			$.alert(sexMent+'의 성별을 먼저 입력해 주세요');
+			return false;
+		}
+		$.setHash('#slctProfileAttr');
+		// 자녀수는 결혼의 경우 선택할 수 없습니다.
+		if(key == 'children' && $("#mateSlct").val() == 'w') {
+			$.toast('자녀수는 재혼의 경우만 선택할 수 있습니다.');
+			return false;
+		}
+		// 20161014 kossy2k[프라임정보추가]
+		if(key == 'xth'){
+			if(!$('#brothers').val()){
+				$.alert('형제 인원수를 먼저 선택해 주세요');
+				return false;
+			}else if(!$('#sisters').val()){
+				$.alert('자매 인원수를 먼저 선택해 주세요');
+				return false;
+			}
+		}
+		// 고향 중분류는 대분류를 먼저 선택한 후 선택할 수 있습니다.
+		if(key == 'sloc' && (!$("#mateHomeTownL").val() || $("#mateHomeTownL").val() == 'q')) {
+			return false;
+		}
+		// 흡연 중분류는 대분류를 먼저 선택한 후 선택할 수 있습니다.
+		if(key == 'smokeTypeS' && (!$("#smokeTypeL").val() || $("#smokeTypeL").val() == 'a')) {
+			return false;
+		}
+		// 음주량 중분류는 대분류를 먼저 선택한 후 선택할 수 있습니다.
+		if(key == 'alcoholType' && (!$("#alcohol").val() || $("#alcohol").val() == 'a')) {
+			return false;
+		}
+		// 건강관리 중분류는 대분류를 먼저 선택한 후 선택할 수 있습니다.
+		if(key == 'healthType' && (!$("#health").val() || $("#health").val() == 'a')) {
+			return false;
+		}
+
+		$("#profileAttrTitle").html(title);
+		$("#profileSlct").empty();
+		$("#profileAttr").show();
+		var prefix;
+		var suffix;
+		var isMulti = false;
+		var isSlct = false; // 선택적인
+		var isEtcUp = false; // key value top
+		var isChked = ''; // multi slct
+		var slctMsg = '선택하세요';
+		var maxSlct = 0;
+		var arAttr = {};
+		var arAttrOrder = [];
+		var memSex = ($.cookie('gCCV:SLCT')=='j' || $.cookie('gCCV:SLCT')=='p') ? mateSex : $.cookie('gCCV:SEX');
+		switch(key) {
+			case 'want' :
+				suffix = '상대를 찾고 있습니다.';
+				arAttr = $arCommonCode[key];
+				arAttrOrder = $arCommonCode[key + '_key'];
+				break;
+			case 'job' :
+			case 'salary' :
+			case 'school' :
+				isSlct = true;
+				suffix = '';
+				arAttr = $arCommonCode[key];
+				arAttrOrder = $arCommonCode[key + '_key'];
+				break;
+			case 'height' :
+			case 'weight' :
+			case 'car' :
+			case 'blood' :
+			case 'age' :
+			case 'loc' :
+
+			case 'memProperty' :		// 20161014 kossy2k[프라임정보추가]
+			case 'foreignL' :
+			case 'studyAbroad' :
+
+			case 'smokeTypeL' :		// 20161024 kossy2k[프라임정보추가2]
+			case 'alcohol' :
+			case 'alcoholType' :
+			case 'health' :
+			case 'healthType' :
+
+			case 'religion' :
+				isSlct = true;
+				suffix = '';
+				arAttr = $arCommonCode[key];
+				break;
+
+			case 'xth' :		// 20161014 kossy2k[프라임정보추가]
+				isSlct = true;
+				suffix = '';
+				arAttr = $arCommonCode[key];
+				var slctMsg = '선택';
+				break;
+/*
+			case 'animalNow' :	// 20161024 kossy2k[프라임정보추가2]
+				isSlct = true;
+				suffix = '';
+				arAttr = $arCommonCode[key];
+				var slctMsg = '선택하세요';
+				break;
+			case 'animalMarry' :
+				isSlct = true;
+				suffix = '';
+				arAttr = $arCommonCode[key];
+				var slctMsg = '선택하세요';
+				break;
+*/
+			case 'wishLoc' :
+				prefix = '원하시는 지역을';
+				maxSlct = 5;
+				suffix = '';
+				isSlct = true;
+				isMulti = true;
+				isEtcUp = true;
+				arAttr = $arCommonCode[key];
+				break;
+
+			case 'brothers' :		// 20161014 kossy2k[프라임정보추가]
+			case 'sisters' :
+			case 'divorceDate' :
+
+			case 'children' :
+				isEtcUp = true;
+				suffix = '';
+				arAttr = $arCommonCode[key];
+				break;
+			case 'style' :
+				suffix = '';
+				isSlct = true;
+				arAttr = $arCommonCode[key][memSex];
+				break;
+			case 'character' :
+				prefix = '나의 성격을';
+				maxSlct = 3;
+				suffix = '';
+				isSlct = true;
+				isMulti = true;
+				arAttr = $arCommonCode[key][memSex];
+				break;
+			case 'hobby' :
+				prefix = '나의 취미 활동을';
+				maxSlct = 5;
+				suffix = '';
+				isSlct = true;
+				isMulti = true;
+				arAttr = $arCommonCode[key];
+				break;
+			case 'fashionStyle' :  // 20161014 kossy2k[프라임정보추가]
+				prefix = '나의 패션스타일을';
+				maxSlct = 2;
+				suffix = '';
+				isSlct = true;
+				isMulti = true;
+				arAttr = $arCommonCode[key][memSex];
+				break;
+			case 'favoriteFood' :  // 20161014 kossy2k[프라임정보추가]
+				prefix = '나의 선호음식을';
+				maxSlct = 7	;
+				suffix = '';
+				isSlct = true;
+				isMulti = true;
+				arAttr = $arCommonCode[key];
+				break;
+			case 'sloc' :
+				var htownL = $("#mateHomeTownL").val();
+				isSlct = true;
+				suffix = '';
+				arAttr = $arCommonCode[key][htownL];
+				//console.log(arAttr);
+			break;
+			case 'smokeTypeS' :
+				var smokeTypeL = $("#smokeTypeL").val();
+				isSlct = true;
+				suffix = '';
+				arAttr = $arCommonCode[key][smokeTypeL];
+				var slctMsg = '선택하세요';
+				//console.log(arAttr);
+			break;
+			default :
+				suffix = '';
+				arAttr = $arCommonCode[key];
+				break;
+		}
+		switch(id) {
+			case 'wishAge' :
+				slctMsg = '';
+				isSlct = false;
+				break;
+			case 'wishReligion' :
+				slctMsg = '';
+				isSlct = false;
+				break;
+		}
+		var value = $('#' + id).val();
+		var slctCss = '';
+		var slctColor = '';
+		var tempSlctCss = '';
+		var _html = (isMulti) ? '<ul class="multi" data-max="' + maxSlct + '" data-id="' + id + '">' : '<ul>';
+		// multi select top desc
+		if(isMulti) {
+			if(key == 'wishLoc'){
+				_html += '<li class="helpMulti"><span style="display:inline-block;width:310px;vertical-align:middle;text-align:left">선택지역에 결혼재혼을 원하는 이성의 프로필이 등록되면 알림을 받으실 수 있습니다!<br><span style="color:#FF0000;">(※ 최대 ' + maxSlct + '개 지역선택 가능)</span></span></li>'
+			}else{
+				_html += '<li class="helpMulti"><span style="display:inline-block;width:225px">' + prefix + ' 선택해주세요!<br>최대 ' + maxSlct + '개까지 선택가능합니다!</span><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/two_choice_ment.jpg" height="33" width="25"></li>';
+			}
+		}
+		// 직업이나 학력의 경우 프로필 목록 (code.common)순서 정렬
+		var attrKey = null;
+		var attrVal = null;
+		var slctCssColor = '';
+		for(k in arAttrOrder) {
+			attrKey = arAttrOrder[k];
+			attrVal = arAttr[arAttrOrder[k]];
+		}
+		var i = 0;
+		var tempHtml = '';
+		var arValue = new Array();
+		var bronum = $("#brothers").val()*1;
+		var sisnum = $("#sisters").val()*1;
+		var xthnum = bronum+sisnum;
+		for(k in arAttr) {
+			if(key == 'xth' && xthnum <= i){			// 20161014 kossy2k[프라임정보추가 - 형제+자매수에 맞게 몇째까지 표시]
+				break;
+			}
+			if(isMulti) {
+				isChked = '';
+				if(value != '') {
+					var rVal = value.substring(0,value.length-1);
+					arValue = rVal.split(',');
+					for(j in arValue) {
+						if(k == arValue[j]) {
+							isChked = ' checked'
+						}
+					}
+				}
+			}
+			else {
+				if(value) {
+					//alert(k+''+value);
+					slctCss = (k == value) ? ' slcted' : '';
+					slctColor = (arAttrOrder[i] == value) ? ' slcted' : '';
+				}
+				else {
+					slctCss = (i == 0) ? ' slcted' : '';
+				}
+			}
+			if(isSlct && i == 0) {
+				if(value) {
+					tempSlctCss = '';
+				}
+				else {
+					tempSlctCss = slctCss;
+					slctCss = '';
+				}
+				// mulit select
+				if(isMulti) {
+					_html += '';
+				}
+				else {
+					_html += '<li><a href="javascript:void(0);" onclick="$.slctProfileAttr(this);" data-id="' + id + '" data-key="" class="font_m' + tempSlctCss + '">' + slctMsg + '</a></li>';
+				}
+			}
+			// mulit select
+			if(isMulti) {
+				if(!isEtcUp && k == 0) {
+					tempHtml = '<li class="list"><a href="javascript:void(0);" onclick="$.slctMultiProfileAttr(this, ' + maxSlct + ', event);"><input type="checkbox" id="cb_multi_' + k + '" class="cb_multi" value="' + k + '"' + isChked + '><label for="cb_multi_' + k + '"></label>' + arAttr[k] + suffix + '</a></li>';
+				}
+				else {
+					if(key != 'wishLoc' || (key == 'wishLoc' && k))
+					_html += '<li class="list"><a href="javascript:void(0);" onclick="$.slctMultiProfileAttr(this, ' + maxSlct + ', event);"><input type="checkbox" id="cb_multi_' + k + '" class="cb_multi" value="' + k + '"' + isChked + '><label for="cb_multi_' + k + '"></label>' + arAttr[k] + suffix + '</a></li>';
+				}
+			}
+			else { //싱글 선택 폼
+				if(key == 'job'){ // job일 경우 리스트 순서
+					_html += '<li><a href="javascript:void(0);" onclick="$.popJob(this);" data-id="' + id + '" data-key="' + arAttrOrder[k] + '" class="font_m' + slctColor + '">' + arAttr[arAttrOrder[k]] + suffix +'</a></li>';
+				}	else if(key == 'school' || key=='salary'){ // school일 경우 리스트 순서
+					_html += '<li><a href="javascript:void(0);" onclick="$.slctProfileAttr(this);" data-id="' + id + '" data-key="' + arAttrOrder[i] + '" class="font_m' + slctColor + '">' + arAttr[arAttrOrder[i]] + suffix +'</a></li>';
+				} else {
+					if(!isEtcUp && k == 0) {
+						tempHtml = '<li><a href="javascript:void(0);" onclick="$.slctProfileAttr(this);" data-id="' + id + '" data-key="' + k + '" class="font_m' + slctCss + '">' + arAttr[k] + suffix + '</a></li>';
+					} else {
+						_html += '<li><a href="javascript:void(0);" onclick="$.slctProfileAttr(this);" data-id="' + id + '" data-key="' + k + '" class="font_m' + slctCss + '">' + arAttr[k] + suffix + '</a></li>';
+					}
+				}
+			}
+			i++;
+		}
+		_html += tempHtml;
+		_html += '</ul>';
+		$("#profileSlct").html(_html);
+		var _btn = '<div class="btn_multi_choice">';
+		if(isMulti) {
+			_btn += '<a href="javascript:void(0);" onclick="$.initMultiProfileAttr();" class="btn_multi_left btn_multi_bg01 float_l font_m">초기화</a>';
+			_btn += '<a href="javascript:void(0);" onclick="$.setMultiProfileAttr();" class="btn_multi_left btn_multi_bg02 float_r font_m">확인</a>';
+		}
+		else {
+			_btn += '<a href="javascript:void(0);" onclick="$.closeProfileAttr();" class="btn_multi_one btn_multi_bg02 font_m">확인</a>';
+		}
+		_btn += '</div>';
+		$("#profileAttr .ft").html(_btn);
+		isr = new IScroll('#profileSlct', { mouseWheel:true,scrollbars:true,preventDefault:false});
+
+		document.getElementById("profileAttr").addEventListener('touchmove', function (e) { e.preventDefault(); },false);
+
+		var slctIdx = $("#profileSlct ul a").index($("#profileSlct ul li a.slcted"));
+		slctIdx = (slctIdx == null || slctIdx == -1 ||  slctIdx == 0) ? 1 : slctIdx;
+		isr.scrollToElement(document.querySelector('#profileSlct li:nth-child('+slctIdx+')'), 1000, null, null, null);
+	}
+
+	$('body').on('mouseover', 'li a', function(){
+		$this = $(this);
+		$this.addClass('tmove');
+	});
+
+	$('body').on('mouseout', 'li a', function(){
+		$('#profileSlct li a').removeClass('tmove');
+	});
+
+	// 선택 - 싱글
+	$.slctProfileAttr = function(slct) {
+		$('#secretInfo').show(); // 20161024 kossy2k[프라임정보추가2]
+
+		var $this = $(slct);
+		//console.log($this.data('id'));
+		$('#' + $this.data('id')).val($this.data('key')).trigger('change');
+		$('#' + $this.data('id') + 'Text').html($this.text());
+		$('#flagUpdate').val(1);
+		if($this.text() == '선택하세요' || $this.text() == '선택'){
+			$('#' + $this.data('id') + 'Text').parent().removeClass('slctColor');
+		} else {
+			$('#' + $this.data('id') + 'Text').parent().addClass('slctColor'); // 색상추가
+		}
+		//$('#' + $this.data('id') + 'Text').parent().addClass('slctColor'); // 색상추가
+		if($this.data('id') == 'mateHomeTownL'){
+				if($this.text() == '선택하세요'){
+						$('#' + $this.data('id') + 'Text').html('선택');
+				}
+
+				if($this.data('key') != 'q') {
+						$("#mateHomeTownS").parent().parent().removeClass('select_box_disable');
+						$("#mateHomeTownSText").html('선택');
+						$("#mateHomeTownSText").parent().removeClass('slctColor');
+						$("#mateHomeTownS").val("");
+				}else{
+						$("#mateHomeTownS").parent().parent().addClass('select_box_disable');
+						$("#mateHomeTownSText").html('선택');
+						$("#mateHomeTownSText").parent().removeClass('slctColor');
+						$("#mateHomeTownS").val("");
+				}
+		}
+
+		if($this.data('id') == 'smokeTypeL'){ // 20161024 kossy2k[프라임정보추가2] - 흡연경력
+				var arrKey = ['b', 'c'];
+				var chkKey = $.inArray($this.data('key'), arrKey);
+				if(chkKey > -1 ){
+						$("#smokeTypeS").parent().parent().show();
+						$("#smokeTypeSText").html('선택하세요');
+						$("#smokeTypeSText").parent().removeClass('slctColor');
+						$("#smokeTypeS").val("");
+				}else{
+						$("#smokeTypeS").val("");
+						$("#smokeTypeS").parent().parent().hide();
+				}
+		}
+
+		if($this.data('id') == 'alcohol'){ // 20161024 kossy2k[프라임정보추가2] - 음주량
+				var arrKey = ['b', 'c', 'd'];
+				var chkKey = $.inArray($this.data('key'), arrKey);
+				if(chkKey > -1 ){
+						$("#alcoholType").parent().parent().show();
+						$("#alcoholTypeText").html('선택하세요');
+						$("#alcoholTypeText").parent().removeClass('slctColor');
+						$("#alcoholType").val("");
+				}else{
+						$("#alcoholType").val("");
+						$("#alcoholType").parent().parent().hide();
+				}
+		}
+
+		if($this.data('id') == 'health'){ // 20161024 kossy2k[프라임정보추가2] - 건강관리
+				var arrKey = ['b', 'c', 'd'];
+				var chkKey = $.inArray($this.data('key'), arrKey);
+				if(chkKey > -1 ){
+						$("#healthType").parent().parent().show();
+						$("#healthTypeText").html('선택하세요');
+						$("#healthTypeText").parent().removeClass('slctColor');
+						$("#healthType").val("");
+				}else{
+						$("#healthType").val("");
+						$("#healthType").parent().parent().hide();
+				}
+		}
+
+		if($this.data('id') == 'brothers' || $this.data('id') == 'sisters'){ // 20161014 kossy2k[프라임정보추가]
+			$("#xth").val("");
+			$("#xthText").html("선택");
+			$("#xthText").parent().removeClass('slctColor');
+		}
+
+		if($('#mateOffspring_m').val() == '0' && $('#mateOffspring_f').val() == '0'){ // 20161014 kossy2k[프라임정보추가]
+			$('#bringUpBox').hide();
+		}else if($('input[name="mateSlct"]:checked').val() == 'r'){
+			$('#bringUpBox').show();
+		}
+
+		$.fCommon_chk();
+		$.closeProfileAttr();
+		$.tmpSave();	// 20161124 kossy2k 선택변경시 임시저장
+		history.back();
+	}
+	// 선택 - 멀티
+	$.slctMultiProfileAttr = function(slct, maxSlct, e) {
+		var $this = $(slct);
+		var $input = $this.find('input[type="checkbox"]');
+		if($input.is(':checked')) {
+			$input.prop('checked', false);
+		}
+		else {
+			if($('.cb_multi:checked').length >= maxSlct) {
+				$.alert('최대 ' + maxSlct + '개까지 선택가능합니다.',null,null);
+			}
+			else {
+				$input.prop('checked', true);
+			}
+		}
+		
+		$('#flagUpdate').val(1);
+		// 선택된 데이터 출력
+		$.printMultiAttr();
+		e.preventDefault();
+	}
+	// 초기화 - 멀티
+	$.initMultiProfileAttr = function() {
+		$('.cb_multi').prop('checked', false);
+		$.printMultiAttr();
+	}
+	// 확인 - 멀티
+	$.setMultiProfileAttr = function() {
+		if($("#profileAttr :checkbox:checked").length==0){ $.toast("최소 1지역 이상 설정하셔야 합니다");return; }
+		$.tmpSave();	// 20161124 kossy2k 선택변경시 임시저장
+		$('#secretInfo').show();  // 20161024 kossy2k[프라임정보추가2]
+		$('#flagUpdate').val(1);
+		$.printMultiAttr();
+		$.fCommon_chk();
+		$.closeProfileAttr();
+		history.back();
+	}
+	// 선택 - 멀티 설정
+	$.printMultiAttr = function() {
+		var retVal = new Array();
+		var retText = new Array();
+		$('.cb_multi:checked').each(function() {
+			var $this = $(this);
+			retVal.push($this.val());
+			retText.push($this.parent().text());
+		});
+		var rVal = retVal.join(',')+',';
+		var rText = retText.join(',');
+		var $ul = $("#profileSlct ul");
+		var id = $ul.data('id');
+		var maxSlct = $ul.data('max');
+		if($.trim(rText) == '') {
+			rText = '선택하세요(최대' + maxSlct + '개 선택가능)';
+			$('#' + id + 'Text').parent().removeClass('slctColor'); // 색상제거
+		}else{
+			$('#' + id + 'Text').parent().addClass('slctColor'); // 색상추가
+		}
+		$('#' + id).val(rVal);
+		$('#' + id + 'Text').html(rText);
+	}
+	$.matchMemCost = function(){
+		var matchAmt = $arCommonCode['matchAmt'];
+		var matchAmtLen = Object.keys(matchAmt).length;
+		if($('#matchMemCost').val()==matchAmtLen){
+			$('.input_arrange_cost_text').show();
+		}else{
+			$('.input_arrange_cost_text').hide();
+		}
+	};
+
+	//------- 20161124 kossy2k 임시저장기능(뒤로가기, 홈, 물리뒤로가기, 물리홈 눌렀을 때) ------//
+	// 변경된 값이 있으면 로컬스토리지에 값 저장(변경된 값만)
+	$.tmpSave = function(btnType){
+		var fullNameChk = $('#memFullName').data('val');
+		if(hpAuthView || !fullNameChk){	// 인증이 안되어 있을 때만 임시저장시킴
+			var idAll = $.getId();
+			var tmpProfile = $.getInputData();
+			var tmpLoginId = $.cookie('gCCV:ID');
+			var tmpSave = {
+				loginId: tmpLoginId,
+				id:{},
+				idText:{}
+			};
+			var chProfile = JSON.parse(tmpProfile);
+			for(var key in chProfile){
+				var findKey = idAll.chkId.indexOf(key);
+				if(findKey > -1 && chProfile[key]){
+					tmpSave.id[key] = chProfile[key];
+					tmpSave.idText[key] = $('#'+key+'Text').text();
+				}
+				var findKey2 = idAll.chkId2.indexOf(key);
+				if(findKey2 > -1 && chProfile[key]){
+					tmpSave.id[key] = chProfile[key];
+				}
+				var findKey3 = idAll.chkId3.indexOf(key);
+				if(findKey3 > -1){
+					tmpSave.id[key] = chProfile[key];
+				}
+
+			}
+			if(tmpProfile != localStorage.defaultProfile){
+				localStorage.tmpSave = JSON.stringify(tmpSave);
+			}
+
+			localStorage.removeItem('defaultProfile');
+			switch(btnType){
+				case 'back':
+					$.toast('임시저장되었습니다.', function(){
+						$.goBack3();
+					});
+					break;
+				case 'home':
+					$.toast('임시저장되었습니다.', function(){
+						$.finishPop('');
+					});
+					break;
+				case 'save':
+					$.toast('임시저장되었습니다.');
+					break;
+			}
+		}else{
+			$.removeTmpSave();
+			switch(btnType){
+				case 'back':
+					$.goBack3();
+					break;
+				case 'home':
+					$.finishPop('');
+					break;
+				case 'save':
+					break;
+			}
+		}
+	};
+
+	// 사용중인 input필드의 id
+	$.getId = function(){
+		var idAll = {
+			chkId:[],
+			chkId2:[]
+		};
+		idAll.chkId = [	// 셀렉트필드 이용 선택하는 값들(id값)
+			'memLastName','memFirstName','memBirthMonth',
+			'brothers','sisters','xth','mateHomeTownL','mateHomeTownS','mateJob','nameJob','studyAbroad','mateCareer','mateAnnSalary','memProperty','mateStyle','fashionStyle',
+			'mateHeight','mateWeight','smokeTypeL','smokeTypeS','alcohol','alcoholType','health','healthType','mateBlood','mateReligion','animalNow','animalMarry',
+			'mateCar','mateCharc','mateHobby','favoriteFood','mateOffspring_m','mateOffspring_f',
+			'divorceDate','mateConts','familyConts','wishAge','wishLoc','wishReligion','joinSlct','memPhone'
+		];
+		idAll.chkId2 = [	// 라디오버튼을 이용하는 값들(name값)
+			'mateSlct','parents','divorceRslt','wedPlan','bringUp','babyPlan',
+		];
+		idAll.chkId3 = [	// 체크박스 이용하는 것들(id값)
+			'memNameSlct'
+		];
+
+		return idAll;
+	};
+	// input필드에 저장된 값 가져오기
+	$.getInputData = function(){
+		var idAll = $.getId();
+
+		var objVal = {};
+		for(var key in idAll.chkId){	// 셀렉트필드 이용 값 저장
+			objVal[idAll.chkId[key]] = $('#'+idAll.chkId[key]).val();
+		}
+		for(var key in idAll.chkId2){	// 라디오버튼 이용 값 저장
+			objVal[idAll.chkId2[key]] = $('input:radio[name="'+idAll.chkId2[key]+'"]:checked').val();
+		}
+		for(var key in idAll.chkId3){	// 체크박스 이용 값 저장
+			objVal[idAll.chkId3[key]] = $('#'+idAll.chkId3[key]).prop('checked');
+		}
+		//console.log(objVal);
+		return JSON.stringify(objVal);
+	};
+
+	// 프로필페이지 오픈시 임시저장값으로 덮어쓰기
+	$.setInputData = function(){
+		var idAll = $.getId();
+		if(localStorage.tmpSave){
+			var arrSave = JSON.parse(localStorage.tmpSave);
+			//console.log(arrSave);
+			for(var key in arrSave.id){	// 셀렉트필드 이용값들 덮어쓰기
+				var findKey = idAll.chkId.indexOf(key);
+				if(findKey > -1){
+					$('#'+key).val(arrSave.id[key]).parent().parent().show();
+					$('#'+key+'Text').text(arrSave.idText[key]).parent().addClass('slctColor');
+				}
+				var findKey2 = idAll.chkId2.indexOf(key);
+				if(findKey2 > -1){
+					$('input:radio[name="'+key+'"][value="'+arrSave.id[key]+'"]').prop('checked', true);
+				}
+				var findKey3 = idAll.chkId3.indexOf(key);
+				if(findKey3 > -1){
+					$('input:checkbox[name="'+key+'"]').prop('checked', arrSave.id[key]);
+				}
+			}
+			if(arrSave.id.mateSlct == 'r'){	// 재혼인 경우 숨김처리된 항목 보이도록
+				$('.remarry_box').show();
+			}
+		}else{
+			return;
+			console.log('값없음');
+		}
+	};
+
+	// 임시저장값 삭제
+	$.removeTmpSave = function(){
+		localStorage.removeItem('tmpSave');
+		localStorage.removeItem('tmpSaveDay');
+	};
+
+	// pc 버전에서 뒤로가기를 눌렀을 때 임시저장
+	if($.cookie('siteLayout') == 'w'){
+		window.onbeforeunload = function() {
+			$.tmpSave();
+		};
+	}
+
+	$(':radio,:checkbox,:text,textarea,select').on('click', function(){
+		$.tmpSave();
+	});
+	//------- 20161124 kossy2k 임시저장기능(여기까지) ------//
+
+
+	$(window).load(function() {
+
+		// 20170628 kossy2k 자기소개글 힌트를 결혼/재혼에 따라 다른문구로 
+		if($('input[name="mateSlct"]:checked').val() == 'r') {
+			document.getElementsByName('mateConts')[0].placeholder='광고글, SNS아이디(카톡), 전화번호 등 결혼과 관련없는 글은 관리자가 삭제합니다.';
+		}else{
+			document.getElementsByName('mateConts')[0].placeholder='꼭! 결혼에 적합한 자기소개글을 등록해주세요~광고글, SNS아이디(카톡), 전화번호 등 결혼과 관련없는 글은 관리자가 삭제합니다.';
+		}
+
+		// 20161124 kossy2k 임시저장기능(변경된값 있는지 확인위한 기본값 저장)
+		var defaultProfile = $.getInputData();
+		localStorage.defaultProfile = defaultProfile;
+
+		// 20161124 kossy2k 임시저장기능(임시저장값 덮어쓰기)
+		if(localStorage.tmpSave) {
+			var tmpSaveArr = JSON.parse(localStorage.tmpSave);
+			if(localStorage.tmpSave && tmpSaveArr.loginId == $.cookie('gCCV:ID')){
+	//			$.alert('프로필작성중 임시저장 상태입니다.<br>프로필등록 후 모든 서비스 이용가능합니다.', '확인', function(){
+					$.setInputData();
+	//			});
+			}else{
+				$.removeTmpSave();
+			}
+
+		}
+
+		if(localStorage.inputPhoto && localStorage.inputPhoto == 1){
+			localStorage.inputPhoto = '';
+			localStorage.removeItem('inputPhoto');
+			photoProc.togPhotoSaveLy();
+		}
+		if(localStorage.inputItem) {
+			$('#' + localStorage.inputItem).focus();
+			localStorage.inputItem = '';
+			localStorage.removeItem('inputItem');
+		}
+		if(localStorage.anchorItem){	//#819 프로필 결혼계획, 패션스타일 추가에 따른 by irony
+
+				// 20161024 kossy2k[프라임정보추가2] - 해당위치로 포커스 이동 + 하이라이트
+				var highlightId = {
+					'focusBro':'broTxt',
+					'focusJob':'jobTxt',
+					'focusSmokeTypeL':'smokeTxt',
+					'focusAlcohol':'alcoholTxt',
+					'familyTxt':'familyTxt',
+					'focusSalary':'salaryTxt',
+					'focusProperty':'propertyTxt',
+					'myRespectTxt':'myRespectTxt',
+					'myPointTxt':'myPointTxt',
+				};
+				var findKey = localStorage.anchorItem in highlightId;
+				if(findKey){
+					backColor(localStorage.anchorItem, highlightId[localStorage.anchorItem]);
+				}else{
+					backColor(localStorage.anchorItem);
+				}
+
+				//window.location.hash = '#'+ localStorage.anchorItem;
+				localStorage.removeItem('anchorItem');
+		}
+	});
+}(jQuery));
+</script><div id="photo_save_ly" class="photo_save_wrap"><div class="photo_alarm_box"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img2/img_photo_alarm4.png" id="photoDesc" width="282" height="78 alt=" 사진가져오기"=""><p class="confirm_photo font_m">등록 가능한 사진수 : <span class="confirm_txt"> 20장</span><span class="max_txt"> (최대 <span id="maxPhotoCnt">20</span>장까지)</span></p><a href="javascript:void(0);" id="photo_save_gallery" class="btn_alarm btn_alarm_bg font_m alarm_margin_top">앨범에서 가져오기</a><a href="javascript:void(0);" id="photo_save_camera" class="btn_alarm btn_alarm_bg font_m">카메라 촬영하기</a><a href="javascript:void(0);" id="photo_save_close" class="btn_alarm btn_alarm_bg btn_photo_color01 font_m">닫기</a></div></div><form name="fmatePhoto" id="fmatePhoto" method="post" onsubmit="return false;" style="display:none;height:0"><input type="hidden" name="memNo" id="photo_memNo" value=""><input type="hidden" name="type" id="photo_type" value=""><input type="hidden" name="matchNo" id="photo_matchNo" value=""><input type="file" name="imagefile" id="photo_imagefile" accept="image/*" style="opacity:0" value=""></form>
+<style>
+.profile_pop_wrap { display:block; position:fixed; top:15%; left:3%; width:93.75%; height:auto; overflow:hidden; background-color:#fff; border:2px solid #283140; margin:10px auto; box-shadow:0 0 10px 0 rgba(0,0,0,.5); -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,.5); z-index:2500;}
+.profile_pop_header { width:100%; height:40px; background-color:#283140; text-align:center;  }
+.profile_pop_txt01 { font-size:13px; color:#fff; padding-top:2px; }
+.profile_pop_txt02 { font-size:11px; color:#fff; }
+/*.profile_pop_wrap ul { margin:0; padding:0; border-bottom:1px dotted #283140; margin-bottom:10px;  }*/
+.profile_pop_wrap ul { margin:0; padding:0; border:none; margin-bottom:10px;  }
+.profile_pop_wrap ul li { font-size:13px; color:#283140; margin-top:14px; margin-left:16px; padding-bottom:px; }
+.before_job { color:#1589da; padding-left:5px; font-size:14px;}
+.now_job_txta1 { width:69%; height:23px; border:1px solid #9ea1a6; resize:none; -webkit-box-shadow:inset 1px 1px 3px rgba(0,0,0,.5); vertical-align:middle; border-radius:3px; margin-left:5px; padding-left:10px; padding-top:6px;}
+.now_job_txt02 { display:block; font-size:11px; color:#97999a; padding-left:50px; padding-bottom:10px; padding-top:3px; }
+.ex_txt { display:block; text-align:center; font-size:12px; color:#7a7a7a; letter-spacing:-1px; padding-bottom:17px; }
+.btn_box { display:block; width:auto; height:auto; text-align:center; margin-bottom:15px; }
+.btn_profile { display: inline-block; height:35px; border:1px solid #cfcfcf; background: -moz-linear-gradient(top,  #ffffff 0%, #ededed 100%); background: -webkit-linear-gradient(top,  #ffffff 0%,#ededed 100%); background: linear-gradient(to bottom,  #ffffff 0%,#ededed 100%); font-size:12px; border-radius:5px;
+ }
+.left_btn { width:135px; margin-right:5px; }
+.right_btn { width:50px; }
+</style>
+
+<script>
+$.close = function(){
+	$("#popJob").hide();
+	//$.toast('직업명을 등록하시지 않았습니다.');
+}
+
+$.popJobName = function() {
+	$("#popJob").show();
+	$("#jobSave").show();
+	$("#saveJob").hide();
+
+	$('#jobName').focus();
+}
+
+// 직업선택
+$.popJob = function(slct) {
+	$("#popJob").show();
+	$("#saveJob").show();
+	$("#jobSave").hide();
+
+	var $this = $(slct);
+
+	$('#jobName').focus();
+
+	//alert('jobID : ' + $this.data('id') + '/ jobKEY : ' + $this.data('key'));
+	$('#pr-' + $this.data('id') + 'Text').html($this.text());
+	$('#pr-' + $this.data('id') + 'Text').data('id', $this.data('id'));
+	$('#pr-' + $this.data('id') + 'Text').data('key', $this.data('key'));
+
+	//$('#flagUpdate').val(1);
+	//$('#' + $this.data('id') + 'Text').parent().addClass('slctColor'); // 색상추가
+	//$('#jobName').val($this.val());
+
+	//$('#jobName').val('직업명을 입력하세요!');
+
+	var jobKey = $this.data('key');
+
+	if(!jobKey){
+		$('#' + $this.data('id') + 'Text').parent().removeClass('slctColor'); // 색상추가
+	} else {
+		$('#' + $this.data('id') + 'Text').parent().addClass('slctColor'); // 색상추가
+	}
+
+}
+
+// 등록하기
+$.jobNameClose = function() {
+	$('#secretInfo').show();  // 20161024 고성수[프라임정보추가2]
+	var $prMateJobText = $('#pr-mateJobText');
+	var $this = $('#jobName');
+	var szVal = $this.val();
+	history.back();
+	//alert('jobID2 : ' + $prMateJobText.data('id') + '/ jobKEY2 : ' + $prMateJobText.data('key'));
+
+	for(var i=0; i<100; i++){ // 2개이상 공백을 하나로
+		szVal = szVal.replace("  "," ");
+	}
+
+	// 입력내용
+	if($.trim(szVal) == '') {
+		$.toast('직업명을 입력하세요.');
+		return false;
+	}
+
+	// 입력내용
+	if($.trim(szVal) == '직업명을 입력하세요!') {
+		$.toast('직업명을 입력하세요.');
+		return false;
+	}
+
+	// 한글만 입력
+	var korChk = /([^가-힣ㄱ-ㅎㅏ-ㅣ\x20])/i;
+	if (korChk.test(szVal)) {
+		$.toast('직업명은 한글로만 입력할 수 있습니다.');
+		return false;
+	}
+
+	// 한글 최대 3자
+	if($.trim(szVal).length < 2 || $.trim(szVal).length > 10) {
+		$.toast('직업명은 2자부터 10자까지 입력하세요.');
+		return false;
+	}
+
+	if($.trim(szVal)){
+		$("#profileAttr").hide();
+		$("#popJob").hide();
+
+		$('#' + $prMateJobText.data('id')).val($prMateJobText.data('key')).trigger('change');
+		$('#' + $prMateJobText.data('id') + 'Text').html($prMateJobText.text());
+		$('#jobText').html($prMateJobText.text());
+
+		$('#job').val($.trim(szVal));
+		$('#nameJob').val($.trim(szVal));
+		//$('#job').html($.trim(szVal));
+		//$('#mateJobText').addClass('slctColor');
+
+		//$.toast('직업명을 등록하였습니다.');
+		$(document).unbind('touchmove');
+		$.fCommon_chk();
+		return true;
+	}
+}
+</script>
+
+<div class="profile_pop_wrap" id="popJob" style="display:none;">
+	<div class="profile_pop_header">
+		<p class="profile_pop_txt01 font_b">
+			직업명을 상세히 적어주세요!
+		</p>
+		<p class="profile_pop_txt02 font_r">
+			본인의 신뢰도를 높일 수 있습니다.
+		</p>
+	</div>
+	<ul>
+		<li class="font_m" id="saveJob" style="display:none;">선택한 직업종류:
+			<span class="before_job font_b" id="pr-mateJobText" data-id="" data-key="">사무/관리</span>
+		</li>
+		<li class="font_m" id="jobSave" style="display:none;">선택한 직업종류:
+			<span class="before_job font_b" id="jobText">사무/관리</span>
+		</li>
+		<li class="font_m">직업명:
+			<span>
+				<textarea class="now_job_txta1" id="jobName" name="jobName" placeholder="직업명을 입력하세요!">사무원</textarea>
+			</span>
+<!-- 			<span class="now_job_txt02 font_r">※최소2자 ~ 최대10자 입력 가능합니다.</br>※영문,숫자,특수문자는 입력할 수 없습니다.</span> -->
+		</li>
+	</ul>
+<!-- 	<p class="ex_txt font_r"> -->
+<!-- 		예) 치과 원장, 행정공무원, 회계사, 버스운전기사,헤어디자이너,<br> -->
+<!-- 		&nbsp;&nbsp;&nbsp;&nbsp; 보육교사, 간호사, 치킨집운영, 소방관,웹디자이너,공인중개사,<br> -->
+<!-- 		&nbsp;&nbsp;&nbsp;&nbsp목수,골프캐디  등등 구체적으로 본인의 실제 직업을 적어주세요. -->
+<!-- 	</p> -->
+	<p class="ex_txt font_r">
+		예) 치과의사, 공인중개사, 보육교사, 목수, 소방관, 행정공무원<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; 본인의 실제직업을 구체적으로 적어주세요<br>
+	</p>
+	<div class="btn_box">
+		<button onclick="$.jobNameClose();" class="btn_profile left_btn font_b">등록하기</button>
+		<button onclick="$.close();" class="btn_profile right_btn">닫기</button>
+	</div>
+</div>
+
+
+<style>
+.company_ad { display:none; bottom:0; width:100%; height:auto; background-color:#636467; font-size:12px; color:#FFF;  padding:3px 0; text-align:center; }
+.posi_relative {position: relative;}
+.posi_fixed {position: fixed; }
+#btnMoveTop:focus {outline:none;}
+</style>
+
+<a href="javascript:void(0);" onclick="$(this).effect('bounce',{times:3},30,function(){$.goTop();});" id="btnMoveTop" style="z-index: 999; margin-bottom: 0px; display: none;"><img src="http://image.yeoboya.com/imgs/new_wedding/mobile/img/btn_jump_up.png" width="35" alt=""></a>
+
+<div class="company_ad font_r posi_fixed" id="company_ad">
+(주)인포렉스 대표이사 박진. 사업자등록번호 409-81-49209<br>
+광주광역시 서구 마륵동 165-27. 문의전화 1522-3379<br>
+결혼중개신고번호 광주-서구-국내-15-0003호
+</div>
+
+
+<script>
+$(document).ready(function() {
+
+	$.hashState = 1;
+
+	// open layer use backbutton
+	$.setHash = function(hashStr) {
+		$.hashState = 2;
+		if(history.pushState) {
+			history.pushState('', document.title, '/' + location.search + hashStr);
+		}
+		if(typeof(Storage) !== "undefined") {
+			localStorage.setItem("lastHash", hashStr);
+		}
+	}
+
+	// hash action
+	$.actHash = function(hashData) {
+		$.hashState = 3;
+		switch(hashData) {
+			case '#photo_save_hash' :
+				$("#photo_save_ly").hide();
+				break;
+			case '#slctPrPhoto' :
+				$('#slctPrPhoto').hide();
+				break;
+			case '#slctProfileAttr' :
+				$.closeProfileAttr();
+				break;
+			case '#ifx-alert' :
+				$('#ifx-dialog').hide();
+				break;
+			case '#ifx-confirm' :
+				$('#ifx-dialog').hide();
+				break;
+			case '#msgReport' :
+				$('#profileReport').hide();
+				$('#msgReport').hide();
+				$('#wealthReport').hide();
+				break;
+			case '#ajaxStopID' :
+				$('#ifx-dialog').hide();
+				break;
+			case '#brokerMember' : // ----------------- 중매회원 소개
+				$("#brokerMember").remove();
+				break;
+			case '#miniProfile' : // ----------------- 미니프로필
+				$("#miniProfile").remove();
+				break;
+			case '#bgBlack' : // ----------------- 전체보기버튼 눌렀을 때 암막 2016.11.02 endy 
+				$.allMenuHide();
+				break;
+			case '#bgBlackAll' : // ----------------- 2016.11.02 endymion 전체보기버튼 눌렀을 때 암막
+				$.setNewMemAlertHide();
+				break;
+			case '#noticeOpen' :
+				$.noticeClose();
+				break;
+			case '#floating' : // ----------------- 플로팅버튼 2017.04.03 endy 
+				$.floatAction();
+				break;
+			case '#ilhaeyoWarning' : // ----------------- 일해요 유의사항 토글 2017.04.03 endy
+				$.noteToggle();
+				break;
+			case '#detailSrchPop' : // ----------------- 상세검색 팝업창 닫기
+				$.directCloseDetailSrchPop();
+				break;
+			case '#alarmLayer' :
+				$(".alarm_layer").slideUp(200);
+				$.hintLayerHide();
+				break;
+			case '#leaveLayer' :
+				layerHide();
+				break;
+			case '#t_mateSlct' :
+				$("#t_mateSlctLayer").attr("value","1");
+				$("#banner_secret_mini, .floating-btn_area_wrap").hide();
+				break;
+			default :
+				// 연락하기
+				if(hashData.indexOf('msg_send_ly')) {
+					var arRet = hashData.split('_');
+					$.msgCloseLayer(arRet[3]);
+				}
+
+				if(hashData.indexOf('msg_rcv_ly')) {
+					var arRet = hashData.split('_');
+					$.msgCloseLayer(arRet[3]);
+				}
+				break;
+			}
+	};
+
+	// hash chcek
+	$(window).on('hashchange', function(e) {
+		if(typeof(Storage) !== "undefined") {
+			if(window.location.hash == '') {
+				$.actHash(localStorage.lastHash);
+				localStorage.setItem("lastHash", '');
+			}
+
+			if(window.location.hash != '' && window.location.hash != localStorage.lastHash) {
+				$.actHash(localStorage.lastHash);
+				localStorage.setItem("lastHash", window.location.hash);
+			}
+		}
+	});
+
+	$(window).scroll(function() {
+		if($(window).scrollTop() > 300) {
+			$('#btnMoveTop').css({"z-index":"999","margin-bottom":"0px"}).show();
+		}
+		else {
+			$('#btnMoveTop').hide();
+		}
+	});
+	
+	$(window).on("load", function() {
+		setTimeout(function() {
+		
+		}, 0);
+	});
+});
+</script>
+
+<script>
+(function($) {
+	// user stop check
+	if($.cookie('gCCV:NO')) {
+		if($isApp) {
+			$(document).on('WebViewJavascriptBridgeReady', function() {
+				$.userStopChk('userStop');
+			});
+		}
+		else {
+			$.userStopChk('userStop');
+		}
+	}
+}(jQuery));
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65223325-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+  // 한 페이지에서 두개의 서로다른 신고하기 창 처리
+  var $arProfileList = [ "기타", "개인정보 허위", "광고 및 음란성소개 사진/글"  ];     // [허위프로필신고] 의 신고사유 목록
+  var $arMsgList = [ "기타", "욕설/비방", "광고/상업성", "음란성", "SNS 아이디 요구 ( 카톡 )" ];   // 연락하기/메시지에서의 신고사유 목록
+  var $arWealthList1 = [ "기타", "연봉사진 신고", "개인정보 허위", "광고 및 음란성소개 사진/글"  ];     //프로필 연봉사진 신고 목록
+  var $arWealthList2 = [ "기타", "학력사진 신고", "개인정보 허위", "광고 및 음란성소개 사진/글"  ];     //프로필 학력사진 신고 목록
+  var $arWealthList3 = [ "기타", "차량사진 신고", "개인정보 허위", "광고 및 음란성소개 사진/글"  ];     //프로필 차량사진 신고 목록
+
+  var result = "";
+  var checkVal = "";
+  var pmemNo = '';   // 상대방 회원No
+
+  // 신고사유 라디오버튼을 클릭했을 때 선택한 번호([0:기타,1:개인정보허위,2:광고및음란성 사진/글])가 신고하기 버튼의 onclick 속성값을 업데이트 하도록
+  $.radioClick = function(){
+    checkVal = $(":radio[name='radiog_lite']:checked").val();
+  }
+  // 신고사유 선택된게 없으면 선택하도록 경고창 띄우기 : 메시지박스용(채팅창포함)
+  $.sendMsg = function(msgImg, msgText){
+    if($(":radio[name='radiog_lite']:checked").length > 0) {
+      var checkVal = $(":radio[name='radiog_lite']:checked").val();
+      $.msgReportProc(pmemNo, checkVal, msgImg, msgText);
+	  $('#msgReport').hide();
+      //alert("pmemNo : "+pmemNo+"  / checkVal : "+checkVal+"  / msgImg : "+msgImg+"  / msgText : "+msgText);
+    }
+    else {
+      $.alert('신고사유를 선택하여주세요', '확인', null);
+    }
+  }
+  // 신고사유 선택된게 없으면 선택하도록 경고창 띄우기 : 허위프로필신고용(프로필사진포함)
+  $.sendProfile = function(rptSlct, regNo){
+    if($(":radio[name='radiog_lite']:checked").length > 0) {
+      var rptType = $(":radio[name='radiog_lite']:checked").val();
+      $.reportProc(pmemNo, rptSlct, rptType, regNo);
+	  $('#wealthReport').hide();
+	  $('#profileReport').hide();
+    }
+    else {
+      $.alert('신고사유를 선택하여주세요', '확인', null);
+    }
+  }
+
+  $.cancelMsg = function(){
+	$('.report_wrap').hide();
+  };
+
+  // ====== 앞에서 신고하기를 클릭했을 때의 처리 ====== //
+  // 메시지박스(btnReport, 입력한내용, 이미지파일명, 이미지주소)
+  // 프로필사진(btnReport2, 'p', 신고사유(공백), 신고값(이미지번호))
+  // 허위프로필(btnReport2, 'm', 신고사유(공백), 신고값(0))
+  $.btnClick = function (clickId, msgText, msgImg, photoUrl){
+
+    var rptSlct = msgText;    // 허위프로필 또는 프로필사진일때 : msgText 값을 rptSlct 로 받아서 사용(변수명을 명확히)
+    var regNo = photoUrl;   // 허위프로필 또는 프로필사진일때
+		if(!location.hash){
+			$.setHash('#msgReport');
+		}
+    var selKey = "";           // 신고사유 갯수가 서로 다르기 때문에 클릭한 id값에 따른 배열을 저장한다.
+    var clickReport = "";     // 허위플로필신고(btnReport) or 글쓰기의 신고(btnReport2)
+    var radioList = "";        // 신고사유 리스트를 저장할 변수(라디오버튼-목록)
+    var num =1;               // input 요소의 radio 버튼에 id 값을 줄 때 1 번부터 시작하도록(radio_msg01)
+
+    // 클릭한 버튼이 허위프로필신고(btnReport) or  글쓰기의 신고(btnReport2) 일 때 보여줄 창을 clickReport 에 담는다.
+    switch(clickId){
+    		case "btnReport":
+			      selKey = $arProfileList;
+			      clickReport = $('#profileReport').css('display');
+    		break;
+    		case "btnReport2":
+			      selKey = $arMsgList;
+			      clickReport = $('#msgReport').css('display');
+			      num += $arProfileList.length;    // 신고하기 창이 하나의 창에서 열리기 때문에  radio 버튼의 id 값을 중복되지 않게 처리
+    		break;
+    		case "btnReport3_1":  //프로필 연봉사진 신고
+			      selKey = $arWealthList1;
+			      clickReport = $('#msgReport').css('display');
+			      num += $arProfileList.length;    // 신고하기 창이 하나의 창에서 열리기 때문에  radio 버튼의 id 값을 중복되지 않게 처리
+    		break;
+    		case "btnReport3_2":  //프로필 학력사진 신고
+			      selKey = $arWealthList2;
+			      clickReport = $('#msgReport').css('display');
+			      num += $arProfileList.length;    // 신고하기 창이 하나의 창에서 열리기 때문에  radio 버튼의 id 값을 중복되지 않게 처리
+    		break;
+    		case "btnReport3_3":  //프로필 차량사진 신고
+			      selKey = $arWealthList3;
+			      clickReport = $('#msgReport').css('display');
+			      num += $arProfileList.length;    // 신고하기 창이 하나의 창에서 열리기 때문에  radio 버튼의 id 값을 중복되지 않게 처리
+    		break;
+    		default:
+    				selKey = "";
+    		break;
+    }
+
+    // 위의 신고사유 배열 갯수만큼 ul 요소안에 li 요소로 사유리스트를 만든다.
+    // 실제 신고사유 리스트가 html 코드로 저장(단 기타의 경우 실제 index 값은 "0"이지만 실제 화면에 보이는 위치는 맨 끝으로 가야함)
+    for(var i=0; i<selKey.length; i++) {
+      if(selKey[i] != '기타') {
+        radioList += "<li class='font_m'>";
+        radioList += "<label for='radio_msg0"+(i+num)+"' class='radio_label'>"+selKey[i];
+        radioList += "<input href='javascript:void(0);' onclick='$.radioClick()' name='radiog_lite' type='radio' class='msg_radio_1' id='radio_msg0"+(i+num)+"' value="+i+" />";
+        radioList += "<label for='radio_msg0"+(i+num)+"' class='radio_css01'></label></label>";
+        radioList += "</li>";
+      }
+    }
+    for(var i=0; i<selKey.length; i++) {
+      if(selKey[i] == '기타') {
+        radioList += "<li class='font_m'>";
+        radioList += "<label for='radio_msg0"+(i+num)+"' class='radio_label'>"+selKey[i];
+        radioList += "<input href='javascript:void(0);' onclick='$.radioClick()' name='radiog_lite' type='radio' class='msg_radio_1' id='radio_msg0"+(i+num)+"' value="+i+" />";
+        radioList += "<label for='radio_msg0"+(i+num)+"' class='radio_css01'></label></label>";
+        radioList += "</li>";
+      }
+    }
+    // 신고사유선택창 : 허위프로필용
+    var wrapHeight = 0;
+    var winHeight = parseInt($(window).height());
+
+    if(clickReport == 'none'){
+    		switch(clickId){
+    				case "btnReport":
+					      $('#profileReport').show();
+					      $('#msgReport').hide();
+					      $('#wealthReport').hide();
+					      $('#profileReportUl > span').html(radioList);
+					      wrapHeight = parseInt($('#profileReport').css('height').replace(/[^0-9]/g,''))+50;
+					      result = "$.sendProfile('"+rptSlct+"','"+regNo+"')";
+    				break;
+    				case "btnReport2":
+					      if((msgImg == "||" || msgImg == "|" || msgImg == "null||") && msgText != null){
+					       		radioList += "<li class='font_m last_li'>"+msgText+"<br><br><br></li>";
+					      }else{
+					        	radioList += "<li class='font_m last_li' ><div id='imgReport'></div></li>";
+					      }
+					      $('#msgReport').show();
+					      $('#profileReport').hide();
+					      $('#wealthReport').hide();
+					      $('#msgReportUl > span').html(radioList);
+					      wrapHeight = parseInt($('#msgReport').css('height').replace(/[^0-9]/g,''));
+					      result = "$.sendMsg('"+msgImg+"','"+msgText+"')";
+    				break;
+    				case "btnReport3_1":
+    				case "btnReport3_2":
+    				case "btnReport3_3":
+					      $('#wealthReport').show();
+					      $('#msgReport').hide();
+					      $('#profileReport').hide();
+					      $('#wealthReportUI > span').html(radioList);
+					      wrapHeight = parseInt($('#profileReport').css('height').replace(/[^0-9]/g,''))+90;
+					      result = "$.sendProfile('"+rptSlct+"','"+regNo+"')";
+    				break;
+    				default:
+					      $('#profileReport').hide();
+					      $('#msgReport').hide();
+    				break;
+    		}
+    }else{
+	      $('#profileReport').hide();
+	      $('#msgReport').hide();
+    }
+
+    $('.sendReport').attr('onclick', result);
+//    $('#radio_msg0'+num).attr('checked', true);
+    $('#imgReport').css("background-image","url('"+photoUrl+"')");
+    $('.report_wrap').css("top", ((winHeight-wrapHeight)/2)+"px");
+  }
+</script>
+
+
+</body></html>
